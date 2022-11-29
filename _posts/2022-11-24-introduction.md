@@ -43,6 +43,8 @@ Colons can be used to align columns.
 | zebra stripes | are neat      |    $1 |
 
 
+Testing one more table. 
+
 | Column 1 Header | Column 2 Header | Column 3 Header |
 | --------------- | --------------- | --------------- |
 | Row 1 Column 1 | Row 1 Column 2 | Row 1 Column 3 |
