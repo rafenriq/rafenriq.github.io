@@ -25,3 +25,14 @@ Here the list of things we need to setup:
 -Create an organization and account 
 -Serial number of your device 
 -Uplink to internet so they can talk to Meraki cloud
+
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+
+
+
+
