@@ -4,7 +4,8 @@ title: Lab Guide
 published: true
 ---
 
-![CL-Banner.jpg]({{site.baseurl}}/_posts/CL-Banner.jpg)
+
+![]({{site.baseurl}}//images/CL-Banner.jpg)
 
 ## Lerning Objectives
 
