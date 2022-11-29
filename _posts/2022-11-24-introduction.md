@@ -4,6 +4,8 @@ title: Lab Guide
 published: true
 ---
 
+![CL-Banner.jpg]({{site.baseurl}}/_posts/CL-Banner.jpg)
+
 ## Lerning Objectives
 
 With this LAB you will be able to understand 
@@ -22,5 +24,3 @@ Here the list of things we need to setup:
 -Create an organization and account 
 -Serial number of your device 
 -Uplink to internet so they can talk to Meraki cloud
-
-
