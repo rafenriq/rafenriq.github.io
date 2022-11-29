@@ -9,8 +9,8 @@ name: LTREWN-2034 - Cisco Live
 description: 100 Wi-Fi 6E APs Managed from Cloud or On Premises? We've got you Covered!
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-#avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/CL-log.png
-avatar: https://raw.githubusercontent.com/rafenriq/master/images/CL-log.png
+#avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/
+avatar: /images/CL-log.png
 
 
 #
