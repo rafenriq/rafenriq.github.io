@@ -1,6 +1,6 @@
 ---
 layout: page
-title: LTREWN-2034
+title: Lab Guide
 published: true
 ---
 
