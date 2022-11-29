@@ -5,7 +5,7 @@ published: true
 ---
 
 
-![]({{site.baseurl}}//images/CL-Banner.jpg)
+![](/images/CL-Banner.jpg)
 
 ## Lerning Objectives
 
