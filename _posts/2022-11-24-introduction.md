@@ -61,6 +61,10 @@ Claim your access point via SN, use the SN assigned to your POD
 
 
 
+****testing with Nia 
+
+
+
 
 
 As opposed to traditional hardware that requires physical access to be configured, you can configure everything before you even have your devices
