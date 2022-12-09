@@ -83,8 +83,21 @@ Enter the address again on the input box in the map, to make sure the AP has bee
 
 ![](/images/adddevicemap4.png)
 
+Go to the oganization overview, you should see by now your network with the AP added and status green, meaning AP is online and ready to be configured. 
 
+![](/images/justaddednw1.png)
 
+Click on your network name and then on the AP name, at this moment is using AP mac address as name
+
+![](/images/configAP1.png)
+
+Give your AP a name
+
+![](/images/configAP2.png)
+
+Click on BSSID detail and you will see we  already have an SSID configured with name: "network" "WiFi", this is expected as we use the default template, while creating the network. 
+
+![](/images/configAP3.png)
 
 
 
