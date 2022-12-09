@@ -55,13 +55,60 @@ Enter a name for your network
 
 ![](/images/createnetwork2.png)
 
-Claim your access point via SN, use the SN assigned to your POD
+To add the AP to the network we need the serial number (SN). SN can be found on a label in the AP as shown in the following picture. 
+
+![](/images/labelAP.jpeg)
+
+For this LAB, (we are not allowed to bring equipment to the room) the following are the SN, use the SN assigned to your POD
 
 ![](/images/createnetwork3.png)
 
+Finally, create the network
+
+![](/images/createnetwork4.png)
+
+In the following page we can place the divice in a specific address , this will define the location for your AP in your network. 
+
+![](/images/adddevicemap1.png)
+
+Select the AP and follow the steps in the image below
+
+![](/images/adddevicemap2.png)
+
+Click on "Enter address" and enter a valid address to position your AP. 
+
+![](/images/adddevicemap3.png)
+
+Enter the address again on the input box in the map, to make sure the AP has been position correctly and "save the device placement"
+
+![](/images/adddevicemap4.png)
 
 
-****testing with Nia 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
