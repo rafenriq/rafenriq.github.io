@@ -49,15 +49,15 @@ Once you log in to the Dashboard you will see the following page:
 
 Next step is we need to create your own network for that follow the next screen shoots: 
 
-![](/images/new-dashboarb-account.png)
+![](/images/createnetwork1.png)
 
 Enter a name for your network
 
-![](/images/createnetwork1.png)
+![](/images/createnetwork2.png)
 
 Claim your access point via SN, use the SN assigned to your POD
 
-![](/images/createnetwork2.png)
+![](/images/createnetwork3.png)
 
 
 
