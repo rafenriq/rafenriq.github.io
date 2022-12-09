@@ -28,7 +28,8 @@ With this LAB wil walk you through the steps to migrate an AP Wi-Fi 6E from mana
 ### Meraki Dashboard
 
 The first thing that we need to do is to create an account in Meraki dashboard. 
-For this LAB we have created the accunts, as the linceses available for the APs we are using were given by meraki under the same account. 
+
+_For this LAB we have created the account, as the linceses available for the APs we are using were given by meraki under the same account._
 
 If you like, you are welcome to create your dashboard account using the following [link](https://account.meraki.com/login/new_account). 
 
@@ -38,7 +39,25 @@ The information needed to create the account is the following:
 
 ![](/images/new-dashboarb-account.png)
 
+Credential for the account are: 
+username: rafenriq@cisco.com
+Password: .......
 
+Once you log in to the Dashboard you will see the following page: 
+
+![](/images/dashboard.png)
+
+Next step is we need to create your own network for that follow the next screen shoots: 
+
+![](/images/new-dashboarb-account.png)
+
+Enter a name for your network
+
+![](/images/createnetwork1.png)
+
+Claim your access point via SN, use the SN assigned to your POD
+
+![](/images/createnetwork2.png)
 
 
 
