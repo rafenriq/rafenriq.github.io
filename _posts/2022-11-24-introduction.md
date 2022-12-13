@@ -100,9 +100,7 @@ Click on BSSID detail and you will see we  already have an SSID configured with 
 ![](/images/configAP3.png)
 
 
-##
-
-Modify your network information 
+## Modify your network information 
 
 We can update information to the network just created. In this case let's set the right local time, as the organization was created selecting North America, we need to update this information. Make sure you are under your network before saving changes. Follow the image below.
 
