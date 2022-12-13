@@ -100,7 +100,32 @@ Click on BSSID detail and you will see we  already have an SSID configured with 
 ![](/images/configAP3.png)
 
 
+##
 
+Modify your network information 
+
+We can update information to the network just created. In this case let's set the right local time, as the organization was created selecting North America, we need to update this information. Make sure you are under your network before saving changes. Follow the image below.
+
+![](/images/modifynw1.png)
+
+![](/images/modifynw2.png)
+
+Additianlly we can configure SysLog and SNMP for network management. This values will be valid for all the devices you add to this network 
+
+![](/images/modifynw3.png)
+
+![](/images/modifynw4.png)
+
+Finally save the changes
+
+![](/images/modifynw5.png)
+
+
+
+
+##
+
+Configuring Enterprise SSID.
 
 
 
