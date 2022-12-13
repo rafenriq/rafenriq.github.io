@@ -119,13 +119,29 @@ Finally save the changes
 ![](/images/modifynw5.png)
 
 
+## Configuring Enterprise SSID.
+
+Navigate to Wireless => SSID. Under "Unconfigured SSID 2" click "edit settings"
+
+![](/images/ssid1.png)
+
+Configure the following parameters:
+- SSID name: give it a name Ex. "Corp rafenriq"
+- Status: Enable 
+- Security: Enterprise with "Meraki Cloud Authentications" 
+- Encryption: WPA2
+- Client IP and VLAN: "Meraki AP assigned (NAT mode)"
+Once done save the changes on the right down corner and navigate back to Wireless => SSID
+SSID should look like as following: 
+
+![](/images/ssid2.png)
 
 
-##
-
-Configuring Enterprise SSID.
 
 
+
+
+## Configuring Enterprise SSID.
 
 
 
