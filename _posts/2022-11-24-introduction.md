@@ -137,14 +137,29 @@ SSID should look like as following:
 ![](/images/ssid2.png)
 
 
+## Configuring Guest SSID
+
+Navigate to Wireless => SSID. Under "Unconfigured SSID 3" click "edit settings"
+
+Configure the following parameters:
+- SSID name: give it a name Ex. "Guest rafenriq"
+- Status: Enable 
+- Security: Open
+- Splash Page: Sign-on with "Meraki Cloud authentication"
+- For Advanced splash setting, let's use the following:
+..* Captive portal strength: Chose type of traffic allowed before completing portal
+
+
+![](/images/ssid3.png)
 
 
 
 
-## Configuring Enterprise SSID.
 
+- Client IP and VLAN: "Meraki AP assigned (NAT mode)"
 
-
+Once done save the changes on the right down corner and navigate back to Wireless => SSID
+SSID should look like as following: 
 
 
 
