@@ -163,12 +163,30 @@ SSID should look like as following:
 ![](/images/ssid4.png)
 
 
+## Meraki Splash page
+
+Unlike Splash page presented by 9800, Meraki has a very good user friendly interface on the dashboard to modify the default splash page to customize your own. 
+All we need is a bit of HTML knownledge. 
+
+In order to modify the splash page navigate to: Wireless >> Splash page
+Select the SSID we just created for guest clients. 
+From there we have available 2 themes, wich we can only modify colors as shown below, click on "Preview" to check how your new colour selections looks like. Feel free to play around with it. 
+
+If we want to further customize this, using the themes as a template, we can do the following: 
+
+![](/images/splashpage1.png)
+
+![](/images/splashpage2.png)
+
+![](/images/splashpage3.png)
+
+![](/images/splashpage4.png)
+
+You will have a new tab on your browser to be able to modify the theme as needed. 
+- Edit: will take us to the html code to be edited 
+- Pop up: it is a preview of the changes made. 
 
 
-- Client IP and VLAN: "Meraki AP assigned (NAT mode)"
-
-Once done save the changes on the right down corner and navigate back to Wireless => SSID
-SSID should look like as following: 
 
 
 
