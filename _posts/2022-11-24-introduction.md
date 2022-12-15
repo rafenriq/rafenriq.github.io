@@ -223,6 +223,9 @@ We have done the following changes to show the configuration
 
 ![](/images/splashpage12.png)
 
+#radiosettings
+### Radio Settings
+
 
 
 
