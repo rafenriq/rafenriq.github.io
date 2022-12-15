@@ -229,6 +229,14 @@ We have done the following changes to show the configuration
 
 
 
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
 
 As opposed to traditional hardware that requires physical access to be configured, you can configure everything before you even have your devices
 Once your device reaches Meraki cloud it will be able to download its configuration and report its performance. 
