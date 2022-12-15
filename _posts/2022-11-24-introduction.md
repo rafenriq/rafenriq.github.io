@@ -13,7 +13,7 @@ published: true
  	- [Mofify your network information](#specification) 
  	- [Configuring Enterprise SSID](#dependencies-title) 
   	- [Configuring Guest SSID](#specification) 
- 	- [Meraki Splash page](#dependencies-title) 
+ 	- [Meraki Splash page](#splashpage) 
  	- [SSID Availability](#specification) 
  	- [Radio Settings](#dependencies-title) 
 
@@ -173,7 +173,7 @@ SSID should look like as following:
 
 ![](/images/ssid4.png)
 
-
+#splashpage
 ## Meraki Splash page
 
 Unlike Splash page presented by 9800, Meraki has a very good user friendly interface on the dashboard to modify the default splash page to customize your own. 
