@@ -186,7 +186,21 @@ You will have a new tab on your browser to be able to modify the theme as needed
 - Edit: will take us to the html code to be edited 
 - Pop up: it is a preview of the changes made. 
 
+![](/images/splashpage5.png)
 
+In this case we are doing something very simple, we are just adding a the following message to the page: "This message has been added for CL LAB LTREWN-2034" and we are changing the color for the font. 
+
+Select "auth.html" and click Edit, add the following line to the html file and "Save" the file 
+
+![](/images/splashpage8.png)
+
+Lets select file "main.css" to configure the color and lets make the following change
+
+![](/images/splashpage9.png)
+
+After you save the changes you should see them as follow:
+
+![](/images/splashpage10.png)
 
 
 
