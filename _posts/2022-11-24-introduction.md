@@ -198,7 +198,8 @@ Lets select file "main.css" to configure the color and lets make the following c
 
 ![](/images/splashpage9.png)
 
-After you save the changes you should see them as follow:
+After you save the changes you should see them as following, You can play around addind more stuff if you want to. 
+(the following link has the hex value for the colors you can use on the .css file [color codes](https://www.quackit.com/css/css_color_codes.cfm)) 
 
 ![](/images/splashpage10.png)
 
