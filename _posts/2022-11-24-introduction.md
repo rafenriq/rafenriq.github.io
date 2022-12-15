@@ -226,6 +226,10 @@ We have done the following changes to show the configuration
 #radiosettings
 ### Radio Settings
 
+Now let's modify the radio settings for our AP. Navigate to "Wireless" >> "Radio Settings". From there you can see our AP is using the "Basic Indoor Profile", which is the defaul added when creating the network, but most likely in a real deployment we do not want to use this one. As wireless networks changes based on where AP are deploy. You should see something silar as shown in the next image:
+
+
+
 
 
 
