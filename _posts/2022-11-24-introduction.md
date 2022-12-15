@@ -7,7 +7,15 @@ published: true
 
 # Contents
  - [Introduction](#specification) 
- - [Dependencies Title](#dependencies-title) 
+ - [Learning Objectives](#dependencies-title) 
+ - [Network Diagram](#specification) 
+ - [Meraki Dashboard](#dependencies-title) 
+ 	- [Mofify your network information](#specification) 
+ 	- [Configuring Enterprise SSID](#dependencies-title) 
+  	- [Configuring Guest SSID](#specification) 
+ 	- [Meraki Splash page](#dependencies-title) 
+ 	- [SSID Availability](#specification) 
+ 	- [Radio Settings](#dependencies-title) 
 
 
 ## Introduction
@@ -122,7 +130,7 @@ Finally save the changes
 ![](/images/modifynw5.png)
 
 
-## Configuring Enterprise SSID.
+## Configuring Enterprise SSID
 
 Navigate to Wireless => SSID. Under "Unconfigured SSID 2" click "edit settings"
 
