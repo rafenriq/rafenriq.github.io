@@ -9,6 +9,11 @@ published: true
  - [Introduction](#specification) 
  - [Learning Objectives](#dependencies-title) 
  - [Network Diagram](#specification) 
+ - [Cisco Catalyst 9800 Series Wireless Controller](#dependencies-title)
+  	- [AP join](##AP join) 
+ 	- [DNA Spaces Integration](#dependencies-title) 
+  	- [Catalyst 9800 Wireless Controllers Configuration Model](#specification)
+  	- [Troubleshooting tools](#specification)
  - [Meraki Dashboard](#dependencies-title) 
  	- [Mofify your network information](#specification) 
  	- [Configuring Enterprise SSID](#dependencies-title) 
@@ -34,6 +39,16 @@ With this LAB wil walk you through the steps to migrate an AP Wi-Fi 6E from mana
 
 ![](/images/Picture1.png)
 
+
+### Cisco Catalyst 9800 Series Wireless Controller
+
+## AP join
+
+## DNA Spaches Integration
+
+## Catalyst 9800 Wireless Controllers Configuration Model
+
+## Troubleshooting tools
 
 ### Meraki Dashboard
 
