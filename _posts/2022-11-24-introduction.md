@@ -48,13 +48,94 @@ The Catalyst 9800 is the new generation Wireless Controller by Cisco that you ca
 In this section we will cover the basic setup of a Wireless controller and a 916X Access Point when deployed in Private Cloud Controller.
 
 
+![](/images/9800-networkdiagram.png)
+
+
 ### Day 0 configuration
 
 Let's start by the deployment of the C9800 WLC. Follow the next steps:
 
-From CLI:
+CLI Procedure
 
 
+1. Access the CLI via the vga/monitor console of ESXi .
+
+2. Terminate the configuration wizard (this wizard it’s not specific for wireless controller)
+
+Would you like to enter the initial configuration dialog? [yes/no]: no
+Would you like to terminate autoinstall? [yes]:yes
+
+3. Optionally set the hostname:
+
+WLC(config)#hostname C9800
+
+4. Enter the config mode and add login credentials using the following command:
+
+C9800(config)#username dcloud privilege 15 password dcloud
+
+5. Configure the vlan for wireless management interface.
+
+C9800#conf t
+C9800(config)#vlan 10
+C9800(config-vlan)#name wireless_management
+	
+6. Configure the SVI for wireless management interface, for example:
+
+C9800(config)#int vlan 10
+C9800(config-if)#ip address 198.19.10.10 255.255.255.0
+C9800(config-if)#no shutdown
+
+
+7. Configure the interface gigabit 2 as trunk and allow mgmt vlan:
+
+C9800(config-if)#interface GigabitEthernet2   
+C9800(config-if)#switchport mode trunk
+C9800(config-if)#switchport trunk allowed vlan 10
+C9800(config-if)#shut
+C9800(config-if)#no shut
+
+8. Configure a default route:
+
+C9800(config-if)#ip route 0.0.0.0 0.0.0.0 198.19.10.254
+
+9. Disable the wireless network to configure the country code:
+
+C9800(config)#ap dot11 5ghz shutdown 
+Disabling the 802.11a network may strand mesh APs.
+Are you sure you want to continue? (y/n)[y]: y
+C9800(config)#ap dot11 24ghz shutdown 
+Disabling the 802.11b network may strand mesh APs.
+Are you sure you want to continue? (y/n)[y]: y
+
+
+10. Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
+
+C9800(config)# c9800-10-30(config)#ap country US,MX
+
+11. A certificate is needed for the AP to join the virtual C9800. This can be created automatically via the DAY 0 flow or manually using the following commands.
+
+Specify the interface to be the wireless management interface
+
+C9800(config)#wireless management interface vlan 10
+In exec mode, issue the following command:
+
+C9800(config)#wireless config vwlc-ssc key-size 2048 signature-algo sha256 password 0 Cisco123
+Configuring vWLC-SSC…
+Script is completed
+This is a script the automates the whole certificate creation:
+
+12. Verify Certificate Installation:
+
+C9800#show wireless management trustpoint
+Trustpoint Name : ewlc-default-tp
+Certificate Info : Available
+Certificate Type : SSC
+Certificate Hash : XXXXXXXXX
+Private key Info : Available
+
+13. Access via GUI using your credentials, type:
+
+https://198.19.10.10/
 
 
 ### AP join
