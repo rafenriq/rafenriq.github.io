@@ -52,9 +52,13 @@ In this section we will cover the basic setup of a Wireless controller and a 916
 
 ### Day 0 configuration
 
-Follow the instructions to easily setup the controller from console to operate in a network wireless environment. 
+Follow the instructions to easily setup the controller from console to operate in a network wireless environment. Note that the day0 configuration is used only for the first time in brand new installations or when controller configuration is reset to factory defaults.
 
-Access the VM console from Vsphere client. Login with the following credentials:
+_Procedure_
+
+1.Access the CLI via the vga/monitor console of ESXi. 
+
+Login the Vsphere Client with following credentials:
 
 **Username:** root
 **Password:** C1sco12345
@@ -62,10 +66,6 @@ Access the VM console from Vsphere client. Login with the following credentials:
 ![](/images/images/vsphereclient.jpg)
 
 Once there locate the C9800-CL VM and access to console. 
-
-
-1.Access the CLI via the vga/monitor console of ESXi .
-
 
 2.Terminate the configuration wizard (this wizard it’s not specific for wireless controller)
 
