@@ -13,7 +13,7 @@ published: true
  	- [Day 0 configuration](#day-0-configuration) 
   	- [AP join](#ap-join) 
  	- [DNA Spaces Integration](#dna-spaces-integration) 
-  	- [Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-controllers-configuration-model)
+  	- [Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-lan-controller-configuration-model)
   	- [Troubleshooting tools](#troubleshooting-tools)
  - [Meraki Dashboard](#dependencies-title) 
  	- [Mofify your network information](#specification) 
