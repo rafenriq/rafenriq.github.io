@@ -66,9 +66,9 @@ Lately we will see that the Access Points can be mapped to the tags either stati
 
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
-The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained withing tags that are eventually applied to the access points. 
+The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained within tags that are eventually applied to the access points. 
 
-![](/images/config model.png)
+![]({{site.baseurl}}/images/config model.png)
 
 In this section we will go through the creation of the creation of the required Tags and Profiles to configure our Access Points to provide service. 
 
