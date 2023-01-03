@@ -10,6 +10,7 @@ published: true
  - [Learning Objectives](#dependencies-title) 
  - [Network Diagram](#specification) 
  - [Cisco Catalyst 9800 Series Wireless Controller](#dependencies-title)
+ 	- [Day 0 configuration]
   	- [AP join](##AP join) 
  	- [DNA Spaces Integration](#dependencies-title) 
   	- [Catalyst 9800 Wireless Controllers Configuration Model](#specification)
@@ -42,11 +43,32 @@ With this LAB wil walk you through the steps to migrate an AP Wi-Fi 6E from mana
 
 ### Cisco Catalyst 9800 Series Wireless Controller
 
+The Catalyst 9800 is the new generation Wireless Controller by Cisco that you can deploy either On-Prem or Private/Public cloud. In this type of setup you have various features like telemetry, High Availability, programmability and more.
+
+In this section we will cover the basic setup of a Wireless controller and a 916X Access Point when deployed in Private Cloud Controller.
+
+## Day 0 configuration
+
+Let's start by the deployment of the C9800 WLC. Follow the next steps:
+
+From CLI:
+![config model.png]({{site.baseurl}}/_posts/config model.png)
+
+
 ## AP join
 
-## DNA Spaches Integration
 
-## Catalyst 9800 Wireless Controllers Configuration Model
+Lately we will see that the Access Points can be mapped to the tags either statically or as part of the rule engine that runs on the controller and comes into effect during the AP join process.
+
+!## DNA Spaches Integration
+
+## Catalyst 9800 Wireless LAN Controller Configuration Model
+
+The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained withing tags that are eventually applied to the access points. 
+
+In this section we will go throutg the creation of the creation of the required Tags and Profiles to configure our Access Points to provide service. 
+
+
 
 ## Troubleshooting tools
 
