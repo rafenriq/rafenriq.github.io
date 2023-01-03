@@ -182,7 +182,7 @@ Private key Info : Available
 
 Lately we will see that the Access Points can be mapped to the tags either statically or as part of the rule engine that runs on the controller and comes into effect during the AP join process.
 
-## DNA Spaces Integration
+< ## DNA Spaces Integration
 
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
