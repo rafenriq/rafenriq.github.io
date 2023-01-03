@@ -63,9 +63,10 @@ Login the Vsphere Client with following credentials:
 **Username:** root
 **Password:** C1sco12345
 
-![](/images/images/vsphereclient.jpg)
+![](images/vsphereclient.jpg)
 
 Once there locate the C9800-CL VM and access to console. 
+
 
 2.Terminate the configuration wizard (this wizard it’s not specific for wireless controller)
 
