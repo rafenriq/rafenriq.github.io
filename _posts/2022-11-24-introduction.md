@@ -10,11 +10,11 @@ published: true
  - [Learning Objectives](#dependencies-title) 
  - [Network Diagram](#specification) 
  - [Cisco Catalyst 9800 Series Wireless Controller](#cisco-catalyst-9800-series-wireless-controller)
--	[Day 0 configuration](#day-0-configuration)
--	[AP join](#ap-join)
--	[DNA Spaces Integration](#dna-spaces-integration)
--	[Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-lan-controller-configuration-model)
->    -	[Troubleshooting tools](#troubleshooting-tools)
+ 	-	[Day 0 configuration](#day-0-configuration)
+	-	[AP join](#ap-join)
+	-	[DNA Spaces Integration](#dna-spaces-integration)
+	-	[Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-lan-controller-configuration-model)
+	-	[Troubleshooting tools](#troubleshooting-tools)
  - [Meraki Dashboard](#dependencies-title) 
  	- [Mofify your network information](#specification) 
  	- [Configuring Enterprise SSID](#dependencies-title) 
@@ -56,7 +56,7 @@ Follow the instructions to easily setup the controller from console to operate i
 
 _Procedure_
 
-	1.Access the CLI via the vga/monitor console of ESXi. 
+1.Access the CLI via the vga/monitor console of ESXi. 
 
 Login the Vsphere Client with following credentials:
 
@@ -68,26 +68,26 @@ Login the Vsphere Client with following credentials:
 Once there locate the C9800-CL VM and access to console. 
 
 
-	2.Terminate the configuration wizard (this wizard it’s not specific for wireless controller)
+2.Terminate the configuration wizard (this wizard it’s not specific for wireless controller)
 
 ```
 Would you like to enter the initial configuration dialog? [yes/no]: no
 Would you like to terminate autoinstall? [yes]:yes
 ```
 
-	3.Optionally set the hostname:
+3.Optionally set the hostname:
 
 ```
 WLC(config)#hostname C9800
 ```
 
-	4.Enter the config mode and add login credentials using the following command:
+4.Enter the config mode and add login credentials using the following command:
 
 ```
 C9800(config)#username dcloud privilege 15 password dcloud
 ```
 
-	5.Configure the vlan for wireless management interface.
+5.Configure the vlan for wireless management interface.
 
 ```
 C9800#conf t
@@ -95,7 +95,7 @@ C9800(config)#vlan 10
 C9800(config-vlan)#name wireless_management
 ```
 	
-	6.Configure the SVI for wireless management interface, for example:
+6.Configure the SVI for wireless management interface, for example:
 
 ```
 C9800(config)#int vlan 10
@@ -103,7 +103,7 @@ C9800(config-if)#ip address 198.19.10.10 255.255.255.0
 C9800(config-if)#no shutdown
 ```
 
-	7.Configure the interface gigabit 2 as trunk and allow mgmt vlan:
+7.Configure the interface gigabit 2 as trunk and allow mgmt vlan:
 
 ```
 C9800(config-if)#interface GigabitEthernet2   
@@ -113,13 +113,13 @@ C9800(config-if)#shut
 C9800(config-if)#no shut
 ```
 
-	8.Configure a default route:
+8.Configure a default route:
 
 ```
 C9800(config-if)#ip route 0.0.0.0 0.0.0.0 198.19.10.254
 ```
 
-	9.Disable the wireless network to configure the country code:
+9.Disable the wireless network to configure the country code:
 
 ```
 C9800(config)#ap dot11 5ghz shutdown 
@@ -130,20 +130,20 @@ Disabling the 802.11b network may strand mesh APs.
 Are you sure you want to continue? (y/n)[y]: y
 ```
 
-	10.Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
+10.Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
 
 ```
 C9800(config)#ap country US,MX
 ```
 
-	11.Enable the 802.11a and 802.11b/g networks
+11.Enable the 802.11a and 802.11b/g networks
 
 ```
 C9800(config)# no ap dot11 24ghz shutdown
 C9800(config)# no ap dot11 5ghz shutdown
 ```
 
-	12.A certificate is needed for the AP to join the virtual C9800. This can be created automatically via the DAY 0 flow or manually using the following commands.
+12.A certificate is needed for the AP to join the virtual C9800. This can be created automatically via the DAY 0 flow or manually using the following commands.
 
 Specify the interface to be the wireless management interface
 
@@ -161,7 +161,7 @@ Script is completed
 
 This is a script the automates the whole certificate creation.
 
-	13.Verify Certificate Installation:
+13.Verify Certificate Installation:
 
 ```
 C9800#show wireless management trustpoint
@@ -172,7 +172,7 @@ Certificate Hash : XXXXXXXXX
 Private key Info : Available
 ```
 
-	14.Access via GUI using your credentials, type:
+14.Access via GUI using your credentials, type:
 
 <https://198.19.10.10/>
 
