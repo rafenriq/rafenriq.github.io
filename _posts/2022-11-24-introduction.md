@@ -63,7 +63,7 @@ Login the Vsphere Client with following credentials:
 **Username:** root
 **Password:** C1sco12345
 
-![](images/vsphereclient.jpg)
+![](images/vsphereclient9800.jpg)
 
 Once there locate the C9800-CL VM and access to console. 
 
