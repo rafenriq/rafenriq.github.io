@@ -47,15 +47,21 @@ The Catalyst 9800 is the new generation Wireless Controller by Cisco that you ca
 
 In this section we will cover the basic setup of a Wireless controller and a 916X Access Point when deployed in Private Cloud Controller.
 
-
 ![](/images/9800-networkdiagram.png)
 
 
 ### Day 0 configuration
 
-Let's start by the deployment of the C9800 WLC. Follow the next steps:
+Follow the instructions to easily setup the controller from console to operate in a network wireless environment. 
 
-CLI Procedure
+Access the VM console from Vsphere client. Login with the following credentials:
+
+**Username:** root
+**Password:** C1sco12345
+
+![](/images/images/vsphereclient.jpg)
+
+Once there locate the C9800-CL VM and access to console. 
 
 
 1.Access the CLI via the vga/monitor console of ESXi .
@@ -129,6 +135,13 @@ Are you sure you want to continue? (y/n)[y]: y
 C9800(config)#ap country US,MX
 ```
 
+11.Enable the 802.11a and 802.11b/g networks
+
+```
+C9800(config)# no ap dot11 24ghz shutdown
+C9800(config)# no ap dot11 5ghz shutdown
+```
+
 11.A certificate is needed for the AP to join the virtual C9800. This can be created automatically via the DAY 0 flow or manually using the following commands.
 
 Specify the interface to be the wireless management interface
@@ -160,7 +173,7 @@ Private key Info : Available
 
 13.Access via GUI using your credentials, type:
 
-https://198.19.10.10/
+<https://198.19.10.10/>
 
 
 ### AP join
