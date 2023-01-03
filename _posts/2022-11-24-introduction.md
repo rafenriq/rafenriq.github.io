@@ -12,7 +12,6 @@ published: true
  - [Cisco Catalyst 9800 Series Wireless Controller](#cisco-catalyst-9800-series-wireless-controller)
 	-	[Day 0 configuration](#day-0-configuration)
 	-	[AP join](#ap-join)
-	-	[DNA Spaces Integration](#dna-spaces-integration)
 	-	[Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-lan-controller-configuration-model)
 	-	[Troubleshooting tools](#troubleshooting-tools)
  - [Meraki Dashboard](#dependencies-title) 
@@ -61,9 +60,10 @@ _Procedure_
 Login the Vsphere Client with following credentials:
 
 **Username:** root
+
 **Password:** C1sco12345
 
-![](images/vsphereclient9800.jpg)
+![]({{site.baseurl}}/https://github.com/rafenriq/rafenr/images/vsphereclient9800.jpeg)
 
 Once there locate the C9800-CL VM and access to console. 
 
@@ -159,7 +159,7 @@ Configuring vWLC-SSC…
 Script is completed
 ```
 
-This is a script the automates the whole certificate creation.
+> This is a script the automates the whole certificate creation.
 
 13.Verify Certificate Installation:
 
@@ -181,8 +181,6 @@ Private key Info : Available
 
 
 Lately we will see that the Access Points can be mapped to the tags either statically or as part of the rule engine that runs on the controller and comes into effect during the AP join process.
-
-< ## DNA Spaces Integration
 
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
@@ -279,7 +277,7 @@ We can update information to the network just created. In this case let's set th
 
 ![](/images/modifynw2.png)
 
-Additianlly we can configure SysLog and SNMP for network management. This values will be valid for all the devices you add to this network 
+Additioanlly we can configure SysLog and SNMP for network management. This values will be valid for all the devices you add to this network 
 
 ![](/images/modifynw3.png)
 
