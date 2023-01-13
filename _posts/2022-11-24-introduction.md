@@ -265,7 +265,7 @@ Go to the Security tab, follow the image below
 
 This is how your new WLAN looks like
 
-![](/images/WLAN,png)
+![](/images/WLAN.png)
 
 3. Create a new Policy Profile. 
 
@@ -280,6 +280,8 @@ Give it a name and enable it.
 This is how your Policy Profile looks like
 
 ![](/images/PolicyProfile.png)
+
+4. 
 
 ### Troubleshooting tools
 
