@@ -177,11 +177,6 @@ Private key Info : Available
 <https://198.19.10.10/>
 
 
-### AP join
-
-
-We will see that the Access Points can be mapped to the tags either statically or as part of the rule engine that runs on the controller and comes into effect during the AP join process.
-
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
 The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained within tags that are eventually applied to the access points. 
@@ -195,6 +190,45 @@ There are three tags:
 - Policy Tag. Link between a WLAN Profile (SSID) and a Policy Profile
 - Site Tag. Defines de AP mode and other AP settings.
 - RF Tag. Sets the RF profiles with the seetings for each band.
+
+Let's create the tags with basic configurations. Later we will apply this tags to the Access Point that will be joined to the controller.
+
+
+
+_Procedure:_
+
+1. Access the controller GUI with your credentials
+
+GUI: <https://198.19.10.10/>
+
+**Username:** dcloud
+
+**Password:** dcloud
+
+2. 
+
+### AP join
+
+The way Access Points work in the 9800 is by usings tags, these tags are used to control the features that are available for each AP. The tags are assigned to the AP as part of the rule engine that runs on the controller and comes into effect during the AP join process.
+
+Once you finished the day0 configuration from previus step you will see your assigned access points joining to your brand new 9800 controller. 
+
+Please verify your APs are joined using "**show ap summary**" command
+
+Example:
+
+```
+C9800-CL#show ap summary 
+Number of APs: 1
+
+CC = Country Code
+RD = Regulatory Domain
+
+AP Name                          Slots AP Model             Ethernet MAC   Radio MAC      CC   RD   IP Address                                State        Location
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 --        172.16.26.189                             **Downloading**  default location                
+
+```
 
 
 
