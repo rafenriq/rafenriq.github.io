@@ -230,6 +230,18 @@ CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.
 
 ```
 
+```
+C9800#show ap summary 
+Number of APs: 1
+
+CC = Country Code
+RD = Regulatory Domain
+
+AP Name                          Slots AP Model             Ethernet MAC   Radio MAC      CC   RD   IP Address                                State        Location
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 MX   -A   172.16.26.189                             Registered   default location    
+```
+
 
 
 ### Troubleshooting tools
