@@ -245,13 +245,18 @@ CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.
 Verify what tags where applied to the APs. Use "show ap tag summary " command. 
 
 ```
-C9800-CL#show ap tag summary 
+C9800#show ap tag summary 
 Number of APs: 1
 
 AP Name                           AP Mac           Site Tag Name                     Policy Tag Name                   RF Tag Name                       Misconfigured    Tag Source    
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 CW9166I-A-6                       cc9c.3ef7.e440   default-site-tag                  default-policy-tag                default-rf-tag                    No               Default       
 ```
+
+You can also verify what are the tags from GUI
+**Configuration > Wireless > Access Points > _Select the AP_ **
+
+Add image AP_tags_default.png
 
 ### Troubleshooting tools
 
