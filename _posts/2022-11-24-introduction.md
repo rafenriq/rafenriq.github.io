@@ -267,7 +267,7 @@ This is how your new WLAN looks like.
 
 ![](/images/WLAN.png)
 
-3. Create a new Policy Profile. 
+3.Create a new Policy Profile. 
 
 Go to Configuration > Tags & Profiles > Policy > +Add
 
@@ -285,19 +285,19 @@ This is how your Policy Profile looks like.
 
 ![](/images/PolicyProfile.png)
 
-4. Create the Policy tag and map the created WLAN and Policy Profiles.
+4.Create the Policy tag and map the created WLAN and Policy Profiles.
 
 Go to Configuration > Tags & Profiles > Tags > Policy > +Add 
 
 ![](/images/tag_policy_AMS.png)
 
-5. Create an AP join Profile
+5.Create an AP join Profile
 
 Go to Configuration > Tags & Profiles > AP join > +Add
 
 ![](/images/JoinProfile_add.png)
 
-6. Create a Flex Profile. 
+6.Create a Flex Profile. 
 
 Go to Configuration > Tags & Profiles > Flex > +Add. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30. This is the same value as the native vlan configured in the AP switchport.
 
@@ -307,7 +307,7 @@ Select the VLAN tab, set configurations as in the image below.
 
 ![](/images/FlexProfile_vlan.png) 
 
-7. Create a new Site tag and apply the created AP join and Flex Profiles.
+7.Create a new Site tag and apply the created AP join and Flex Profiles.
 
 Go to Configuration > Tags & Profiles > Tags > Site > +Add 
 
