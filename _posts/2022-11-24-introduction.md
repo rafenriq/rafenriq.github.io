@@ -213,7 +213,7 @@ The way Access Points work in the 9800 is by usings tags, these tags are used to
 
 Once you finished the day0 configuration from previus step you will see your assigned access points joining to your brand new 9800 controller. 
 
-Please verify your APs are joined using "**show ap summary**" command
+Verify your AP joined using "**show ap summary**" command
 
 Example:
 
@@ -242,7 +242,16 @@ AP Name                          Slots AP Model             Ethernet MAC   Radio
 CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 MX   -A   172.16.26.189                             Registered   default location    
 ```
 
+Verify what tags where applied to the APs. Use "show ap tag summary " command. 
 
+```
+C9800-CL#show ap tag summary 
+Number of APs: 1
+
+AP Name                           AP Mac           Site Tag Name                     Policy Tag Name                   RF Tag Name                       Misconfigured    Tag Source    
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CW9166I-A-6                       cc9c.3ef7.e440   default-site-tag                  default-policy-tag                default-rf-tag                    No               Default       
+```
 
 ### Troubleshooting tools
 
