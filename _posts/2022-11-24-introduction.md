@@ -177,36 +177,6 @@ Private key Info : Available
 <https://198.19.10.10/>
 
 
-### Catalyst 9800 Wireless LAN Controller Configuration Model
-
-The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained within tags that are eventually applied to the access points. 
-
-![]({{site.baseurl}}/images/config model.png)
-
-In this section we will go through the creation of the creation of the required Tags and Profiles to configure our Access Points to provide service. 
-
-There are three tags:
-
-- Policy Tag. Link between a WLAN Profile (SSID) and a Policy Profile
-- Site Tag. Defines de AP mode and other AP settings.
-- RF Tag. Sets the RF profiles with the seetings for each band.
-
-Let's create the tags with basic configurations. Later we will apply this tags to the Access Point that will be joined to the controller.
-
-
-
-_Procedure:_
-
-1. Access the controller GUI with your credentials
-
-    **GUI:** <https://198.19.10.10/>
-
-    **Username:** dcloud
-
-    **Password:** dcloud
-
-2. 
-
 ### AP join
 
 The way Access Points work in the 9800 is by usings tags, these tags are used to control the features that are available for each AP. The tags are assigned to the AP as part of the rule engine that runs on the controller and comes into effect during the AP join process.
@@ -238,13 +208,49 @@ AP Name                           AP Mac           Site Tag Name                
 CW9166I-A-6                       cc9c.3ef7.e440   default-site-tag                  default-policy-tag                default-rf-tag                    No               Default       
 ```
 
-If you prefer GUI. You can verify if AP is joined from **Configuration > Wireless > Access Points > _Select the AP_ **
+If you prefer GUI, you can verify if AP is joined from **Configuration > Wireless > Access Points > **
 
 ![](/images/AP_joined.png)
 
-To check the current tags you can just click on the AP entry
+To check the current tags click on the AP entry
 
 ![](/images/AP_tags_default.png) 
+
+As you can observe when a brand new access point join to a controller the controller assings the default tags. 
+
+### Catalyst 9800 Wireless LAN Controller Configuration Model
+
+The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained within tags that are eventually applied to the access points. 
+
+![]({{site.baseurl}}/images/config model.png)
+
+There are three tags:
+
+- Policy Tag. Link between a WLAN Profile (SSID) and a Policy Profile
+- Site Tag. Defines de AP mode and other AP settings, trough AP join profile and Flex profile.
+- RF Tag. Sets the RF profiles with the seetings for each band.
+
+Let's create the Profiles and Tags with basic configurations. Later we will apply these tags to the Access Point joined to the controller.
+
+_Procedure:_
+
+1. Access the controller GUI with your credentials
+
+    **GUI:** <https://198.19.10.10/>
+
+    **Username:** dcloud
+
+    **Password:** dcloud
+    
+    ![](/images/gui_log_in.png)
+
+    Note: To configure Tags and Profiles we will use the **Configuration > Tags & Profiles** section 
+
+    ![](/images/Tags_and_profiles.png)
+
+2. 
+
+
 
 
 ### Troubleshooting tools
