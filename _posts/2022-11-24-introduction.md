@@ -199,11 +199,11 @@ _Procedure:_
 
 1. Access the controller GUI with your credentials
 
-GUI: <https://198.19.10.10/>
+    **GUI:** <https://198.19.10.10/>
 
-**Username:** dcloud
+    **Username:** dcloud
 
-**Password:** dcloud
+    **Password:** dcloud
 
 2. 
 
@@ -214,21 +214,6 @@ The way Access Points work in the 9800 is by usings tags, these tags are used to
 Once you finished the day0 configuration from previus step you will see your assigned access points joining to your brand new 9800 controller. 
 
 Verify your AP joined using "**show ap summary**" command
-
-Example:
-
-```
-C9800-CL#show ap summary 
-Number of APs: 1
-
-CC = Country Code
-RD = Regulatory Domain
-
-AP Name                          Slots AP Model             Ethernet MAC   Radio MAC      CC   RD   IP Address                                State        Location
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 --        172.16.26.189                             **Downloading**  default location                
-
-```
 
 ```
 C9800#show ap summary 
@@ -242,7 +227,7 @@ AP Name                          Slots AP Model             Ethernet MAC   Radio
 CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 MX   -A   172.16.26.189                             Registered   default location    
 ```
 
-Verify what tags where applied to the APs. Use "show ap tag summary " command. 
+Verify what tags where applied to the APs. Use "**show ap tag summary**" command. 
 
 ```
 C9800#show ap tag summary 
@@ -253,10 +238,14 @@ AP Name                           AP Mac           Site Tag Name                
 CW9166I-A-6                       cc9c.3ef7.e440   default-site-tag                  default-policy-tag                default-rf-tag                    No               Default       
 ```
 
-You can also verify what are the tags from GUI
-**Configuration > Wireless > Access Points > _Select the AP_ **
+If you prefer GUI. You can verify if AP is joined from **Configuration > Wireless > Access Points > _Select the AP_ **
 
-Add image AP_tags_default.png
+![](/images/AP_joined.png)
+
+To check the current tags you can just click on the AP entry
+
+![](/images/AP_tags_default.png) 
+
 
 ### Troubleshooting tools
 
