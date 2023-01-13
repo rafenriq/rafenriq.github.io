@@ -226,9 +226,9 @@ The Catalyst 9800 configuration model was designed to be simple, flexible and re
 
 There are three tags:
 
-- Policy Tag. Link between a WLAN Profile (SSID) and a Policy Profile
-- Site Tag. Defines de AP mode and other AP settings, trough AP join profile and Flex profile.
-- RF Tag. Sets the RF profiles with the seetings for each band.
+- **Policy Tag**. Link between a WLAN Profile (SSID) and a Policy Profile
+- **Site Tag**. Defines de AP mode and other AP settings, trough AP join profile and Flex profile.
+- **RF Tag**. Sets the RF profiles with the seetings for each band.
 
 Let's create the Profiles and Tags with basic configurations. Later we will apply these tags to the Access Point joined to the controller.
 
@@ -248,10 +248,38 @@ _Procedure:_
 
     ![](/images/Tags_and_profiles.png)
 
-2. 
+2. Create a new SSID. 
 
+Go to **Configuration > Tags & Profiles > WLAN > +Add **
 
+![](/images/wlanprofile_add.png)
 
+WLAN creation window will pop up, give it a name and enable it. 
+Note: For this excercise we will disable 6GHz band.
+
+![](/images/wlanprofile_general.png)
+
+Go to the Security tab, follow the image below
+
+![](/images/wlanprofile_security.png)
+
+This is how your new WLAN looks like
+
+![](/images/WLAN,png)
+
+3. Create a new Policy Profile. 
+
+Go to **Configuration > Tags & Profiles > Policy > +Add **
+
+![](/images/Policyprofile_add.png)
+
+Give it a name and enable it. 
+
+![](/images/Policyprofile_general.png)
+
+This is how your Policy Profile looks like
+
+![](/images/PolicyProfile.png)
 
 ### Troubleshooting tools
 
