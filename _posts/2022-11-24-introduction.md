@@ -180,7 +180,7 @@ Private key Info : Available
 ### AP join
 
 
-Lately we will see that the Access Points can be mapped to the tags either statically or as part of the rule engine that runs on the controller and comes into effect during the AP join process.
+We will see that the Access Points can be mapped to the tags either statically or as part of the rule engine that runs on the controller and comes into effect during the AP join process.
 
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
@@ -189,6 +189,13 @@ The Catalyst 9800 configuration model was designed to be simple, flexible and re
 ![]({{site.baseurl}}/images/config model.png)
 
 In this section we will go through the creation of the creation of the required Tags and Profiles to configure our Access Points to provide service. 
+
+There are three tags:
+
+- Policy Tag. Link between a WLAN Profile (SSID) and a Policy Profile
+- Site Tag. Defines de AP mode and other AP settings.
+- RF Tag. Sets the RF profiles with the seetings for each band.
+
 
 
 ### Troubleshooting tools
