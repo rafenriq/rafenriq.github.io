@@ -234,23 +234,23 @@ Let's create the Profiles and Tags with basic configurations. Later we will appl
 
 _Procedure:_
 
-1. Access the controller GUI with your credentials
+1. Access the controller GUI with your credentials.
 
-    **GUI:** <https://198.19.10.10/>
+**GUI:** <https://198.19.10.10/>
 
-    **Username:** dcloud
+**Username:** dcloud
 
-    **Password:** dcloud
+**Password:** dcloud
     
-    ![](/images/gui_log_in.png)
+![](/images/gui_log_in.png)
 
-    Note: To configure Tags and Profiles we will use the **Configuration > Tags & Profiles** section 
+Note: To configure Tags and Profiles we will use the **Configuration > Tags & Profiles** section,
 
-    ![](/images/Tags_and_profiles.png)
+![](/images/Tags_and_profiles.png)
 
 2. Create a new SSID. 
 
-Go to **Configuration > Tags & Profiles > WLAN > +Add **
+Go to Configuration > Tags & Profiles > WLAN > +Add
 
 ![](/images/wlanprofile_add.png)
 
@@ -259,17 +259,17 @@ Note: For this excercise we will disable 6GHz band.
 
 ![](/images/wlanprofile_general.png)
 
-Go to the Security tab, follow the image below
+Go to the Security tab, set configurations as in the image below.
 
 ![](/images/wlanprofile_security.png)
 
-This is how your new WLAN looks like
+This is how your new WLAN looks like.
 
 ![](/images/WLAN.png)
 
 3. Create a new Policy Profile. 
 
-Go to **Configuration > Tags & Profiles > Policy > +Add **
+Go to Configuration > Tags & Profiles > Policy > +Add
 
 ![](/images/Policyprofile_add.png)
 
@@ -277,11 +277,41 @@ Give it a name and enable it.
 
 ![](/images/Policyprofile_general.png)
 
-This is how your Policy Profile looks like
+Go to the Access Policies tab. Here you can define the Vlan name or Vlan ID for the SSID, in this case we will use the Vlan name "Clients" that will be later defined in the Flex Profile.
+
+![](/images/Policyprofile_access.png)
+
+This is how your Policy Profile looks like.
 
 ![](/images/PolicyProfile.png)
 
-4. 
+4. Create the Policy tag and map the created WLAN and Policy Profiles.
+
+Go to Configuration > Tags & Profiles > Tags > Policy > +Add 
+
+![](/images/tag_policy_AMS.png)
+
+5. Create an AP join Profile
+
+Go to Configuration > Tags & Profiles > AP join > +Add
+
+![](/images/JoinProfile_add.png)
+
+6. Create a Flex Profile. 
+
+Go to Configuration > Tags & Profiles > Flex > +Add. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30. This is the same value as the native vlan configured in the AP switchport.
+
+![](/images/FlexProfile_add_General.png)
+
+Select the VLAN tab, set configurations as in the image below.
+
+![](/images/FlexProfile_vlan.png) 
+
+7. Create a new Site tag and apply the created AP join and Flex Profiles.
+
+Go to Configuration > Tags & Profiles > Tags > Site > +Add 
+
+![](/images/tag_site_AMS.png)
 
 ### Troubleshooting tools
 
