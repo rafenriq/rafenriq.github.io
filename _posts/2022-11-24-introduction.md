@@ -41,16 +41,6 @@ This lab guide also provides some troubleshooting tools from both worlds.
 
 ![](/images/Picture1.png)
 
-
-
-## Cisco Catalyst 9800 Series Wireless Controller
-
-The Catalyst 9800 is the new generation Wireless Controller by Cisco that you can deploy either On-Prem or Private/Public cloud. With this type of setup you have various features like telemetry, High Availability, programmability and more.
-
-In this section we will cover the basic setup of a Wireless controller and a 916X Access Point when deployed in Private Cloud Controller.
-
-![](/images/9800-networkdiagram.png)
-
 ## Get Started
 
 To access your session
@@ -86,9 +76,18 @@ Select from the table your corresponding credentials:
 
 **Host:** 198.18.133.136
 
-**User:** Administrator 
+**User:** Administrator
 
 **Password:** C1sco12345
+
+
+## Cisco Catalyst 9800 Series Wireless Controller
+
+The Catalyst 9800 is the new generation Wireless Controller by Cisco that you can deploy either On-Prem or Private/Public cloud. With this type of setup you have various features like telemetry, High Availability, programmability and more.
+
+In this section we will cover the basic setup of a Wireless controller and a 916X Access Point when deployed in Private Cloud Controller.
+
+![](/images/9800-networkdiagram.png)
 
 
 ### Day 0 configuration
