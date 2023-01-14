@@ -85,7 +85,9 @@ Select from the table your corresponding credentials:
 ![](/images/rdp.png)
 
 **Host:** 198.18.133.136
+
 **User:** Administrator 
+
 **Password:** C1sco12345
 
 
@@ -177,7 +179,7 @@ C9800(config)# no ap dot11 24ghz shutdown
 C9800(config)# no ap dot11 5ghz shutdown
 ```
 
-10. Specify the interface, in this case Vlan 10, to be the Wireless Management Interface.
+10.Specify the interface, in this case Vlan 10, to be the Wireless Management Interface.
 
 
 ```
@@ -208,11 +210,11 @@ FIPS suitability : Not Applicable
 
 14.Access via GUI using your credentials.
 
-Open a browser and type **<https://100.64.0.7>** or click on the **C9800-CL** bookmark.
+Open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark.
 
-Username: dcloud 
+**Username:** dcloud 
 
-Password: dcloud 
+**Password:** dcloud 
 
 ![](/images/GUI-credentials.png)
 
