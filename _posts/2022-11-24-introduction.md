@@ -154,6 +154,13 @@ C9800(config-if)#shut
 C9800(config-if)#no shut
 ```
 
+Configure the Out Of Band Management port:
+```
+interface GigabitEthernet1
+ no switchport
+ ip address 100.64.0.7 255.255.255.0
+```
+
 8.Configure a default route:
 
 ```
