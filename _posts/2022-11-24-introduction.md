@@ -94,6 +94,82 @@ In this section we will cover the basic setup of a Wireless controller and a 916
 
 Follow the instructions to easily setup the Wireless Controller. Note that the day0 configuration is used only for the first time in brand new installations or when controller configuration is reset to factory defaults. You can choose between GUI or CLI
 
+_Web UI Procedure_
+1.Access the Day 0 Wizard via Out-Of-Band port. 
+
+Open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark. Use following credentials.
+
+**Username:** dcloud 
+
+**Password:** dcloud 
+
+![](/images/GUI-credentials.png)
+
+2. Once you are logged into the controller, fill in the following:
+
+In the General Settings screen, 
+• Deployment mode – Standalone
+• Country Code - US,MX,BE
+• NTP Server - 100.64.0.1
+
+![](/images/Day0_1.png)
+
+• Wireless Management Settings
+  o Port number - GigabitEthernet2
+  o VLAN - 10
+  o IPv4 - Check
+  o Wireless Management IP - 198.19.10.7
+  o Subnet mask - 255.255.255.0
+• Static Route Settings
+  o IPv4 Route - Check
+  o IPv4 Destination Prefix - 0.0.0.0
+  o IPv4 Destination Mask - 0.0.0.0
+  o IPv4 Next Hop IP - 198.19.10.254
+  
+  Click "Next"
+
+![](/images/Day0_2.png)
+
+In the Wireles Network Settings >+Add,
+
+• Add Network
+  o Network Name - CiscoLive
+  o Network Tye - Employee
+  o Security - WPA2 Personal
+  o Pre-Shared Key - Cisco123
+  
+  Click "+Add" and "Next"
+
+![](/images/Day0_3.png)
+
+In the Advanced Settings,
+
+• AP Certificate
+  o Generate Certificate - Yes
+  o RSA Key-Size - 2048
+  o Signature Algorithm - sha256
+  o Password - C1sco12345
+• Create a New AP Management User
+  o New AP Management User - admin
+  o Password - C1sco12345
+  o Secret - C1sco12345
+  
+  Click "Summary"
+
+![](/images/Day0_4.png)
+
+![](/images/Day0_5.png)
+
+If all settings are correct click "Finish" and proceed.
+
+![](/images/Day0_6.png)
+
+![](/images/Day0_6_1.png)
+
+3.After a minute or two refresh the page and add the credentials. 
+Now you will be prompted with the Wireless Controller GUI. 
+
+
 _CLI Procedure_
 
 1. Access to controller via SSH.
