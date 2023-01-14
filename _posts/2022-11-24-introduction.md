@@ -9,6 +9,7 @@ published: true
  - [Introduction](#specification) 
  - [Learning Objectives](#dependencies-title) 
  - [Network Diagram](#specification) 
+ - [Get Started](#get-started)  
  - [Cisco Catalyst 9800 Series Wireless Controller](#cisco-catalyst-9800-series-wireless-controller)
 	-	[Day 0 configuration](#day-0-configuration)
 	-	[AP join](#ap-join)
@@ -41,6 +42,9 @@ This lab guide also provides some troubleshooting tools from both worlds.
 ![](/images/Picture1.png)
 
 
+
+
+
 ## Cisco Catalyst 9800 Series Wireless Controller
 
 The Catalyst 9800 is the new generation Wireless Controller by Cisco that you can deploy either On-Prem or Private/Public cloud. With this type of setup you have various features like telemetry, High Availability, programmability and more.
@@ -48,6 +52,42 @@ The Catalyst 9800 is the new generation Wireless Controller by Cisco that you ca
 In this section we will cover the basic setup of a Wireless controller and a 916X Access Point when deployed in Private Cloud Controller.
 
 ![](/images/9800-networkdiagram.png)
+
+## Get Started
+
+To access your session
+
+* Open Anyconnect add your credentials and click "Connect". 
+
+**Host:** dcloud-rtp-anyconnect.cisco.com
+
+
+| **Pod**         | **User**          | **Password**  |
+| ------------- |:-------------:| ---------:|
+| 1     | v2718user1 | 3b48dc   |
+| 2     |       |    |
+| 3     |       |    |
+| 4     |       |    |
+| 5     |       |    |
+| 6     |       |    |
+| 7     |       |    |
+| 8     |       |    |
+| 9     |       |    |
+| 10     |       |    |
+| 11     |       |    |
+| 12     |       |    |
+| 13     |       |    |
+| 14     |       |    |
+| 15     |       |    |
+
+
+* Once VPN connection is stablished open a Remote Desktop Connection
+
+![](/images/rdp.png)
+
+**Host:** 198.18.133.136
+**User:** Administrator 
+**Password:** C1sco12345
 
 
 ### Day 0 configuration
