@@ -379,7 +379,6 @@ Go to Configuration > Tags & Profiles > Tags > Site > +Add
 
 ![](/images/tag_site_AMS.png)
 
-======
 
 ### Troubleshooting tools
 
