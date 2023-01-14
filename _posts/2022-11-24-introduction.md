@@ -98,7 +98,7 @@ _CLI Procedure_
 
 1. Access to controller via SSH.
 
-In this lab the WLC was preset with configurations for the Out Of Band interface.
+In this lab the WLC was pre-set with Out Of Band interface configurations.
 Access the controller CLI via SSH using mRemoteNG App. Once there go to connections and click on **C9800**. 
 
 Login with the following credentials:
@@ -112,14 +112,14 @@ Enable: dcloud
 ![](/images/mremoteng-ssh.png)
 
 
-2. Set the hostname:
+2.Set the hostname as seen below:
 
 ```
 WLC#conf t
 WLC(config)#hostname C9800
 ```
 
-3.Configure the vlan 10 for wireless management interface.
+3.Configure vlan 10 for the wireless management.
 
 ```
 C9800#conf t
@@ -135,7 +135,7 @@ C9800(config-if)#ip address 198.19.10.7 255.255.255.0
 C9800(config-if)#no shutdown
 ```
 
-5.Configure the GigabitEthernet 2 as trunk and allow WMI Vlan 10:
+5.Configure the GigabitEthernet 2 as trunk and allow Vlan 10:
 
 ```
 C9800(config-if)#interface GigabitEthernet2   
@@ -145,7 +145,7 @@ C9800(config-if)#shut
 C9800(config-if)#no shut
 ```
 
-6.Configure a default route:
+6.Configure the WMI default route:
 
 ```
 C9800(config-if)#ip route 0.0.0.0 0.0.0.0 198.19.10.254
@@ -219,13 +219,7 @@ Open a browser and type **https://100.64.0.7** or click on the **C9800-CL** book
 
 ### AP join
 
-The way Access Points work in the 9800 is by usings tags, these tags are used to control the features that are available for each AP. The tags are assigned to the AP as part of the rule engine that runs on the controller and comes into effect during the AP join process.
-
 For this lab configure the WLC Public IP address so the APs can reach the controller through the internet. 
-
-![](/images/wmi-nat.png)
-
-Public IP addresses are assigned as follows:
 
 | **Pod**         | **Public IP**     |
 | ------------- |:-------------:|
@@ -245,7 +239,13 @@ Public IP addresses are assigned as follows:
 | 14     | `64.100.10.X`       |
 | 15     | `64.100.10.X`       |
 
+Select your corresponding Public IP address then go to **Configuration > Interface > Wireless**, click ont he Management interface and add it to the NAT IPv4 field as in below image.
+
+![](/images/wmi-nat.png)
+
+
 Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 controller. 
+
 
 Verify your AP joined using "**show ap summary**" command
 
@@ -261,7 +261,9 @@ AP Name                          Slots AP Model             Ethernet MAC   Radio
 CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 MX   -A   172.16.26.189                             Registered   default location    
 ```
 
-Verify what tags where applied to the APs. Use "**show ap tag summary**" command. 
+The way Access Points work in the 9800 is by usings tags, they are used to control the features that are available for each AP. The tags are assigned to the access points as part of the rule engine that runs on the controller and comes into effect during the AP join process.
+
+Verify what tags where applied to the access point. Use "**show ap tag summary**" command. 
 
 ```
 C9800#show ap tag summary 
