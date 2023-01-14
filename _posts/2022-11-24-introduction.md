@@ -43,8 +43,6 @@ This lab guide also provides some troubleshooting tools from both worlds.
 
 
 
-
-
 ## Cisco Catalyst 9800 Series Wireless Controller
 
 The Catalyst 9800 is the new generation Wireless Controller by Cisco that you can deploy either On-Prem or Private/Public cloud. With this type of setup you have various features like telemetry, High Availability, programmability and more.
@@ -57,10 +55,11 @@ In this section we will cover the basic setup of a Wireless controller and a 916
 
 To access your session
 
-* Open Anyconnect add your credentials and click "Connect". 
+* Open Anyconnect, add your credentials and click "Connect". 
 
 **Host:** dcloud-rtp-anyconnect.cisco.com
 
+Select from the table your corresponding credentials:
 
 | **Pod**         | **User**          | **Password**  |
 | ------------- |:-------------:| ---------:|
@@ -92,43 +91,34 @@ To access your session
 
 ### Day 0 configuration
 
-Follow the instructions to easily setup the controller from console to operate in a network wireless environment. Note that the day0 configuration is used only for the first time in brand new installations or when controller configuration is reset to factory defaults.
+Follow the instructions to easily setup the Wireless Controller. Note that the day0 configuration is used only for the first time in brand new installations or when controller configuration is reset to factory defaults. You can choose between GUI or CLI
 
-_Procedure_
+_CLI Procedure_
 
-1.Access the CLI via the vga/monitor console of ESXi. 
+1. Access to controller via SSH.
 
-Login the Vsphere Client with following credentials:
+In this lab the WLC was preset with configurations for the Out Of Band interface.
+Access the controller CLI via SSH using mRemoteNG App. Once there go to connections and click on **C9800**. 
 
-**Username:** root
+Login with the following credentials:
 
-**Password:** C1sco12345
+Username: dcloud 
 
-![]({{site.baseurl}}/https://github.com/rafenriq/rafenr/images/vsphereclient9800.jpeg)
+Password: dcloud 
 
-Once there locate the C9800-CL VM and access to console. 
+Enable: dcloud
+
+![](/images/mremoteng-ssh.png)
 
 
-2.Terminate the configuration wizard (this wizard it’s not specific for wireless controller)
-
-```
-Would you like to enter the initial configuration dialog? [yes/no]: no
-Would you like to terminate autoinstall? [yes]:yes
-```
-
-3.Optionally set the hostname:
+2. Set the hostname:
 
 ```
+WLC#conf t
 WLC(config)#hostname C9800
 ```
 
-4.Enter the config mode and add login credentials using the following command:
-
-```
-C9800(config)#username dcloud privilege 15 password dcloud
-```
-
-5.Configure the vlan for wireless management interface.
+3.Configure the vlan 10 for wireless management interface.
 
 ```
 C9800#conf t
@@ -136,15 +126,15 @@ C9800(config)#vlan 10
 C9800(config-vlan)#name wireless_management
 ```
 	
-6.Configure the SVI for wireless management interface, for example:
+4.Configure the SVI for Wireless Management Interface (WMI) as follows:
 
 ```
 C9800(config)#int vlan 10
-C9800(config-if)#ip address 198.19.10.10 255.255.255.0
+C9800(config-if)#ip address 198.19.10.7 255.255.255.0
 C9800(config-if)#no shutdown
 ```
 
-7.Configure the interface gigabit 2 as trunk and allow mgmt vlan:
+5.Configure the GigabitEthernet 2 as trunk and allow WMI Vlan 10:
 
 ```
 C9800(config-if)#interface GigabitEthernet2   
@@ -154,20 +144,13 @@ C9800(config-if)#shut
 C9800(config-if)#no shut
 ```
 
-Configure the Out Of Band Management port:
-```
-interface GigabitEthernet1
- no switchport
- ip address 100.64.0.7 255.255.255.0
-```
-
-8.Configure a default route:
+6.Configure a default route:
 
 ```
 C9800(config-if)#ip route 0.0.0.0 0.0.0.0 198.19.10.254
 ```
 
-9.Disable the wireless network to configure the country code:
+7.Disable the wireless network to configure the country code:
 
 ```
 C9800(config)#ap dot11 5ghz shutdown 
@@ -178,30 +161,71 @@ Disabling the 802.11b network may strand mesh APs.
 Are you sure you want to continue? (y/n)[y]: y
 ```
 
-10.Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
+8.Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
 
 ```
-C9800(config)#ap country US,MX
+C9800(config)#wireless country BE
+C9800(config)#wireless country MX
+C9800(config)#wireless country US
+
 ```
 
-11.Enable the 802.11a and 802.11b/g networks
+9.Enable the 802.11a and 802.11b/g networks
 
 ```
 C9800(config)# no ap dot11 24ghz shutdown
 C9800(config)# no ap dot11 5ghz shutdown
 ```
 
-12.A certificate is needed for the AP to join the virtual C9800. This can be created automatically via the DAY 0 flow or manually using the following commands.
+10. Specify the interface, in this case Vlan 10, to be the Wireless Management Interface.
 
-Specify the interface to be the wireless management interface
 
 ```
-C9800(config)#wireless management interface Vlan10
-C9800(config)#capwap-discovery public
-C9800(config)#public-ip 64.100.10.X
+C9800(config)# wireless management interface Vlan10
 ```
 
-Public ip is assigned as follows:
+11.A certificate is needed for the AP to join the virtual C9800. This can be created automatically using the following commands.
+
+```
+C9800(config)#wireless config vwlc-ssc key-size 2048 signature-algo sha256 password 0 Cisco123
+Configuring vWLC-SSC…
+Script is completed
+```
+
+> This is a script that automates the whole certificate creation.
+
+12.Verify Certificate Installation:
+
+```
+C9800#show wireless management trustpoint
+Trustpoint Name  : C9800_WLC_TP
+Certificate Info : Available
+Certificate Type : SSC
+Certificate Hash : 31ee336150e5e2b2ee1f8e554c20dabac6ecd6af
+Private key Info : Available
+FIPS suitability : Not Applicable
+```
+
+14.Access via GUI using your credentials.
+
+Open a browser and type **<https://100.64.0.7>** or click on the **C9800-CL** bookmark.
+
+Username: dcloud 
+
+Password: dcloud 
+
+![](/images/GUI-credentials.png)
+
+### AP join
+
+The way Access Points work in the 9800 is by usings tags, these tags are used to control the features that are available for each AP. The tags are assigned to the AP as part of the rule engine that runs on the controller and comes into effect during the AP join process.
+
+For this lab configure the WLC Public IP address so the APs can reach the controller through the internet. 
+
+![](/images/wmi-nat.png)
+
+
+Public IP addresses are assigned as follows:
 
 | **Pod**         | **Public IP**     |
 | ------------- |:-------------:|
@@ -221,37 +245,8 @@ Public ip is assigned as follows:
 | 14     | `64.100.10.X`       |
 | 15     | `64.100.10.X`       |
 
-In exec mode, issue the following command:
 
-```
-C9800(config)#wireless config vwlc-ssc key-size 2048 signature-algo sha256 password 0 Cisco123
-Configuring vWLC-SSC…
-Script is completed
-```
-
-> This is a script the automates the whole certificate creation.
-
-13.Verify Certificate Installation:
-
-```
-C9800#show wireless management trustpoint
-Trustpoint Name : ewlc-default-tp
-Certificate Info : Available
-Certificate Type : SSC
-Certificate Hash : XXXXXXXXX
-Private key Info : Available
-```
-
-14.Access via GUI using your credentials, type:
-
-<https://198.19.10.10/>
-
-
-### AP join
-
-The way Access Points work in the 9800 is by usings tags, these tags are used to control the features that are available for each AP. The tags are assigned to the AP as part of the rule engine that runs on the controller and comes into effect during the AP join process.
-
-Once you finished the day0 configuration from previus step you will see your assigned access points joining to your brand new 9800 controller. 
+Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 controller. 
 
 Verify your AP joined using "**show ap summary**" command
 
@@ -286,7 +281,8 @@ To check the current tags click on the AP entry
 
 ![](/images/AP_tags_default.png) 
 
-As you can observe when a brand new access point join to a controller the controller assings the default tags. 
+As you can observe when a brand new Access Point joins, the controller assings the default tags. 
+
 
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
@@ -401,19 +397,26 @@ From CLI:
 C9800#show logging
 ....
 Log Buffer (131072 bytes):
-*Jan 13 03:30:16.635: %CRYPTO-5-SELF_TEST_START: Crypto algorithms release (Rel5a)
-       begin self-test
-*Jan 13 03:30:16.918: %CRYPTO-5-SELF_TEST_END: Crypto algoritms self-test completed successfully
-       All tests passed.Adding registry invocations for the WLC platform
-*Jan 13 03:30:18.515: %SMART_LIC-6-AGENT_ENABLED: Smart Agent for Licensing is enabled 
-*Jan 13 03:30:20.324: %LINK-3-UPDOWN: Interface Lsmpi0, changed state to up
-*Jan 13 03:30:20.418: %LINK-3-UPDOWN: Interface EOBC0, changed state to up
-*Jan 13 03:30:21.324: %LINEPROTO-5-UPDOWN: Line protocol on Interface Lsmpi0, changed state to up
-*Jan 13 03:30:21.418: %LINEPROTO-5-UPDOWN: Line protocol on Interface EOBC0, changed state to up
-*Jan 13 03:30:21.508: WLC-HA-Notice: RF Progression event: RF_PROG_ACTIVE_FAST, Switchover triggered
-*Jan 13 03:30:21.529: %VUDI-6-EVENT: [serial number: 9BTJSI358QS], [vUDI: C9800-CL-K9:9BTJSI358QS], vUDI initialization is now complete
-*Jan 13 03:30:21.537: mcp_pm_subsys_init : Init done sucessfully
-*Jan 13 03:30:21.654: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1, changed state to down
+Jan 14 21:33:50.153: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: C9800_WLC_TP created succesfully
+Jan 14 21:33:52.186: %PKI-6-CERT_ENROLL_MANUAL: Manual enrollment for trustpoint C9800_WLC_TP
+Jan 14 21:33:52.585: %PKI-6-CSR_FINGERPRINT:
+                      CSR Fingerprint MD5 : 027FB457F1BFE59767F87641D310B572
+                      CSR Fingerprint SHA1: ABA9024717A535EA77DE79BC920B37106C259AF6
+                      CSR Fingerprint SHA2: D5621FDD60523F781E604831FFF2126EE4CA094FFCD79060A1F12A2E1353F2A8
+Jan 14 21:33:52.585: %PKI-6-CSR_FINGERPRINT_UNSIGNED:
+                      CSR Fingerprint MD5 (unsigned) : 74E9F6F75BDADE5DB03B1192E2E8AFA3
+Jan 14 21:33:52.585: CRYPTO_PKI:  Certificate Request Fingerprint MD5 :027FB457 F1BFE597 67F87641 D310B572
+Jan 14 21:33:52.586: CRYPTO_PKI:  Certificate Request Fingerprint SHA1 :ABA90247 17A535EA 77DE79BC 920B3710 6C259AF6
+Jan 14 21:33:52.586: CRYPTO_PKI:  Certificate Request Fingerprint SHA2 :D5621FDD 60523F78 1E604831 FFF2126E E4CA094F FCD79060 A1F12A2E 1353F2A8
+Jan 14 21:33:52.586: CRYPTO_PKI:  Certificate Request Fingerprint MD5  (unsigned):74E9F6F7 5BDADE5D B03B1192 E2E8AFA3
+Jan 14 21:33:52.712: %SYS-5-CONFIG_I: Configured from console by  on vty2 (EEM:Mandatory.crypto_pki_vwlc_ssc_config)
+Jan 14 21:33:52.984: %PKI-6-CERT_INSTALL: An ID certificate has been installed under
+                      Trustpoint   : C9800_WLC_TP
+                      Issuer-name  : o=Cisco Virtual Wireless LAN Controller,cn=CA-vWLC_C9800
+                      Subject-name : serialNumber=920XHRC7PLW+hostname=C9800,o=Cisco Virtual Wireless LAN Controller,cn=C9800_WLC_TP
+                      Serial-number: 02
+                      End-date     : 2033-01-13T21:33:47Z
+
 ```
 
 ### RadioActive tracing
