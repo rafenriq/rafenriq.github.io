@@ -189,8 +189,30 @@ C9800(config)# no ap dot11 5ghz shutdown
 Specify the interface to be the wireless management interface
 
 ```
-C9800(config)#wireless management interface vlan 10
+C9800(config)#wireless management interface Vlan10
+C9800(config)#capwap-discovery public
+C9800(config)#public-ip 64.100.10.X
 ```
+
+Public ip is assigned as follows:
+
+| **Pod**         | **Public IP**     |
+| ------------- |:-------------:|
+| 1     | `64.100.10.X`       |
+| 2     | `64.100.10.X`       |
+| 3     | `64.100.10.X`       | 
+| 4     | `64.100.10.X`       |
+| 5     | `64.100.10.X`       |
+| 6     | `64.100.10.X`       | 
+| 7     | `64.100.10.X`       | 
+| 8     | `64.100.10.X`       | 
+| 9     | `64.100.10.X`       | 
+| 10     | `64.100.10.X`       | 
+| 11     | `64.100.10.X`       | 
+| 12     | `64.100.10.X`       | 
+| 13     | `64.100.10.X`       |
+| 14     | `64.100.10.X`       |
+| 15     | `64.100.10.X`       |
 
 In exec mode, issue the following command:
 
