@@ -224,7 +224,6 @@ For this lab configure the WLC Public IP address so the APs can reach the contro
 
 ![](/images/wmi-nat.png)
 
-
 Public IP addresses are assigned as follows:
 
 | **Pod**         | **Public IP**     |
@@ -244,7 +243,6 @@ Public IP addresses are assigned as follows:
 | 13     | `64.100.10.X`       |
 | 14     | `64.100.10.X`       |
 | 15     | `64.100.10.X`       |
-
 
 Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 controller. 
 
@@ -273,7 +271,7 @@ AP Name                           AP Mac           Site Tag Name                
 CW9166I-A-6                       cc9c.3ef7.e440   default-site-tag                  default-policy-tag                default-rf-tag                    No               Default       
 ```
 
-If you prefer GUI, you can verify if AP is joined from **Configuration > Wireless > Access Points > **
+If you prefer GUI, you can verify if AP is joined from "**Configuration > Wireless > Access Points >**"
 
 ![](/images/AP_joined.png)
 
@@ -288,7 +286,7 @@ As you can observe when a brand new Access Point joins, the controller assings t
 
 The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained within tags that are eventually applied to the access points. 
 
-![]({{site.baseurl}}/images/config model.png)
+![](/images/config model.png)
 
 There are three tags:
 
@@ -302,7 +300,7 @@ _Procedure:_
 
 1. Access the controller GUI with your credentials.
 
-**GUI:** <https://198.19.10.10/>
+**GUI:** https://100.64.0.7
 
 **Username:** dcloud
 
