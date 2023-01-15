@@ -569,13 +569,7 @@ To see the list of Meraki Capable APs from GUI go to **Configuration > Wireless 
 
 _Per AP basis_
 
-
-
-**Previosuly Migrated Access Points**
-
-Management Modes migrated in the past can be visualized in the 'Previously migrated APs' tab.
-
-![](/images/migrate-to-meraki-gui-5.png)
+Conversion per AP is only possible via WLC CLI. Use the "ap name _ap-name_ persona meraki" command. 
 
 ```
 C9800#ap name CW9166I-A-6 persona meraki
@@ -613,6 +607,12 @@ C9800#
 
 ![](/images/migrate-to-meraki-gui-4.png)
 
+
+**Previosuly Migrated Access Points**
+
+Management Modes migrated in the past can be visualized in the 'Previously migrated APs' tab.
+
+![](/images/migrate-to-meraki-gui-5.png)
 
 ### Troubleshooting tools
 
