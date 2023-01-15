@@ -483,6 +483,34 @@ Make sure "Enable Local Site" is unchecked.
 
 ![](/images/tag_site_AMS.png)
 
+8.In this lab we will not create the RF tag and their corresponding RF profiles. You can use the default-rf-tag.
+
+9. AP tag assignation can be done in multiple ways. We will see a couple of them
+
+-Assigning tags to a specific AP. 
+
+Navigate to **Configuration > Wireless > Access Points** and select the AP and the "Edit AP" window will appear. In the "Tags" section of the "General" tab you can select the tags to be asigned to the Access Point.
+
+![](/images/APtagging_1.png)
+
+![](/images/APtagging_2.png)
+
+-Assigning tags to multiple APs:
+
+Navigate to **Configuration > Wireless Setup > Advanced > Start Now** then click on the List icon as shown below. 
+
+![](/images/APtagging_3.png)
+![](/images/APtagging_4.png)
+
+Check the Access Points to be tagged, then select **+Tag APs** and a small window will pop up, select the tags that you want to assign to the APs and click **Apply to Device**.
+
+![](/images/APtagging_4.png)
+
+In this case it will be just one, but consider if you have many you can select them and apply the tags at once.
+
+Note: Changing AP Tag(s) will cause associated AP(s) to rejoin and disrupt connected client(s).
+
+
 
 ### Troubleshooting tools
 
