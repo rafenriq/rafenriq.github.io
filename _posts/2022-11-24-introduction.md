@@ -344,7 +344,7 @@ Select your corresponding Public IP address then go to **Configuration > Interfa
 ![](/images/wmi-nat.png)
 
 
-Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 controller. 
+Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 controller. This can take a couple of minutes. 
 
 
 Verify your AP joined using "**show ap summary**" command
