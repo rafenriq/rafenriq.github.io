@@ -428,7 +428,7 @@ Note: For this excercise we will disable 6GHz band.
 
 ![](/images/wlanprofile_general.png)
 
-Go to the Security tab, set configurations as in the image below.
+Go to the **Security tab**, set configurations as in the image below.
 
 ![](/images/wlanprofile_security.png)
 
@@ -446,7 +446,7 @@ Give it a name and enable it.
 
 ![](/images/Policyprofile_general.png)
 
-Go to the Access Policies tab. Here you can define the Vlan name or Vlan ID for the SSID, in this case we will use the Vlan name "Clients" that will be later defined in the Flex Profile.
+Go to the **Access Policies** tab. Here you can define the Vlan name or Vlan ID for the SSID, in this case we will use the Vlan name "Clients" that will be later defined in the Flex Profile.
 
 ![](/images/Policyprofile_access.png)
 
