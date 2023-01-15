@@ -442,7 +442,7 @@ Go to **Configuration > Tags & Profiles > Policy > +Add**
 
 ![](/images/Policyprofile_add.png)
 
-Give it a name and enable it. 
+Give it a name and enable it, then hit **Apply to Device**
 
 ![](/images/Policyprofile_general.png)
 
@@ -479,6 +479,7 @@ Select the VLAN tab, set configurations as in the image below.
 7.Create a new Site tag and apply the created AP join and Flex Profiles.
 
 Go to **Configuration > Tags & Profiles > Tags > Site > +Add**
+Make sure "Enable Local Site" is unchecked.
 
 ![](/images/tag_site_AMS.png)
 
