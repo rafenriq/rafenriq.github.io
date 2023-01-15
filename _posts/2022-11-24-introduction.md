@@ -543,12 +543,12 @@ Configured Country Codes
 
 To validate a Product ID for a country refer [Wireless LAN Compliance Lookup](https://www.cisco.com/c/dam/assets/prod/wireless/wireless-compliance-tool/index.html).
 
-add image country
+![](/images/country-code.png)
 
 
 **Verify Meraki Capable Access Points**
 
-Not all AP models are Meraki Capable. To verify this capability issue the "_show ap management-mode meraki capability summary_" command.
+Not all AP models are Meraki Capable. To verify this capability issue the "**show ap management-mode meraki capability summary**" command.
 
 ```      
 C9800#show ap persona meraki capability summary
@@ -563,7 +563,7 @@ CW9166I-A-6                      CW9166I-A            6c8d.772e.63a0   cc9c.3ef7
 ```
 To see the list of Meraki Capable APs from GUI go to **Configuration > Wireless > Migrate to Meraki Mode** 
 
-add image 0
+![](/images/migrate-to-meraki-gui-0.png)
 
 **Change AP management-mode to Meraki
 
@@ -571,12 +571,20 @@ _Per AP basis_
 
 Convertion per AP is only possible via WLC CLI. Use the "ap name <ap-name> persona meraki" command.
   
-```
+  
+```     
  C9800#ap name CW9166I-A-6 persona meraki
   Executing this command will cause AP to reboot and it will no longer be manageable from this Wireless LAN Controller. Are you sure you want to continue?(y/n)[y][confirm]y
-
-```
-
+```      
+  
+  
+  
+![](/images/migrate-to-meraki-gui-1.png)
+  
+![](/images/migrate-to-meraki-gui-2.png)
+  
+![](/images/migrate-to-meraki-gui-3.png)
+  
   
   
  ``` 
@@ -603,7 +611,7 @@ C9800#
   
 ```
   
-  add image 4
+![](/images/migrate-to-meraki-gui-4.png)
   
   
 
@@ -611,7 +619,7 @@ C9800#
 
 Management Modes migrated in the past can be visualized in the 'Previously migrated APs' tab.
 
-add image 5
+![](/images/migrate-to-meraki-gui-5.png)
   
   
 ### Troubleshooting tools
