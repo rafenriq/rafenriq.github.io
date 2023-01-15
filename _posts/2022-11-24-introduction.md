@@ -282,13 +282,13 @@ C9800(config)# no ap dot11 5ghz shutdown
 
 ```
 C9800(config)# wireless management interface Vlan10
-C9800(config-mgmt-interface)#exit
+C9800(config-mgmt-interface)#end
 ```
 
 11.A certificate is needed for the AP to join the virtual C9800. This can be created automatically using the following commands.
 
 ```
-C9800(config)#wireless config vwlc-ssc key-size 2048 signature-algo sha256 password 0 Cisco123
+C9800#wireless config vwlc-ssc key-size 2048 signature-algo sha256 password 0 Cisco123
 Configuring vWLC-SSC…
 Script is completed
 ```
