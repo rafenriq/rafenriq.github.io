@@ -14,7 +14,7 @@ published: true
 	-	[Day 0 configuration](#day-0-configuration)
 	-	[AP join](#ap-join)
 	-	[Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-lan-controller-configuration-model)
-    -   [Access Point Conversion from Enterprise to Meraki](#access-point-conversion-from-enterprise-to-meraki)
+    -   [Migrate to Meraki Management](#migrate-to-meraki-management)
 	-	[Troubleshooting tools](#troubleshooting-tools)
  - [Meraki Dashboard](#dependencies-title) 
  	- [Mofify your network information](#specification) 
