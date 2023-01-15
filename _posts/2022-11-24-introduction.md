@@ -524,7 +524,7 @@ The change of Enterprise Access Points to Meraki Persona can be triggered from t
 
 - Correct Country Code must be configured according to physical location.
 
-- Access Points management vlan must have DHCP server, DNS resolution and have reachability to Meraki Cloud. Allow common protocols (HTTP, HTTPS, DNS and ICMP) to "any" internet address to allow the connectivity tests to function correctly. Refer [Upstream Firewall Rules for Cloud Connectivity](https://documentation.meraki.com/General_Administration/Other_Topics/Upstream_Firewall_Rules_for_Cloud_Connectivity#Addresses_and_Ports_to_Allow)
+- Access Points management vlan must have DHCP server, DNS resolution and have reachability to Meraki Cloud. Permit common protocols (HTTP, HTTPS, DNS and ICMP) to "any" internet address to allow the connectivity tests to function correctly. Refer [Upstream Firewall Rules for Cloud Connectivity](https://documentation.meraki.com/General_Administration/Other_Topics/Upstream_Firewall_Rules_for_Cloud_Connectivity#Addresses_and_Ports_to_Allow)
 
 **Verify configured country codes
 
