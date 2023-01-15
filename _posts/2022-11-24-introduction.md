@@ -339,7 +339,7 @@ For this lab configure the WLC Public IP address so the APs can reach the contro
 | 14     | `64.100.10.X`       |
 | 15     | `64.100.10.X`       |
 
-Select your corresponding Public IP address then go to **Configuration > Interface > Wireless**, click on the Management interface and add it to the NAT IPv4 field as in below image.
+Select your corresponding Public IP address then go to **Configuration > Interface > Wireless**, click on the Management interface and add it to the NAT IPv4 field as in below image, then hit "**Update & Apply to Device**".
 
 ![](/images/wmi-nat.png)
 
