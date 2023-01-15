@@ -505,7 +505,7 @@ Navigate to **Configuration > Wireless Setup > Advanced > Start Now** then click
 
 Check the Access Points to be tagged, then select **+Tag APs** and a small window will pop up, select the tags that you want to assign to the APs and click **Apply to Device**.
 
-![](/images/APtagging_4.png)
+![](/images/APtagging_5.png)
 
 In this case it will be just one, but consider if you have many you can select them and apply the tags at once.
 
