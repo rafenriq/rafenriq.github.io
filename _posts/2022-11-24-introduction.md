@@ -514,13 +514,13 @@ Note: Changing AP Tag(s) will cause associated AP(s) to rejoin and disrupt conne
 
 ### Migrate to Meraki Management
 
-The change of Enterprise Access Points to Meraki Persona can be triggered from the Wireles LAN Controller only after the AP has successfully joined to the WLC. The conversion can be triggered per AP or to multiple APs. 
+The change of Enterprise Access Points to Meraki Persona can be triggered from the Wireles LAN Controller only after the AP has successfully joined to the WLC. The conversion can be triggered per AP or to multiple APs at once. 
 
 **Requirements for the conversion:**
 
 - C9800 WLC running 17.9 or higher
 
-- Have the Access Points joined to the C9800 WLC
+- Access Points joined to the C9800 WLC
 
 - Correct Country Code must be configured according to physical location.
 
