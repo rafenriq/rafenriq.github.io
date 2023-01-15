@@ -391,9 +391,9 @@ Note: To configure Tags and Profiles we will use the **Configuration > Tags & Pr
 
 ![](/images/Tags_and_profiles.png)
 
-2. Create a new SSID. 
+2.Create a new SSID. 
 
-Go to Configuration > Tags & Profiles > WLAN > +Add
+Go to **Configuration > Tags & Profiles > WLAN > +Add**
 
 ![](/images/wlanprofile_add.png)
 
@@ -412,7 +412,7 @@ This is how your new WLAN looks like.
 
 3.Create a new Policy Profile. 
 
-Go to Configuration > Tags & Profiles > Policy > +Add
+Go to **Configuration > Tags & Profiles > Policy > +Add**
 
 ![](/images/Policyprofile_add.png)
 
@@ -430,19 +430,19 @@ This is how your Policy Profile looks like.
 
 4.Create the Policy tag and map the created WLAN and Policy Profiles.
 
-Go to Configuration > Tags & Profiles > Tags > Policy > +Add 
+Go to **Configuration > Tags & Profiles > Tags > Policy > +Add**
 
 ![](/images/tag_policy_AMS.png)
 
 5.Create an AP join Profile
 
-Go to Configuration > Tags & Profiles > AP join > +Add
+Go to **Configuration > Tags & Profiles > AP join > +Add**
 
 ![](/images/JoinProfile_add.png)
 
 6.Create a Flex Profile. 
 
-Go to Configuration > Tags & Profiles > Flex > +Add. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30. This is the same value as the native vlan configured in the AP switchport.
+Go to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30. This is the same value as the native vlan configured in the AP switchport.
 
 ![](/images/FlexProfile_add_General.png)
 
@@ -452,7 +452,7 @@ Select the VLAN tab, set configurations as in the image below.
 
 7.Create a new Site tag and apply the created AP join and Flex Profiles.
 
-Go to Configuration > Tags & Profiles > Tags > Site > +Add 
+Go to **Configuration > Tags & Profiles > Tags > Site > +Add**
 
 ![](/images/tag_site_AMS.png)
 
@@ -497,7 +497,7 @@ Jan 14 21:33:52.984: %PKI-6-CERT_INSTALL: An ID certificate has been installed u
 
 ### RadioActive tracing
 
-RadioActive give the ability to conditionally print debug information across processes, threads for the condition of interest. The most used case is when torubleshooting client connectivity,here the conditional debug runs for client mac or ip address to get end to end view at control plane.
+RadioActive traces give the ability to conditionally print debug information across processes, threads for the condition of interest. The most used case is when torubleshooting client connectivity,here the conditional debug runs for client mac or ip address to get end to end view at control plane.
 
 add images
 
