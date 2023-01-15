@@ -198,7 +198,6 @@ Now you will be prompted with the Wireless Controller GUI.
 
 1. Access to controller via SSH.
 
-In this lab the WLC was pre-set with Out Of Band interface configurations.
 Access the controller CLI via SSH using mRemoteNG App. Once there go to connections and click on **C9800**. 
 
 Login with the following credentials:
@@ -283,6 +282,7 @@ C9800(config)# no ap dot11 5ghz shutdown
 
 ```
 C9800(config)# wireless management interface Vlan10
+C9800(config-mgmt-interface)#exit
 ```
 
 11.A certificate is needed for the AP to join the virtual C9800. This can be created automatically using the following commands.
