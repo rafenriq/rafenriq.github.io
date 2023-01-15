@@ -565,31 +565,32 @@ To see the list of Meraki Capable APs from GUI go to **Configuration > Wireless 
 
 ![](/images/migrate-to-meraki-gui-0.png)
 
-**Change AP management-mode to Meraki
+**Change AP management-mode to Meraki**
 
 _Per AP basis_
 
-Convertion per AP is only possible via WLC CLI. Use the "ap name <ap-name> persona meraki" command.
-  
-  
-```     
- C9800#ap name CW9166I-A-6 persona meraki
-  Executing this command will cause AP to reboot and it will no longer be manageable from this Wireless LAN Controller. Are you sure you want to continue?(y/n)[y][confirm]y
-```      
-  
-  
-  
+
+
+**Previosuly Migrated Access Points**
+
+Management Modes migrated in the past can be visualized in the 'Previously migrated APs' tab.
+
+![](/images/migrate-to-meraki-gui-5.png)
+
+```
+C9800#ap name CW9166I-A-6 persona meraki
+Executing this command will cause AP to reboot and it will no longer be manageable from this Wireless LAN Controller. Are you sure you want to continue?(y/n)[y][confirm]y
+ ```
+
 ![](/images/migrate-to-meraki-gui-1.png)
   
 ![](/images/migrate-to-meraki-gui-2.png)
   
 ![](/images/migrate-to-meraki-gui-3.png)
-  
-  
-  
- ``` 
-  C9800#show logging  last 5
-...
+
+```
+C9800#show logging  last 5
+ . . .
 Showing last 5 lines
 Log Buffer (131072 bytes):
 Jan 15 04:39:20.232: %IOSXE_RP_CFG_NOT-6-IOX_SERVICE_NOTSUPPORTED: IOx service not supported.
@@ -608,20 +609,11 @@ CW9166I-A-6                         CW9166I-A             6c8d.772e.63a0   cc9c.
 
 C9800#show ap management-mode meraki failure summary
 C9800#
-  
 ```
-  
+
 ![](/images/migrate-to-meraki-gui-4.png)
-  
-  
 
-**Previosuly Migrated Access Points**
 
-Management Modes migrated in the past can be visualized in the 'Previously migrated APs' tab.
-
-![](/images/migrate-to-meraki-gui-5.png)
-  
-  
 ### Troubleshooting tools
 
 To troubleshoot in the 9800 we have some avaialble tools.
