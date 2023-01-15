@@ -14,6 +14,7 @@ published: true
 	-	[Day 0 configuration](#day-0-configuration)
 	-	[AP join](#ap-join)
 	-	[Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-lan-controller-configuration-model)
+    -   [Access Point Conversion from Enterprise to Meraki](#access-point-conversion-from-enterprise-to-meraki)
 	-	[Troubleshooting tools](#troubleshooting-tools)
  - [Meraki Dashboard](#dependencies-title) 
  	- [Mofify your network information](#specification) 
@@ -511,7 +512,108 @@ In this case it will be just one, but consider if you have many you can select t
 Note: Changing AP Tag(s) will cause associated AP(s) to rejoin and disrupt connected client(s).
 
 
+### Migrate to Meraki Management
 
+The change of Enterprise Access Points to Meraki Persona can be triggered from the Wireles LAN Controller only after the AP has successfully joined to the WLC. The conversion can be triggered per AP or to multiple APs. 
+
+**Requirements for the conversion:**
+
+- C9800 WLC running 17.9 or higher
+
+- Have the Access Points joined to the C9800 WLC
+
+- Correct Country Code must be configured according to physical location.
+
+- Access Points management vlan must have DHCP server, DNS resolution and have reachability to Meraki Cloud. Allow common protocols (HTTP, HTTPS, DNS and ICMP) to "any" internet address to allow the connectivity tests to function correctly. Refer [Upstream Firewall Rules for Cloud Connectivity](https://documentation.meraki.com/General_Administration/Other_Topics/Upstream_Firewall_Rules_for_Cloud_Connectivity#Addresses_and_Ports_to_Allow)
+
+**Verify configured country codes
+
+Revise the list of available country codes configured on your device.
+
+```
+C9800#show wireless country configured
+
+Configured Country................ Multiple Countries : BE,MX,US
+Configured Country Codes
+        BE  - Belgium                   802.11a Indoor,Outdoor/ 802.11b Indoor,Outdoor/ 802.11g Indoor,Outdoor/ 802.11 6GHz Indoor
+        MX  - Mexico                    802.11a Indoor,Outdoor/ 802.11b Indoor,Outdoor/ 802.11g Indoor,Outdoor/
+        US  - United States             802.11a Indoor,Outdoor/ 802.11b Indoor,Outdoor/ 802.11g Indoor,Outdoor/ 802.11 6GHz Indoor
+
+```
+
+To validate a Product ID for a country refer [Wireless LAN Compliance Lookup](https://www.cisco.com/c/dam/assets/prod/wireless/wireless-compliance-tool/index.html).
+
+add image country
+
+
+**Verify Meraki Capable Access Points**
+
+Not all AP models are Meraki Capable. To verify this capability issue the "_show ap management-mode meraki capability summary_" command.
+
+```      
+C9800#show ap persona meraki capability summary
+This command is deprecated and replaced with "show ap management-mode meraki capability summary"
+
+
+C9800#show ap management-mode meraki capability summary
+AP Name                          AP Model             Radio MAC        MAC Address      AP Serial Number       Meraki Serial Number
+-----------------------------------------------------------------------------------------------------------------------------------
+CW9166I-A-6                      CW9166I-A            6c8d.772e.63a0   cc9c.3ef7.e440   KWC26330BTF            Q5AF-9VQV-3Q2B
+
+```
+To see the list of Meraki Capable APs from GUI go to **Configuration > Wireless > Migrate to Meraki Mode** 
+
+add image 0
+
+**Change AP management-mode to Meraki
+
+_Per AP basis_
+
+Convertion per AP is only possible via WLC CLI. Use the "ap name <ap-name> persona meraki" command.
+  
+```
+ C9800#ap name CW9166I-A-6 persona meraki
+  Executing this command will cause AP to reboot and it will no longer be manageable from this Wireless LAN Controller. Are you sure you want to continue?(y/n)[y][confirm]y
+
+```
+
+  
+  
+ ``` 
+  C9800#show logging  last 5
+...
+Showing last 5 lines
+Log Buffer (131072 bytes):
+Jan 15 04:39:20.232: %IOSXE_RP_CFG_NOT-6-IOX_SERVICE_NOTSUPPORTED: IOx service not supported.
+Jan 15 04:39:20.857: %SYS-5-CONFIG_P: Configured programmatically by process SEP_webui_wsma_http from console as dcloud on vty1
+Jan 15 04:45:03.993: %APMGR_TRACE_MESSAGE-3-WLC_GEN_ERR: Chassis 1 R0/0: wncd: Error in AP: 6c8d.772e.63a0: country code (US ) and regulatory domain (-A) mismatch for slot 2
+Jan 15 04:45:05.217: %APMGR_TRACE_MESSAGE-6-AP_MERAKI_CONVERSION_SUCCESS: Chassis 1 R0/0: wncd: AP CW9166I-A-6, MAC 6c8d.772e.63a0, Meraki serial number: Q5AF-9VQV-3Q2B, Meraki persona change result: Success.Terminating the CAPWAP session.
+Jan 15 04:45:31.086: %CAPWAPAC_SMGR_TRACE_MESSAGE-5-AP_JOIN_DISJOIN: Chassis 1 R0/0: wncd: AP Event: AP Name: CW9166I-A-6 Mac: 6c8d.772e.63a0 Session-IP: 64.100.12.17[5272] 198.19.10.7[5246] Disjoined AP persona
+
+C9800#show ap management-mode meraki change summary
+Note: This CLI prints successful Meraki management-mode change attempts of all APs
+
+
+AP Name                             AP Model              Radio MAC        MAC Address      Conversion Timestamp       AP Serial Number        Meraki Serial Number
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CW9166I-A-6                         CW9166I-A             6c8d.772e.63a0   cc9c.3ef7.e440   01/15/2023 04:45:05 UTC    KWC26330BTF             Q5AF-9VQV-3Q2B
+
+C9800#show ap management-mode meraki failure summary
+C9800#
+  
+```
+  
+  add image 4
+  
+  
+
+**Previosuly Migrated Access Points**
+
+Management Modes migrated in the past can be visualized in the 'Previously migrated APs' tab.
+
+add image 5
+  
+  
 ### Troubleshooting tools
 
 To troubleshoot in the 9800 we have some avaialble tools.
@@ -557,6 +659,11 @@ RadioActive traces give the ability to conditionally print debug information acr
 add images
 
 Later you can upload the RadioActive traces into the [Wireless Debug Analyzer]https://cway.cisco.com/wireless-debug-analyzer/), this tool parsed debug files to make easier to troubleshoot wireless issues such as client association, authentication, roaming, and connectivity issues. 
+
+
+### Show commands
+C9800#show ap management-mode meraki change summary
+C9800#show ap management-mode meraki failure summary
 
 
 
