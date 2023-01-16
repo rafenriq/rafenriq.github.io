@@ -430,13 +430,13 @@ Navigate to **Configuration > Tags & Profiles > WLAN > +Add**
 
 ![](/images/wlanprofile_add.png)
 
-WLAN creation window will pop up, give it a name and enable it. 
+WLAN creation window will pop up, give it a name and enable it.
 
 _Note:_ For this excercise we will disable 6GHz band. 
 
 ![](/images/wlanprofile_general.png)
 
-Navigate to the **Security tab**, set configurations as in the image below.
+Navigate to the **Security tab**, we are going to create an Open SSID, set configurations as in the image below, then hit **Apply to Device**.
 
 ![](/images/wlanprofile_security.png)
 
@@ -450,7 +450,7 @@ Navigate to **Configuration > Tags & Profiles > Policy > +Add**
 
 ![](/images/Policyprofile_add.png)
 
-Give it a name and enable it, then hit **Apply to Device**
+Give it a name and enable it, then hit **Apply to Device**.
 
 ![](/images/Policyprofile_general.png)
 
@@ -480,44 +480,53 @@ Navigate to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name an
 
 ![](/images/FlexProfile_add_General.png)
 
-Select the VLAN tab, set configurations as in the image below.
+Select the VLAN tab, click **+Add** and set configurations as in the image below.
 
 ![](/images/FlexProfile_vlan.png) 
 
 7.Create a new Site tag and apply the created AP join and Flex Profiles.
 
 Navigate to **Configuration > Tags & Profiles > Tags > Site > +Add**
-Make sure "Enable Local Site" is unchecked.
+
+Uncheck "Enable Local Site" and set configurations as in the image below.
 
 ![](/images/tag_site_AMS.png)
 
+
 8.In this lab we will not create the RF tag and their corresponding RF profiles. You can use the default-rf-tag.
 
-9. AP tag assignation can be done in multiple ways. We will see a couple of them
 
--Assigning tags to a specific AP. 
+9.AP tag assignation can be done in multiple ways. We will see a couple of them, per AP and to multiple APs at once.
 
-Navigate to **Configuration > Wireless > Access Points** and select the AP and the "Edit AP" window will appear. In the "Tags" section of the "General" tab you can select the tags to be asigned to the Access Point.
+_Assigning tags to a specific AP._ 
+
+Navigate to **Configuration > Wireless > Access Points** and select the Access Point then the "Edit AP" window will appear. In the "Tags" section of the "General" tab select from the drop-down list the tags you created in previous step.
 
 ![](/images/APtagging_1.png)
 
 ![](/images/APtagging_2.png)
 
--Assigning tags to multiple APs:
+Note: Changing AP Tag(s) will cause associated AP(s) to rejoin and disrupt connected client(s).
+It can take a couple of minutes for the AP to rejoin.
+
+
+_Assigning tags to multiple APs._
 
 Navigate to **Configuration > Wireless Setup > Advanced > Start Now** then click on the List icon as shown below. 
 
 ![](/images/APtagging_3.png)
 ![](/images/APtagging_4.png)
 
-Check the Access Points to be tagged, then select **+Tag APs** and a small window will pop up, select the tags that you want to assign to the APs and click **Apply to Device**.
+Check the Access Points to be tagged, then select **+Tag APs** and a small window will pop up, there select the tags that you want to assign to the APs and click **Apply to Device**.
 
 ![](/images/APtagging_5.png)
 
-In this case it will be just one, but consider if you have many you can select them and apply the tags at once.
+For this lab you have one assigned Access Point, yet consider in production environments you can select them and apply the tags at once.
 
 Note: Changing AP Tag(s) will cause associated AP(s) to rejoin and disrupt connected client(s).
+It can take a couple of minutes for the AP to rejoin.
 
+____________________________________________________________________________________
 
 ### Migrate to Meraki Management
 
