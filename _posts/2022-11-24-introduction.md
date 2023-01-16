@@ -691,7 +691,7 @@ Take the AP RadioActive trace filtering by Radio MAC
 
 These are the Notice logging level traces on the C9800. This tool allows to get contextual data on a failure that has occurred without mandating the failure condition be reproduced. To troubleshoot Access Point issues its recommended to filter by AP radio MAC address. Grab the AP MAC address from "show ap summary" command, then collect the Aways On Traces.
 
-*One day Always on traces filtered by MAC
+-One day Always on traces filtered by MAC
     
 ```
 C9800#show ap summary
