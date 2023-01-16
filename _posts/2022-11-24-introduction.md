@@ -689,11 +689,14 @@ Take the AP RadioActive trace filtering by Radio MAC
 
 **Always-On-Tracing**
 
-Every control plane process on the WLC9800 is constantly logging at logging level of Notice to its own dedicated buffer. This is termed as always-on tracing. This is a unique capability that allows you to get contextual data on a failure that has occurred without mandating the failure condition be reproduced.
+These are the Notice logging level traces on the C9800. This tool allows to get contextual data on a failure that has occurred without mandating the failure condition be reproduced.
 
-	• One day Always on traces filteres by MAC
+*One day Always on traces filteres by MAC
     
-C9800#show logging profile wireless start last 1 days filter mac \<radio-mac-address\> to-file bootflash:
+```
+C9800#show logging profile wireless start last 1 days filter mac \<radio-mac-address\> to-file bootflash:<FILENAME.log>
+C9800# more bootflash:<FILENAME.log>
+```
 
 
 **Useful show commands**
