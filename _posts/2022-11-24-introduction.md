@@ -530,7 +530,7 @@ ________________________________________________________________________________
 
 ### Migrate to Meraki Management
 
-The change of Enterprise Access Points to Meraki Persona can be triggered from the Wireles LAN Controller only after the AP has successfully joined to the WLC. The conversion can be triggered per AP or to multiple APs at once. 
+The change of Enterprise Access Points to Meraki Persona can be triggered from the Wireles LAN Controller only after the AP has successfully joined to the WLC. 
 
 **Requirements for the conversion:**
 
@@ -577,26 +577,64 @@ AP Name                          AP Model             Radio MAC        MAC Addre
 CW9166I-A-6                      CW9166I-A            6c8d.772e.63a0   cc9c.3ef7.e440   KWC26330BTF            Q5AF-9VQV-3Q2B
 
 ```
-To see the list of Meraki Capable APs from GUI navigate to **Configuration > Wireless > Migrate to Meraki Mode** 
+To see the list of Meraki Capable APs from GUI navigate to **Configuration > Wireless > Migrate to Meraki Management Mode** 
 
 ![](/images/migrate-to-meraki-gui-0.png)
 
 **Change AP management-mode to Meraki**
 
+The conversion can be triggered per AP or to multiple APs at once. 
+
 _Per AP basis_
 
-Conversion per AP is only possible via WLC CLI. Use the "ap name _ap-name_ persona meraki" command. 
+Conversion per AP is only possible via WLC CLI. Use the "**ap name _ap-name_ persona meraki**" command. 
 
 ```
 C9800#ap name CW9166I-A-6 persona meraki
 Executing this command will cause AP to reboot and it will no longer be manageable from this Wireless LAN Controller. Are you sure you want to continue?(y/n)[y][confirm]y
  ```
 
+_To multiple APs_
+
+Batch conversion can be triggered from WLC GUI.
+
+1.Navigate to **Configuration > Wireless > Migrate to Meraki Management Mode** and select the APs to migrate, then click on **Migrate to Meraki Management Mode**
+
 ![](/images/migrate-to-meraki-gui-1.png)
+
+2.Validate the country code check is green, and regulatory domains for Slot 0 and Slot 1 are green too. It is possible that Slot 2 correspondig to 6GHz is red due to country configured is not currently supported, however the conversion can be triggered. Click **Next**
   
 ![](/images/migrate-to-meraki-gui-2.png)
+
+3.Confirm Management Mode Migration. Select **Agree and continue** followed by **Yes**.
   
 ![](/images/migrate-to-meraki-gui-3.png)
+
+This will cause the selected APs to reboot and they will no longer be manageable from this Wireless LAN Controller.
+
+4.Once conversion took place you will see the Access Points int the "**Management Mode Migration Successful**" list
+
+![](/images/migrate-to-meraki-gui-4.png)
+
+**Verify migrated Access Point**
+
+Management Modes migrated in the past can be visualized in the **Configuration > Wireless > Migrate to Meraki Management Mode > Previously migrated APs'** tab.
+
+![](/images/migrate-to-meraki-gui-5.png)
+
+The equivalent output on CLI is the "**show ap management-mode meraki change summary**" command.
+
+```
+C9800#show ap management-mode meraki change summary
+Note: This CLI prints successful Meraki management-mode change attempts of all APs
+
+
+AP Name                             AP Model              Radio MAC        MAC Address      Conversion Timestamp       AP Serial Number        Meraki Serial Number
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CW9166I-A-6                         CW9166I-A             6c8d.772e.63a0   cc9c.3ef7.e440   01/15/2023 04:45:05 UTC    KWC26330BTF             Q5AF-9VQV-3Q2B
+```
+
+You can also see that AP was succesfully converted from controller syslog. See the log "**Meraki persona change result: Success.Terminating the CAPWAP session.**" followed by the AP disjoin log.
 
 ```
 C9800#show logging  last 5
@@ -605,37 +643,22 @@ Showing last 5 lines
 Log Buffer (131072 bytes):
 Jan 15 04:39:20.232: %IOSXE_RP_CFG_NOT-6-IOX_SERVICE_NOTSUPPORTED: IOx service not supported.
 Jan 15 04:39:20.857: %SYS-5-CONFIG_P: Configured programmatically by process SEP_webui_wsma_http from console as dcloud on vty1
-Jan 15 04:45:03.993: %APMGR_TRACE_MESSAGE-3-WLC_GEN_ERR: Chassis 1 R0/0: wncd: Error in AP: 6c8d.772e.63a0: country code (US ) and regulatory domain (-A) mismatch for slot 2
 Jan 15 04:45:05.217: %APMGR_TRACE_MESSAGE-6-AP_MERAKI_CONVERSION_SUCCESS: Chassis 1 R0/0: wncd: AP CW9166I-A-6, MAC 6c8d.772e.63a0, Meraki serial number: Q5AF-9VQV-3Q2B, Meraki persona change result: Success.Terminating the CAPWAP session.
 Jan 15 04:45:31.086: %CAPWAPAC_SMGR_TRACE_MESSAGE-5-AP_JOIN_DISJOIN: Chassis 1 R0/0: wncd: AP Event: AP Name: CW9166I-A-6 Mac: 6c8d.772e.63a0 Session-IP: 64.100.12.17[5272] 198.19.10.7[5246] Disjoined AP persona
-
-C9800#show ap management-mode meraki change summary
-Note: This CLI prints successful Meraki management-mode change attempts of all APs
-
-
-AP Name                             AP Model              Radio MAC        MAC Address      Conversion Timestamp       AP Serial Number        Meraki Serial Number
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-CW9166I-A-6                         CW9166I-A             6c8d.772e.63a0   cc9c.3ef7.e440   01/15/2023 04:45:05 UTC    KWC26330BTF             Q5AF-9VQV-3Q2B
-
-C9800#show ap management-mode meraki failure summary
-C9800#
 ```
 
-![](/images/migrate-to-meraki-gui-4.png)
+To check if there are failed convertions use the "**show ap management-mode meraki failure summary**" command from CLI.
 
-
-**Previosuly Migrated Access Points**
-
-Management Modes migrated in the past can be visualized in the 'Previously migrated APs' tab.
-
-![](/images/migrate-to-meraki-gui-5.png)
+```
+C9800#show ap management-mode meraki failure summary
+```
 
 ### Troubleshooting tools
 
 To troubleshoot in the 9800 we have some avaialble tools.
 
 ### Syslog
-Show the logs generated by the 9800 WLC, this output shows general logs as well as some wireless-specifics logs. 
+As shown in previuous step, this tool presents the logs generated by the 9800 WLC, this output shows general logs as well as some wireless-specifics logs. 
 
 You can find them at **Troubleshooting > Syslog**
  add image
