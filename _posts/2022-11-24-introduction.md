@@ -32,10 +32,9 @@ They provide the best of both worlds while delivering flexibility and investment
 
 Cisco understands that selecting your next platform is not an easy choice. With the Cisco Catalyst Wi-Fi 6E access points, you don’t need to make the decision now. Keep the operational mode you use today, whether on premises or cloud management. If your needs change-either way-it’s an easy switch. No new hardware required.
 
-## Lerning Objectives
+## Learning Objectives
 
 With this LAB wil walk you through the steps to migrate an AP Wi-Fi 6E from management with 9800 Wireless LAN Controller to Meraki cloud and vice versa and to demonstrate Wi-Fi 6E configuration for both management types. 
-This lab guide also provides some troubleshooting tools from both worlds.
 
 ## Network Diagram 
 
@@ -44,13 +43,11 @@ This lab guide also provides some troubleshooting tools from both worlds.
 
 ## Get Started
 
-To access your session
-
-* Open Anyconnect, add your credentials and click "Connect". 
+To access your session open Anyconnect App, add your credentials and click "Connect". 
 
 **Host:** dcloud-rtp-anyconnect.cisco.com
 
-Select from the table your corresponding credentials:
+_Select from the table your corresponding credentials:_
 
 | **Pod**         | **User**          | **Password**  |
 | ------------- |:-------------:| ---------:|
@@ -71,7 +68,7 @@ Select from the table your corresponding credentials:
 | 15     | ``       | ``    |
 
 
-* Once VPN connection is stablished open a Remote Desktop Connection
+Once VPN connection is stablished open a Remote Desktop Connection
 
 ![](/images/rdp.png)
 
@@ -86,20 +83,20 @@ Select from the table your corresponding credentials:
 
 The Catalyst 9800 is the new generation Wireless Controller by Cisco that you can deploy either On-Prem or Private/Public cloud. With this type of setup you have various features like telemetry, High Availability, programmability and more.
 
-In this section we will cover the basic setup of a Wireless controller and a 916X Access Point when deployed in Private Cloud Controller.
+In this section we will cover the basic setup of a Wireless Controller and a 916X Access Point when deployed in Private Cloud Controller, later we will  migrate the AP management to Meraki.
 
 ![](/images/9800-networkdiagram.png)
 
 
 ### Day 0 configuration
 
-Follow the instructions to easily setup the Wireless Controller. Note that the day0 configuration is used only for the first time in brand new installations or when controller configuration is reset to factory defaults. You can choose between GUI or CLI
+Follow the instructions to easily setup the Wireless Controller. Note that the day0 configuration is used only for the first time in brand new installations or when Controller configuration is reset to factory defaults. For this exercise you can choose between Web UI or CLI procedures.
 
 **_Web UI Procedure_**
 
 1.Access the Day 0 Wizard via Out-Of-Band port. 
 
-Open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark. Use following credentials.
+In the remote desktop open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark. Use following credentials.
 
 **Username:** dcloud 
 
@@ -107,53 +104,55 @@ Open a browser and type **https://100.64.0.7** or click on the **C9800-CL** book
 
 ![](/images/GUI-credentials.png)
 
-2. Once you are logged into the controller, fill in the following:
+2.Once you are logged into the Controller, fill in the following:
 
 In the General Settings screen, 
 
 • Deployment mode – Standalone
+
 • Country Code - US,MX,BE
+
 • NTP Server - 100.64.0.1
 
 ![](/images/Day0_1.png)
 
 • Wireless Management Settings
 
-  o Port number - GigabitEthernet2
+  	o Port number - GigabitEthernet2
   
-  o VLAN - 10
+  	o IPv4 - Check
   
-  o IPv4 - Check
+  	o Wireless Management VLAN - 10
   
-  o Wireless Management IP - 198.19.10.7
+  	o Wireless Management IP - 198.19.10.7
   
-  o Subnet mask - 255.255.255.0
+  	o Subnet mask - 255.255.255.0
   
 • Static Route Settings
 
-  o IPv4 Route - Check
+  	o IPv4 Route - Check
   
-  o IPv4 Destination Prefix - 0.0.0.0
-  
-  o IPv4 Destination Mask - 0.0.0.0
-  
-  o IPv4 Next Hop IP - 198.19.10.254
+ 	o IPv4 Destination Prefix - 0.0.0.0
+  	
+  	o IPv4 Destination Mask - 0.0.0.0
+    
+    o IPv4 Next Hop IP - 198.19.10.254
   
   Click "Next"
 
 ![](/images/Day0_2.png)
 
-In the Wireles Network Settings >+Add,
+In the Wireles Network Settings **>+Add**,
 
 • Add Network
 
-  o Network Name - CiscoLive
+ 	 o Network Name - CiscoLive
   
-  o Network Tye - Employee
+  	o Network Tye - Employee
   
-  o Security - WPA2 Personal
+  	o Security - WPA2 Personal
   
-  o Pre-Shared Key - Cisco123
+  	o Pre-Shared Key - Cisco123
   
   Click "+Add" and "Next"
 
@@ -163,21 +162,21 @@ In the Advanced Settings,
 
 • AP Certificate
 
-  o Generate Certificate - Yes
+  	o Generate Certificate - Yes
   
-  o RSA Key-Size - 2048
+  	o RSA Key-Size - 2048
   
-  o Signature Algorithm - sha256
+  	o Signature Algorithm - sha256
   
-  o Password - C1sco12345
+  	o Password - C1sco12345
   
 • Create a New AP Management User
 
-  o New AP Management User - admin
-  
-  o Password - C1sco12345
-  
-  o Secret - C1sco12345
+    o New AP Management User - admin
+
+    o Password - C1sco12345
+
+    o Secret - C1sco12345
   
   Click "Summary"
 
@@ -185,29 +184,28 @@ In the Advanced Settings,
 
 ![](/images/Day0_5.png)
 
-If all settings are correct click "Finish" and proceed.
+3.Review the Summary, If all settings are correct click "Finish" and proceed.
 
 ![](/images/Day0_6.png)
 
 ![](/images/Day0_6_1.png)
 
-3.After a minute or two refresh the page and add the credentials. 
-Now you will be prompted with the Wireless Controller GUI. 
+4.After a minute or two refresh the page and log in with same credentials. Now you will be prompted with the Wireless Controller GUI. 
 
 
 **_CLI Procedure_**
 
-1. Access to controller via SSH.
+1. Access to Controller via SSH.
 
-Access the controller CLI via SSH using mRemoteNG App. Once there go to connections and click on **C9800**. 
+In the remote desktop access the Controller CLI via SSH using mRemoteNG App. Once there go to connections and click on **C9800**. 
 
 Login with the following credentials:
 
-Username: dcloud 
+**Username:** dcloud 
 
-Password: dcloud 
+**Password:** dcloud 
 
-Enable: dcloud
+**Enable:** dcloud
 
 ![](/images/mremoteng-ssh.png)
 
@@ -260,6 +258,9 @@ Are you sure you want to continue? (y/n)[y]: y
 C9800(config)#ap dot11 24ghz shutdown 
 Disabling the 802.11b network may strand mesh APs.
 Are you sure you want to continue? (y/n)[y]: y
+C9800(config)#ap dot11 6ghz shutdown
+Disabling the 802.11 6GHz network may strand mesh APs.
+Are you sure you want to continue? (y/n)[y]: y
 ```
 
 8.Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
@@ -276,6 +277,7 @@ C9800(config)#wireless country US
 ```
 C9800(config)# no ap dot11 24ghz shutdown
 C9800(config)# no ap dot11 5ghz shutdown
+C9800(config)# no ap dot11 6ghz shutdown
 ```
 
 10.Specify the interface, in this case Vlan 10, to be the Wireless Management Interface.
@@ -294,7 +296,8 @@ Configuring vWLC-SSC…
 Script is completed
 ```
 
-> This is a script that automates the whole certificate creation.
+This is a script that automates the whole certificate creation.
+
 
 12.Verify Certificate Installation:
 
@@ -308,9 +311,7 @@ Private key Info : Available
 FIPS suitability : Not Applicable
 ```
 
-14.Access via GUI using your credentials.
-
-Open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark.
+13.Access via GUI. In your remote desktop open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark.
 
 **Username:** dcloud 
 
@@ -320,7 +321,7 @@ Open a browser and type **https://100.64.0.7** or click on the **C9800-CL** book
 
 ### AP join
 
-For this lab configure the WLC Public IP address so the APs can reach the controller through the internet. 
+For this lab configure the WLC Public IP address so the APs can reach the Controller through the internet. 
 
 | **Pod**         | **Public IP**     |
 | ------------- |:-------------:|
@@ -340,15 +341,15 @@ For this lab configure the WLC Public IP address so the APs can reach the contro
 | 14     | `64.100.10.X`       |
 | 15     | `64.100.10.X`       |
 
-Select your corresponding Public IP address then go to **Configuration > Interface > Wireless**, click on the Management interface and add it to the NAT IPv4 field as in below image, then hit "**Update & Apply to Device**".
+Select your corresponding Public IP address from above table, then navitage to **Configuration > Interface > Wireless**, click on the Management interface and add the public IP address to the "NAT IPv4" field as in below image, then hit "**Update & Apply to Device**".
 
 ![](/images/wmi-nat.png)
 
 
-Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 controller. This can take a couple of minutes. 
+Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 Controller. This can take a couple of minutes. 
 
 
-Verify your AP joined using "**show ap summary**" command
+Verify your AP joined using "**show ap summary**" command. 
 
 ```
 C9800#show ap summary 
@@ -362,7 +363,7 @@ AP Name                          Slots AP Model             Ethernet MAC   Radio
 CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 MX   -A   172.16.26.189                             Registered   default location    
 ```
 
-The way Access Points work in the 9800 is by usings tags, they are used to control the features that are available for each AP. The tags are assigned to the access points as part of the rule engine that runs on the controller and comes into effect during the AP join process.
+The way Access Points work in the 9800 is by usings tags, they are used to control the features that are available for each AP. The tags are assigned to the access points as part of the rule engine that runs on the Controller and comes into effect during the AP join process.
 
 Verify what tags where applied to the access point. Use "**show ap tag summary**" command. 
 
@@ -375,24 +376,25 @@ AP Name                           AP Mac           Site Tag Name                
 CW9166I-A-6                       cc9c.3ef7.e440   default-site-tag                  default-policy-tag                default-rf-tag                    No               Default       
 ```
 
+Observe that when a brand new Access Point joins, the Controller assings the default tags. 
+
+
 If you prefer GUI, you can verify if AP is joined from "**Configuration > Wireless > Access Points >**"
 
 ![](/images/AP_joined.png)
 
-To check the current tags click on the AP entry
+To check the current tags click on the AP entry and look at the "Tags" section in the "General" tab.
 
 ![](/images/AP_tags_default.png) 
 
-As you can observe when a brand new Access Point joins, the controller assings the default tags. 
+Observe that when a brand new Access Point joins, the Controller assings the default tags. 
 
 
 
 
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
-The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of profiles that are contained within tags that are eventually applied to the access points. 
-
-![](/images/config model.png)
+The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of Profiles contained within Tags that are eventually applied to the access points. 
 
 There are three tags:
 
@@ -400,11 +402,15 @@ There are three tags:
 - **Site Tag**. Defines de AP mode and other AP settings, trough AP join profile and Flex profile.
 - **RF Tag**. Sets the RF profiles with the seetings for each band.
 
-Let's create the Profiles and Tags with basic configurations. Later we will apply these tags to the Access Point joined to the controller.
+![](/images/config model.png)
+
+
+Let's create customized Profiles and Tags,  later we will apply these tags to the Access Point joined to your Controller.
+
 
 _Procedure:_
 
-1. Access the controller GUI with your credentials.
+1. Access the Controller GUI with your credentials.
 
 **GUI:** https://100.64.0.7
 
@@ -414,22 +420,23 @@ _Procedure:_
     
 <!-- ![](/images/gui_log_in.png) -->
 
-Note: To configure Tags and Profiles we will use the **Configuration > Tags & Profiles** section,
+_Note:_ To configure Tags and Profiles we will use the **Configuration > Tags & Profiles** section,
 
 ![](/images/Tags_and_profiles.png)
 
 2.Create a new SSID. 
 
-Go to **Configuration > Tags & Profiles > WLAN > +Add**
+Navigate to **Configuration > Tags & Profiles > WLAN > +Add**
 
 ![](/images/wlanprofile_add.png)
 
 WLAN creation window will pop up, give it a name and enable it. 
-Note: For this excercise we will disable 6GHz band.
+
+_Note:_ For this excercise we will disable 6GHz band. 
 
 ![](/images/wlanprofile_general.png)
 
-Go to the **Security tab**, set configurations as in the image below.
+Navigate to the **Security tab**, set configurations as in the image below.
 
 ![](/images/wlanprofile_security.png)
 
@@ -439,7 +446,7 @@ This is how your new WLAN looks like.
 
 3.Create a new Policy Profile. 
 
-Go to **Configuration > Tags & Profiles > Policy > +Add**
+Navigate to **Configuration > Tags & Profiles > Policy > +Add**
 
 ![](/images/Policyprofile_add.png)
 
@@ -447,7 +454,7 @@ Give it a name and enable it, then hit **Apply to Device**
 
 ![](/images/Policyprofile_general.png)
 
-Go to the **Access Policies** tab. Here you can define the Vlan name or Vlan ID for the SSID, in this case we will use the Vlan name "Clients" that will be later defined in the Flex Profile.
+Navigate to the **Access Policies** tab. Here you can define the Vlan name or Vlan ID for the SSID, in this case we will use the Vlan name "Clients" that will be later defined in the Flex Profile.
 
 ![](/images/Policyprofile_access.png)
 
@@ -457,19 +464,19 @@ This is how your Policy Profile looks like.
 
 4.Create the Policy tag and map the created WLAN and Policy Profiles.
 
-Go to **Configuration > Tags & Profiles > Tags > Policy > +Add**
+Navigate to **Configuration > Tags & Profiles > Tags > Policy > +Add**
 
 ![](/images/tag_policy_AMS.png)
 
 5.Create an AP join Profile
 
-Go to **Configuration > Tags & Profiles > AP join > +Add**
+Navigate to **Configuration > Tags & Profiles > AP join > +Add**
 
 ![](/images/JoinProfile_add.png)
 
 6.Create a Flex Profile. 
 
-Go to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30. This is the same value as the native vlan configured in the AP switchport.
+Navigate to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30. This is the same value as the native vlan configured in the AP switchport.
 
 ![](/images/FlexProfile_add_General.png)
 
@@ -479,7 +486,7 @@ Select the VLAN tab, set configurations as in the image below.
 
 7.Create a new Site tag and apply the created AP join and Flex Profiles.
 
-Go to **Configuration > Tags & Profiles > Tags > Site > +Add**
+Navigate to **Configuration > Tags & Profiles > Tags > Site > +Add**
 Make sure "Enable Local Site" is unchecked.
 
 ![](/images/tag_site_AMS.png)
@@ -561,7 +568,7 @@ AP Name                          AP Model             Radio MAC        MAC Addre
 CW9166I-A-6                      CW9166I-A            6c8d.772e.63a0   cc9c.3ef7.e440   KWC26330BTF            Q5AF-9VQV-3Q2B
 
 ```
-To see the list of Meraki Capable APs from GUI go to **Configuration > Wireless > Migrate to Meraki Mode** 
+To see the list of Meraki Capable APs from GUI navigate to **Configuration > Wireless > Migrate to Meraki Mode** 
 
 ![](/images/migrate-to-meraki-gui-0.png)
 
