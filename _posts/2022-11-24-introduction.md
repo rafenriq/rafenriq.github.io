@@ -118,27 +118,27 @@ In the General Settings screen,
 
 • Wireless Management Settings
 
-  	o Port number - GigabitEthernet2
+Port number - GigabitEthernet2
+    
+IPv4 - Check
   
-  	o IPv4 - Check
+Wireless Management VLAN - 10
   
-  	o Wireless Management VLAN - 10
+Wireless Management IP - 198.19.10.7
   
-  	o Wireless Management IP - 198.19.10.7
-  
-  	o Subnet mask - 255.255.255.0
+Subnet mask - 255.255.255.0
   
 • Static Route Settings
 
-  	o IPv4 Route - Check
+IPv4 Route - Check
   
- 	o IPv4 Destination Prefix - 0.0.0.0
+IPv4 Destination Prefix - 0.0.0.0
   	
-  	o IPv4 Destination Mask - 0.0.0.0
+IPv4 Destination Mask - 0.0.0.0
     
-    o IPv4 Next Hop IP - 198.19.10.254
+IPv4 Next Hop IP - 198.19.10.254
   
-  Click "Next"
+Click "Next"
 
 ![](/images/Day0_2.png)
 
@@ -146,13 +146,13 @@ In the Wireles Network Settings **>+Add**,
 
 • Add Network
 
- 	 o Network Name - CiscoLive
+Network Name - CiscoLive
   
-  	o Network Tye - Employee
+Network Tye - Employee
   
-  	o Security - WPA2 Personal
+Security - WPA2 Personal
   
-  	o Pre-Shared Key - Cisco123
+Pre-Shared Key - Cisco123
   
   Click "+Add" and "Next"
 
@@ -162,21 +162,21 @@ In the Advanced Settings,
 
 • AP Certificate
 
-  	o Generate Certificate - Yes
+Generate Certificate - Yes
   
-  	o RSA Key-Size - 2048
+RSA Key-Size - 2048
   
-  	o Signature Algorithm - sha256
+Signature Algorithm - sha256
   
-  	o Password - C1sco12345
+Password - C1sco12345
   
 • Create a New AP Management User
 
-    o New AP Management User - admin
+New AP Management User - admin
 
-    o Password - C1sco12345
+Password - C1sco12345
 
-    o Secret - C1sco12345
+Secret - C1sco12345
   
   Click "Summary"
 
@@ -567,10 +567,6 @@ To validate a Product ID for a country refer [Wireless LAN Compliance Lookup](ht
 Not all AP models are Meraki Capable. To verify this capability issue the "**show ap management-mode meraki capability summary**" command.
 
 ```      
-C9800#show ap persona meraki capability summary
-This command is deprecated and replaced with "show ap management-mode meraki capability summary"
-
-
 C9800#show ap management-mode meraki capability summary
 AP Name                          AP Model             Radio MAC        MAC Address      AP Serial Number       Meraki Serial Number
 -----------------------------------------------------------------------------------------------------------------------------------
@@ -581,9 +577,10 @@ To see the list of Meraki Capable APs from GUI navigate to **Configuration > Wir
 
 ![](/images/migrate-to-meraki-gui-0.png)
 
+
 **Change AP management-mode to Meraki**
 
-The conversion can be triggered per AP or to multiple APs at once. 
+The conversion can be triggered per Access Point or to multiple Access Points at once. 
 
 _Per AP basis_
 
@@ -596,13 +593,13 @@ Executing this command will cause AP to reboot and it will no longer be manageab
 
 _To multiple APs_
 
-Batch conversion can be triggered from WLC GUI.
+Single or batch conversion can be triggered from WLC GUI.
 
 1.Navigate to **Configuration > Wireless > Migrate to Meraki Management Mode** and select the APs to migrate, then click on **Migrate to Meraki Management Mode**
 
 ![](/images/migrate-to-meraki-gui-1.png)
 
-2.Validate the country code check is green, and regulatory domains for Slot 0 and Slot 1 are green too. It is possible that Slot 2 correspondig to 6GHz is red due to country configured is not currently supported, however the conversion can be triggered. Click **Next**
+2.Validate the country code check is green, and regulatory domains for Slot 0 and Slot 1 are green too. It is possible that Slot 2 correspondig to 6GHz is red due to country configured is not supported in current version, however the conversion can be triggered. Click **Next**.
   
 ![](/images/migrate-to-meraki-gui-2.png)
 
@@ -612,13 +609,13 @@ Batch conversion can be triggered from WLC GUI.
 
 This will cause the selected APs to reboot and they will no longer be manageable from this Wireless LAN Controller.
 
-4.Once conversion took place you will see the Access Points int the "**Management Mode Migration Successful**" list
+4.Once conversion took place you will see the Access Points in the "**Management Mode Migration Successful**" list.
 
 ![](/images/migrate-to-meraki-gui-4.png)
 
-**Verify migrated Access Point**
+**Verify migrated Access Points**
 
-Management Modes migrated in the past can be visualized in the **Configuration > Wireless > Migrate to Meraki Management Mode > Previously migrated APs'** tab.
+Management Modes migrated in the past can be visualized in the **Configuration > Wireless > Migrate to Meraki Management Mode > Previously migrated APs** tab.
 
 ![](/images/migrate-to-meraki-gui-5.png)
 
@@ -634,7 +631,7 @@ AP Name                             AP Model              Radio MAC        MAC A
 CW9166I-A-6                         CW9166I-A             6c8d.772e.63a0   cc9c.3ef7.e440   01/15/2023 04:45:05 UTC    KWC26330BTF             Q5AF-9VQV-3Q2B
 ```
 
-You can also see that AP was succesfully converted from controller syslog. See the log "**Meraki persona change result: Success.Terminating the CAPWAP session.**" followed by the AP disjoin log.
+Verify that AP was succesfully converted from controller syslog. Look for the log "**Meraki persona change result: Success.Terminating the CAPWAP session.**" followed by the AP disjoin log.
 
 ```
 C9800#show logging  last 5
@@ -647,7 +644,7 @@ Jan 15 04:45:05.217: %APMGR_TRACE_MESSAGE-6-AP_MERAKI_CONVERSION_SUCCESS: Chassi
 Jan 15 04:45:31.086: %CAPWAPAC_SMGR_TRACE_MESSAGE-5-AP_JOIN_DISJOIN: Chassis 1 R0/0: wncd: AP Event: AP Name: CW9166I-A-6 Mac: 6c8d.772e.63a0 Session-IP: 64.100.12.17[5272] 198.19.10.7[5246] Disjoined AP persona
 ```
 
-To check if there are failed convertions use the "**show ap management-mode meraki failure summary**" command from CLI.
+Review if there are failed convertions, issue the "**show ap management-mode meraki failure summary**" command from CLI.
 
 ```
 C9800#show ap management-mode meraki failure summary
@@ -661,6 +658,7 @@ To troubleshoot in the 9800 we have some avaialble tools.
 As shown in previuous step, this tool presents the logs generated by the 9800 WLC, this output shows general logs as well as some wireless-specifics logs. 
 
 You can find them at **Troubleshooting > Syslog**
+ 
  add image
 
 From CLI:
@@ -669,41 +667,47 @@ From CLI:
 C9800#show logging
 ....
 Log Buffer (131072 bytes):
-Jan 14 21:33:50.153: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: C9800_WLC_TP created succesfully
-Jan 14 21:33:52.186: %PKI-6-CERT_ENROLL_MANUAL: Manual enrollment for trustpoint C9800_WLC_TP
-Jan 14 21:33:52.585: %PKI-6-CSR_FINGERPRINT:
-                      CSR Fingerprint MD5 : 027FB457F1BFE59767F87641D310B572
-                      CSR Fingerprint SHA1: ABA9024717A535EA77DE79BC920B37106C259AF6
-                      CSR Fingerprint SHA2: D5621FDD60523F781E604831FFF2126EE4CA094FFCD79060A1F12A2E1353F2A8
-Jan 14 21:33:52.585: %PKI-6-CSR_FINGERPRINT_UNSIGNED:
-                      CSR Fingerprint MD5 (unsigned) : 74E9F6F75BDADE5DB03B1192E2E8AFA3
-Jan 14 21:33:52.585: CRYPTO_PKI:  Certificate Request Fingerprint MD5 :027FB457 F1BFE597 67F87641 D310B572
-Jan 14 21:33:52.586: CRYPTO_PKI:  Certificate Request Fingerprint SHA1 :ABA90247 17A535EA 77DE79BC 920B3710 6C259AF6
-Jan 14 21:33:52.586: CRYPTO_PKI:  Certificate Request Fingerprint SHA2 :D5621FDD 60523F78 1E604831 FFF2126E E4CA094F FCD79060 A1F12A2E 1353F2A8
-Jan 14 21:33:52.586: CRYPTO_PKI:  Certificate Request Fingerprint MD5  (unsigned):74E9F6F7 5BDADE5D B03B1192 E2E8AFA3
-Jan 14 21:33:52.712: %SYS-5-CONFIG_I: Configured from console by  on vty2 (EEM:Mandatory.crypto_pki_vwlc_ssc_config)
-Jan 14 21:33:52.984: %PKI-6-CERT_INSTALL: An ID certificate has been installed under
-                      Trustpoint   : C9800_WLC_TP
-                      Issuer-name  : o=Cisco Virtual Wireless LAN Controller,cn=CA-vWLC_C9800
-                      Subject-name : serialNumber=920XHRC7PLW+hostname=C9800,o=Cisco Virtual Wireless LAN Controller,cn=C9800_WLC_TP
-                      Serial-number: 02
-                      End-date     : 2033-01-13T21:33:47Z
+Jan 15 04:39:20.232: %IOSXE_RP_CFG_NOT-6-IOX_SERVICE_NOTSUPPORTED: IOx service not supported.
+Jan 15 04:39:20.857: %SYS-5-CONFIG_P: Configured programmatically by process SEP_webui_wsma_http from console as dcloud on vty1
+Jan 15 04:45:05.217: %APMGR_TRACE_MESSAGE-6-AP_MERAKI_CONVERSION_SUCCESS: Chassis 1 R0/0: wncd: AP CW9166I-A-6, MAC 6c8d.772e.63a0, Meraki serial number: Q5AF-9VQV-3Q2B, Meraki persona change result: Success.Terminating the CAPWAP session.
+Jan 15 04:45:31.086: %CAPWAPAC_SMGR_TRACE_MESSAGE-5-AP_JOIN_DISJOIN: Chassis 1 R0/0: wncd: AP Event: AP Name: CW9166I-A-6 Mac: 6c8d.772e.63a0 Session-IP: 64.100.12.17[5272] 198.19.10.7[5246] Disjoined AP persona
 
 ```
 
 ### RadioActive tracing
 
-RadioActive traces give the ability to conditionally print debug information across processes, threads for the condition of interest. The most used case is when torubleshooting client connectivity,here the conditional debug runs for client mac or ip address to get end to end view at control plane.
+RadioActive traces give the ability to conditionally print debug information across processes, threads for the condition of interest. 
+
+<!--The most used case is when troubleshooting client connectivity,here the conditional debug runs for client mac or ip address to get end to end view at control plane.
 
 add images
 
-Later you can upload the RadioActive traces into the [Wireless Debug Analyzer]https://cway.cisco.com/wireless-debug-analyzer/), this tool parsed debug files to make easier to troubleshoot wireless issues such as client association, authentication, roaming, and connectivity issues. 
+Later you can upload the RadioActive traces into the [Wireless Debug Analyzer]https://cway.cisco.com/wireless-debug-analyzer/), this tool parsed debug files to make easier to troubleshoot wireless issues such as client association, authentication, roaming, and connectivity issues. -->
+
+Take the AP RadioActive trace filtering by Radio MAC
 
 
-### Show commands
+### Always-On-Tracing
+
+Every control plane process on the WLC9800 is constantly logging at logging level of Notice to its own dedicated buffer. This is termed as always-on tracing. This is a unique capability that allows you to get contextual data on a failure that has occurred without mandating the failure condition be reproduced.
+
+	• One day Always on traces filteres by MAC
+    
+C9800#show logging profile wireless start last 1 days filter mac mac-address> to-file bootflash:
+
+
+### Useful show commands
+
+```
+C9800#show wireless country configured
+
+C9800#show ap management-mode meraki capability summary
+
 C9800#show ap management-mode meraki change summary
+
 C9800#show ap management-mode meraki failure summary
 
+```
 
 
 ### Meraki Dashboard
