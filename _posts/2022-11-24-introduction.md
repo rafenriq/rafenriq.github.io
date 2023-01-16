@@ -693,7 +693,7 @@ Every control plane process on the WLC9800 is constantly logging at logging leve
 
 	• One day Always on traces filteres by MAC
     
-C9800#show logging profile wireless start last 1 days filter mac \<mac-address\> to-file bootflash:
+C9800#show logging profile wireless start last 1 days filter mac \<radio-mac-address\> to-file bootflash:
 
 
 **Useful show commands**
