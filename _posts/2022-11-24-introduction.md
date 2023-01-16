@@ -705,6 +705,8 @@ C9800# more bootflash:<FILENAME.log>
 ```
 C9800#show wireless country configured
 
+C9800#show wireless stats ap history
+
 C9800#show ap management-mode meraki capability summary
 
 C9800#show ap management-mode meraki change summary
