@@ -410,7 +410,9 @@ The Catalyst 9800 configuration model was created with simplicity, flexibility, 
 There are three types of tags:
 
 **Policy Tag:** This tag links a WLAN Profile (SSID) to a Policy Profile.
+
 **Site Tag:** This tag defines the AP mode and other AP settings through the AP join profile and Flex profile.
+
 **RF Tag:** This tag sets the RF profiles with the settings for each band.
 
 Each of these tags plays a specific role in the configuration model, and together they provide a comprehensive and easy-to-use system for managing your wireless network.
