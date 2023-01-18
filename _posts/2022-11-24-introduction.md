@@ -468,11 +468,29 @@ Navigate to **Configuration > Tags & Profiles > Tags > Policy > +Add**
 
 ![](/images/tag_policy_AMS.png)
 
-5.Create an AP join Profile
+5.Create an AP join Profile. Configure the name and the corresponding Country.
+
+| **Pod**         | PID          | Country  |
+| ------------- |:-------------:| ---------:|
+| 1     | `CW9166I-A`       | `CA`    |
+| 2     | `CW9166I-A`       | `CA`    |
+| 3     | `CW9166I-A`       | `CA`    |
+| 4     | `CW9166I-A`       | `CA`    |
+| 5     | `CW9166I-A`       | `CA`    |
+| 6     | `CW9166I-A`       | `CA`    |
+| 7     | `CW9164I-A`       | `CA`    |
+| 8     | `CW9162I-B`       | `US`    |
+| 9     | `CW9162I-B`       | `US`    |
+| 10     | ``       | ``   |
+| 11     | ``       | ``    |
+| 12     | ``       | ``    |
+| 13     | ``       | ``    |
+| 14     | ``       | ``    |
+| 15     | ``       | ``    |
 
 Navigate to **Configuration > Tags & Profiles > AP join > +Add**
 
-![](/images/JoinProfile_add.png)
+![](/images/ap_join_country.png)
 
 6.Create a Flex Profile. 
 
