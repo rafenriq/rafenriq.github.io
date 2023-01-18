@@ -722,7 +722,13 @@ C9800#
 
 RadioActive traces give the ability to conditionally print debug information across processes, threads for the condition of interest. 
 
-Navigate to 
+Navigate to **Troubleshooting > Radioactive Trace** . You will find the RadioActive trace we enabled before filtered by Radio and Ethernet MAC. Select one of them and click "Generate", generate logs for last 30 minutes and "Apply to Device"
+
+![](/images/ratrace_4.png)
+
+Download the log file (use either of the Download icones). 
+
+![](/images/ratrace_4.png)
 
 <!--The most used case is when troubleshooting client connectivity,here the conditional debug runs for client mac or ip address to get end to end view at control plane.
 
@@ -730,8 +736,18 @@ add images
 
 Later you can upload the RadioActive traces into the [Wireless Debug Analyzer]https://cway.cisco.com/wireless-debug-analyzer/), this tool parsed debug files to make easier to troubleshoot wireless issues such as client association, authentication, roaming, and connectivity issues. -->
 
-Take the AP RadioActive trace filtering by Radio MAC
 
+Open the file and you will see the logs about AP Conversion Success:
+
+```
+2023/01/18 03:23:49.018866255 {wncd_x_R0-0}{1}: [apmgr-db] [15668]: (note): MAC: 6c8d.772e.63a0  Ack received for Meraki request payload
+2023/01/18 03:23:49.019260232 {wncd_x_R0-0}{1}: [errmsg] [15668]: (info): %APMGR_TRACE_MESSAGE-6-AP_MERAKI_CONVERSION_SUCCESS: R0/0: wncd: AP APCC9C.3EF7.E440, MAC 6c8d.772e.63a0, Meraki serial number: Q5AF-9VQV-3Q2B, Meraki persona change result: Success.Terminating the CAPWAP session.
+2023/01/18 03:23:49.019382056 {wncd_x_R0-0}{1}: [ap-join-info-db] [15668]: (note): MAC: 6c8d.772e.63a0  AP disconnect initiated. Reason: AP persona change to Meraki, Phase: Run
+...
+2023/01/18 03:24:13.808512436 {wncd_x_R0-0}{1}: [apmgr-ap-global] [15668]: (note): MAC: 6c8d.772e.63a0  AP SM Purge. AP deregister complete
+```
+
+In case of failure these logs will be helpful to know the reason of failure.
 
 **Always-On-Tracing**
 
@@ -739,14 +755,35 @@ These are the Notice logging level traces on the C9800. This tool allows to get 
 
 -One day Always on traces filtered by MAC
     
+Use the "show ap summary" command to grab the AP Radio Mac. Then use the _**show logging profile wireless start last 1 hour filter mac \<radio-mac-address\> to-file bootflash:<FILENAME.log>**_ to view the content.
+
 ```
-C9800#show ap summary
-C9800#show logging profile wireless start last 1 days filter mac \<radio-mac-address\> to-file bootflash:<FILENAME.log>
-C9800# more bootflash:<FILENAME.log>
+C9800#sh ap summ
+Number of APs: 1
+
+CC = Country Code
+RD = Regulatory Domain
+
+AP Name                          Slots AP Model             Ethernet MAC   Radio MAC      CC   RD   IP Address                                State        Location
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+APCC9C.3EF7.E440                 3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 CA   -A   64.100.12.17                              Registered   default location
+
+
+C9800#show logging profile wireless start last 1 hour filter mac 6c8d.772e.63a0 to-file bootflash:AOT_ap_conversion.log
 ```
 
+To view the content use the **_more bootflash:<FILENAME.log>_** command
+```
+C9800#more  bootflash:AOT_ap_conversion.log | i Meraki
+2023/01/18 03:23:49.018866255 {wncd_x_R0-0}{1}: [apmgr-db] [15668]: (note): MAC: 6c8d.772e.63a0  Ack received for Meraki request payload
+2023/01/18 03:23:49.019260232 {wncd_x_R0-0}{1}: [errmsg] [15668]: (info): %APMGR_TRACE_MESSAGE-6-AP_MERAKI_CONVERSION_SUCCESS: R0/0: wncd: AP APCC9C.3EF7.E440, MAC 6c8d.772e.63a0, Meraki serial number: Q5AF-9VQV-3Q2B, Meraki persona change result: Success.Terminating the CAPWAP session.
+2023/01/18 03:23:49.019382056 {wncd_x_R0-0}{1}: [ap-join-info-db] [15668]: (note): MAC: 6c8d.772e.63a0  AP disconnect initiated. Reason: AP persona change to Meraki, Phase: Run
+
+```
 
 **Useful show commands**
+
+In case you find any failure the following commands can help to determine the AP status.
 
 ```
 C9800#show wireless country configured
