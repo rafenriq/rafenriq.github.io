@@ -398,7 +398,7 @@ Select "here" as shown below.
 
 ![](/images/ratrace_2.png)
 
-Start Conditional Debug Global State as shown below. We will use this tool later.
+Start Conditional Debug Global State. We will use this tool later.
 
 ![](/images/ratrace_3.png)
 
