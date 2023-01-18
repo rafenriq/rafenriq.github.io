@@ -728,7 +728,7 @@ Navigate to **Troubleshooting > Radioactive Trace** . You will find the RadioAct
 
 ![](/images/ratrace_4.png)
 
-Download the log file (use either of the Download icons). 
+Download the log file (use either of the download icons). 
 
 ![](/images/ratrace_5.png)
 
