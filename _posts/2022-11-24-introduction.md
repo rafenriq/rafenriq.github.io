@@ -728,9 +728,9 @@ Navigate to **Troubleshooting > Radioactive Trace** . You will find the RadioAct
 
 ![](/images/ratrace_4.png)
 
-Download the log file (use either of the Download icones). 
+Download the log file (use either of the Download icons). 
 
-![](/images/ratrace_4.png)
+![](/images/ratrace_5.png)
 
 <!--The most used case is when troubleshooting client connectivity,here the conditional debug runs for client mac or ip address to get end to end view at control plane.
 
