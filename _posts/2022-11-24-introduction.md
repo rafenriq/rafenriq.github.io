@@ -549,7 +549,7 @@ For this lab you have one assigned Access Point, yet consider in production envi
 Note: Changing AP Tag(s) will cause associated AP(s) to rejoin and disrupt connected client(s).
 It can take a couple of minutes for the AP to rejoin.
 
-____________________________________________________________________________________
+
 
 ### Migrate to Meraki Management
 
@@ -738,8 +738,10 @@ C9800#show ap management-mode meraki failure summary
 
 ```
 
+____________________________________________________________________________________
 
-### Meraki Dashboard
+
+## Meraki Dashboard
 
 The first thing that we need to do is to create an account in Meraki dashboard. 
 
