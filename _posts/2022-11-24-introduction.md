@@ -434,7 +434,7 @@ WLAN creation window will pop up, give it a name and enable it.
 
 ![](/images/PSK_SAE_0.png)
 
-Navigate to the **Security tab > Layer2**, we are going to create a Pre-Shared Key SSID, set configurations as in the image below, then hit **Apply to Device**.
+Navigate to the **Security tab > Layer2**. To create a Pre-Shared Key SSID set configurations as in the image below, then hit **Apply to Device**.
 
 ![](/images/PSK_SAE_1.png)
 
