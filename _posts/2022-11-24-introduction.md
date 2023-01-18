@@ -760,7 +760,7 @@ These are the Notice logging level traces on the C9800. This tool allows to get 
 Use the "show ap summary" command to grab the AP Radio Mac. Then use the _**show logging profile wireless start last 1 hour filter mac \<radio-mac-address\> to-file bootflash:<FILENAME.log>**_ to view the content.
 
 ```
-C9800#sh ap summ
+C9800#show ap summary
 Number of APs: 1
 
 CC = Country Code
