@@ -269,6 +269,7 @@ Are you sure you want to continue? (y/n)[y]: y
 C9800(config)#wireless country BE
 C9800(config)#wireless country MX
 C9800(config)#wireless country US
+C9800(config)#wireless country CA
 
 ```
 
