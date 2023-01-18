@@ -432,17 +432,17 @@ Navigate to **Configuration > Tags & Profiles > WLAN > +Add**
 
 WLAN creation window will pop up, give it a name and enable it.
 
-_Note:_ For this excercise we will disable 6GHz band. 
+![](/images/PSK_SAE_0.png)
 
-![](/images/wlanprofile_general.png)
+Navigate to the **Security tab > Layer2**, we are going to create a Pre-Shared Key SSID, set configurations as in the image below, then hit **Apply to Device**.
 
-Navigate to the **Security tab**, we are going to create an Open SSID, set configurations as in the image below, then hit **Apply to Device**.
+![](/images/PSK_SAE_1.png)
 
-![](/images/wlanprofile_security.png)
+![](/images/PSK_SAE_2.png)
 
 This is how your new WLAN looks like.
 
-![](/images/WLAN.png)
+![](/images/PSK_SAE_3.png)
 
 3.Create a new Policy Profile. 
 
