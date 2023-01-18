@@ -110,7 +110,7 @@ In the General Settings screen,
 
 • Deployment mode – Standalone
 
-• Country Code - US,MX,BE
+• Country Code - US,MX,BE,CA
 
 • NTP Server - 100.64.0.1
 
