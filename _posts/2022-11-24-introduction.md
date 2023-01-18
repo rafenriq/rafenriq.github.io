@@ -470,23 +470,28 @@ Navigate to **Configuration > Tags & Profiles > Tags > Policy > +Add**
 
 5.Create an AP join Profile. Configure the name and the corresponding Country.
 
-| **Pod**         | PID          | Country  |
-| ------------- |:-------------:| ---------:|
-| 1     | `CW9166I-A`       | `CA`    |
-| 2     | `CW9166I-A`       | `CA`    |
-| 3     | `CW9166I-A`       | `CA`    |
-| 4     | `CW9166I-A`       | `CA`    |
-| 5     | `CW9166I-A`       | `CA`    |
-| 6     | `CW9166I-A`       | `CA`    |
-| 7     | `CW9164I-A`       | `CA`    |
-| 8     | `CW9162I-B`       | `US`    |
-| 9     | `CW9162I-B`       | `US`    |
-| 10     | ``       | ``   |
-| 11     | ``       | ``    |
-| 12     | ``       | ``    |
-| 13     | ``       | ``    |
-| 14     | ``       | ``    |
-| 15     | ``       | ``    |
+| **Pod**       | **PID**       | **Country**|
+| ------------- |:-------------:| ----------:|
+| 1             | `CW9166I-A`   | `CA`       |
+| 2             | `CW9166I-A`   | `CA`       |
+| 3             | `CW9166I-A`   | `CA`       |
+| 4             | `CW9166I-A`   | `CA`       |
+| 5             | `CW9166I-A`   | `CA`       |
+| 6             | `CW9166I-A`   | `CA`       |
+| 7             | `CW9164I-A`   | `CA`       |
+| 8             | `CW9162I-B`   | `US`       |
+| 9             | `CW9162I-B`   | `US`       |
+| 10            | ``       | ``       |
+| 11            | ``       | ``       |
+| 12            | ``       | ``       |
+| 13            | ``       | ``       |
+| 14            | ``       | ``       |
+| 15            | ``       | ``       |
+
+To validate a Product ID for a country refer [Wireless LAN Compliance Lookup](https://www.cisco.com/c/dam/assets/prod/wireless/wireless-compliance-tool/index.html).
+
+![](/images/country-code.png)
+
 
 Navigate to **Configuration > Tags & Profiles > AP join > +Add**
 
