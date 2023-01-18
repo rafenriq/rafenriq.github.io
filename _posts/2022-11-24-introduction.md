@@ -384,11 +384,10 @@ If you prefer GUI, you can verify if AP is joined from "**Configuration > Wirele
 
 ![](/images/AP_joined.png)
 
-To check the current tags click on the AP entry and look at the "Tags" section in the "General" tab.
+To check the current tags click on the AP entry and look at the "Tags" section in the "General" tab. Observe that when a brand new Access Point joins, the Controller assings the default tags. 
 
 ![](/images/AP_tags_default.png) 
 
-Observe that when a brand new Access Point joins, the Controller assings the default tags. 
 
 
 Now that you confirmed the AP has joined navigate to **Monitoring > Wireless > AP statistics** click on the wrench icon for both the AP Radio and Ethernet MAC. 
