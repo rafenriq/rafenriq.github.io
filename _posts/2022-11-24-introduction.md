@@ -774,7 +774,7 @@ APCC9C.3EF7.E440                 3     CW9166I-A            cc9c.3ef7.e440 6c8d.
 C9800#show logging profile wireless start last 1 hour filter mac 6c8d.772e.63a0 to-file bootflash:AOT_ap_conversion.log
 ```
 
-To view the content use the **_more bootflash:<FILENAME.log>_** command
+To view the content use the _**more bootflash:<FILENAME.log>**_ command
 ```
 C9800#more  bootflash:AOT_ap_conversion.log | i Meraki
 2023/01/18 03:23:49.018866255 {wncd_x_R0-0}{1}: [apmgr-db] [15668]: (note): MAC: 6c8d.772e.63a0  Ack received for Meraki request payload
