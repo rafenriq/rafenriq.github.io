@@ -34,7 +34,7 @@ Cisco understands that selecting your next platform is not an easy choice. With 
 
 ## Learning Objectives
 
-With this LAB wil walk you through the steps to migrate an AP Wi-Fi 6E from management with 9800 Wireless LAN Controller to Meraki cloud and vice versa and to demonstrate Wi-Fi 6E configuration for both management types. 
+With this LAB wil walk you through the steps to migrate an AP Wi-Fi 6E from management with 9800 Wireless LAN Controller to Meraki cloud and vice versa and to demonstrate Wi-Fi 6E configuration for both management types.
 
 ## Network Diagram 
 
@@ -81,16 +81,16 @@ Once VPN connection is stablished open a Remote Desktop Connection
 
 ## Cisco Catalyst 9800 Series Wireless Controller
 
-The Catalyst 9800 is the new generation Wireless Controller by Cisco that you can deploy either On-Prem or Private/Public cloud. With this type of setup you have various features like telemetry, High Availability, programmability and more.
+The Catalyst 9800 is Cisco's latest and greatest Wireless LAN Controller, and it's a real game-changer! It can be deployed either on-premises or in a private or public cloud, giving you a ton of flexibility. The C9800 offers awesome features like telemetry, high availability, programmability, and more.
 
-In this section we will cover the basic setup of a Wireless Controller and a 916X Access Point when deployed in Private Cloud Controller, later we will  migrate the AP management to Meraki.
+In this section, we'll start by showing you the basics of setting up a Wireless Controller and a 916X Access Point in a private cloud controller. Then, we will take things to the next level and show you how to migrate the AP management to Meraki. It's going to be a fun and informative ride, so buckle up and let's get started!
 
 ![](/images/9800-networkdiagram.png)
 
 
 ### Day 0 configuration
 
-Follow the instructions to easily setup the Wireless Controller. Note that the day0 configuration is used only for the first time in brand new installations or when Controller configuration is reset to factory defaults. For this exercise you can choose between Web UI or CLI procedures.
+Setting up your Wireless Controller is a breeze! Just follow the instructions and you will be up and running in no time. Keep in mind that the day0 configuration is only necessary for brand new installations or when the Controller's configuration has been reset to factory defaults. You have the option to use either the Web UI or CLI procedures for this exercise, so pick the one that you feel most comfortable with. 
 
 **_Web UI Procedure_**
 
@@ -363,7 +363,7 @@ AP Name                          Slots AP Model             Ethernet MAC   Radio
 CW9166I-A-6                      3     CW9166I-A            cc9c.3ef7.e440 6c8d.772e.63a0 MX   -A   172.16.26.189                             Registered   default location    
 ```
 
-The way Access Points work in the 9800 is by usings tags, they are used to control the features that are available for each AP. The tags are assigned to the access points as part of the rule engine that runs on the Controller and comes into effect during the AP join process.
+The 9800 Wireless Controller uses tags to control the features available for each Access Point. These tags are assigned to the Access Points as part of the rule engine that runs on the Controller. The rule engine comes into effect during the AP join process and ensures that the correct features are enabled for each Access Point. It's a simple but powerful system that helps you stay in control of your wireless network.
 
 Verify what tags where applied to the access point. Use "**show ap tag summary**" command. 
 
@@ -394,18 +394,22 @@ Observe that when a brand new Access Point joins, the Controller assings the def
 
 ### Catalyst 9800 Wireless LAN Controller Configuration Model
 
-The Catalyst 9800 configuration model was designed to be simple, flexible and reusable. This configuration model takes advantage of the use of Profiles contained within Tags that are eventually applied to the access points. 
 
-There are three tags:
+The Catalyst 9800 configuration model was created with simplicity, flexibility, and reusability in mind. It makes use of Profiles contained within Tags, which are then applied to the Access Points. This approach makes it easy to manage and customize your wireless network.
 
-- **Policy Tag**. Link between a WLAN Profile (SSID) and a Policy Profile
-- **Site Tag**. Defines de AP mode and other AP settings, trough AP join profile and Flex profile.
-- **RF Tag**. Sets the RF profiles with the seetings for each band.
+There are three types of tags:
+
+**Policy Tag:** This tag links a WLAN Profile (SSID) to a Policy Profile.
+**Site Tag:** This tag defines the AP mode and other AP settings through the AP join profile and Flex profile.
+**RF Tag:** This tag sets the RF profiles with the settings for each band.
+
+Each of these tags plays a specific role in the configuration model, and together they provide a comprehensive and easy-to-use system for managing your wireless network.
+
 
 ![](/images/config model.png)
 
 
-Let's create customized Profiles and Tags,  later we will apply these tags to the Access Point joined to your Controller.
+Let's create customized Profiles and Tags, later we will apply these tags to the Access Point joined to your Controller.
 
 
 _Procedure:_
