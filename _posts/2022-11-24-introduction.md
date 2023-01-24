@@ -759,14 +759,34 @@ _For this LAB we have created the account, as the linceses available for the APs
 If you like, you are welcome to create your dashboard account using the following [link](https://account.meraki.com/login/new_account). 
 
 The information needed to create the account is the following: 
+Selecting the region is very important when it comes to wireless as this setting are use for AP to work based on different regulatory domains. 
 
 ![](/images/select-region-dashboard.png)
 
 ![](/images/new-dashboarb-account.png)
 
-Credential for the account are: 
-username: rafenriq@cisco.com
-Password: .......
+You can open the following [link](https://account.meraki.com/secure/login/dashboard_login) to access your account, credentials are: 
+
+```
+| **Pod**       | **Name**       | **Company**|
+| ------------- |:--------------:| ----------:|
+| 1             | Simon Balon   | `CA`       |
+| 2             | keith Clarke   | `CA`       |
+| 3             | Heidi Dorrepaal   | `CA`       |
+| 4             | Amanuel Getaneh   | `CA`       |
+| 5             | Christian Ginser   | `CA`       |
+| 6             | Ole Kasten   | `CA`       |
+| 7             | Grezegorz Koziel   | `CA`       |
+| 8             | Rene Mueller   | `US`       |
+| 9             | Heriel Omaisrael   | `US`       |
+| 10            | Frank Osberg       | ``       |
+| 11            | Ivo Peeters       | ``       |
+| 12            | Pim Servaas       | ``       |
+| 13            | Andrei Sidorkov       | ``       |
+| 14            | Bjorn Svensson       | ``       |
+| 15            | Bernd Syrowatka       | ``       |
+```
+
 
 Once you log in to the Dashboard you will see the following page: 
 
