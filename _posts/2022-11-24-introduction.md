@@ -8,7 +8,7 @@ published: true
 # Contents
  - [Introduction](#introduction) 
  - [Learning Objectives](#learning-objectives) 
- - [Network Diagram](#specification) 
+ - [Network Diagram](#network-diagram) 
  - [Get Started](#get-started)  
  - [Cisco Catalyst 9800 Series Wireless Controller](#cisco-catalyst-9800-series-wireless-controller)
 	-	[Day 0 configuration](#day-0-configuration)
@@ -16,13 +16,13 @@ published: true
 	-	[Catalyst 9800 Wireless Controllers Configuration Model](#catalyst-9800-wireless-lan-controller-configuration-model)
     -   [Migrate to Meraki Management](#migrate-to-meraki-management)
 	-	[Troubleshooting tools](#troubleshooting-tools)
- - [Meraki Dashboard](#dependencies-title) 
- 	- [Mofify your network information](#specification) 
- 	- [Configuring Enterprise SSID](#dependencies-title) 
-  	- [Configuring Guest SSID](#specification) 
- 	- [Meraki Splash page](#splashpage) 
- 	- [SSID Availability](#specification) 
- 	- [Radio Settings](#dependencies-title) 
+ - [Meraki Dashboard](#meraki-dashboard) 
+ 	-	[Modify your network information](#modify-your-network-information) 
+ 	-   [Configuring Enterprise SSID](#configuring-enterprise-ssid) 
+  	-   [Configuring Guest SSID](#configuring-guest-ssid) 
+ 	-   [Meraki Splash page](#meraki-splash-page) 
+ 	-   [SSID Availability](#ssid-availability) 
+ 	-   [Radio Settings](#radio-settings) 
 
 
 ## Introduction
