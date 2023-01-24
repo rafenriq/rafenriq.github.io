@@ -30,7 +30,7 @@ published: true
 Cisco Catalyst 9166, 9164, and 9162 Series Access Points (AP) are the first AP from Cisco that give you the flexibility to manage your wireless network on premises or in the cloud.
 They provide the best of both worlds while delivering flexibility and investment protection for your network.
 
-Cisco understands that selecting your next platform is not an easy choice. With the Cisco Catalyst Wi-Fi 6E access points, you don’t need to make the decision now. Keep the operational mode you use today, whether on premises or cloud management. If your needs change-either way-it’s an easy switch. No new hardware required.
+Cisco understands that selecting your next platform is not an easy choice. With the Cisco Catalyst Wi-Fi 6E access points, you don’t need to make the decision now. Keep the operational mode you use today, whether on premises or cloud management. If your need to change it is an easy switch. No new hardware required.
 
 ## Learning Objectives
 
