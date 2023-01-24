@@ -293,6 +293,7 @@ FIPS suitability : Not Applicable
 
 For this lab configure the WLC Public IP address so the APs can reach the Controller through the internet. 
 
+```
 | **Pod**         | **Public IP**     |
 | ------------- |:-------------:|
 | 1     | `64.100.10.X`       |
@@ -310,14 +311,13 @@ For this lab configure the WLC Public IP address so the APs can reach the Contro
 | 13     | `64.100.10.X`       |
 | 14     | `64.100.10.X`       |
 | 15     | `64.100.10.X`       |
+```
 
 Select your corresponding Public IP address from above table, then navitage to **Configuration > Interface > Wireless**, click on the Management interface and add the public IP address to the "NAT IPv4" field as in below image, then hit "**Update & Apply to Device**".
 
 ![](/images/wmi-nat.png)
 
-
 Once the Public IP is configured you will see your assigned Access Point joining to your brand new 9800 Controller. This can take a couple of minutes. 
-
 
 Verify your AP joined using "**show ap summary**" command. 
 
