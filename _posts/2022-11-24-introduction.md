@@ -187,7 +187,7 @@ WLC#conf t
 WLC(config)#hostname C9800
 ```
 
-3.Configure vlan 10 for the wireless management.
+3. Configure vlan 10 for the wireless management.
 
 ```
 C9800#conf t
@@ -195,7 +195,7 @@ C9800(config)#vlan 10
 C9800(config-vlan)#name wireless_management
 ```
 	
-4.Configure the SVI for Wireless Management Interface (WMI) as follows:
+4. Configure the SVI for Wireless Management Interface (WMI) as follows:
 
 ```
 C9800(config)#int vlan 10
@@ -203,7 +203,7 @@ C9800(config-if)#ip address 198.19.10.7 255.255.255.0
 C9800(config-if)#no shutdown
 ```
 
-5.Configure the GigabitEthernet 2 as trunk and allow Vlan 10:
+5. Configure the GigabitEthernet 2 as trunk and allow Vlan 10:
 
 ```
 C9800(config-if)#interface GigabitEthernet2   
@@ -213,13 +213,13 @@ C9800(config-if)#shut
 C9800(config-if)#no shut
 ```
 
-6.Configure the WMI default route:
+6. Configure the WMI default route:
 
 ```
 C9800(config-if)#ip route 0.0.0.0 0.0.0.0 198.19.10.254
 ```
 
-7.Disable the wireless network to configure the country code:
+7. Disable the wireless network to configure the country code:
 
 ```
 C9800(config)#ap dot11 5ghz shutdown 
@@ -233,7 +233,7 @@ Disabling the 802.11 6GHz network may strand mesh APs.
 Are you sure you want to continue? (y/n)[y]: y
 ```
 
-8.Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
+8. Configure the AP country domain. This configuration is what will trigger the GUI to skip the DAY 0 flow as the C9800 needs a country code to be operational:
 
 ```
 C9800(config)#wireless country BE
@@ -243,7 +243,7 @@ C9800(config)#wireless country CA
 
 ```
 
-9.Enable the 802.11a and 802.11b/g networks
+9. Enable the 802.11a and 802.11b/g networks
 
 ```
 C9800(config)# no ap dot11 24ghz shutdown
@@ -251,7 +251,7 @@ C9800(config)# no ap dot11 5ghz shutdown
 C9800(config)# no ap dot11 6ghz shutdown
 ```
 
-10.Specify the interface, in this case Vlan 10, to be the Wireless Management Interface.
+10. Specify the interface, in this case Vlan 10, to be the Wireless Management Interface.
 
 
 ```
@@ -259,7 +259,7 @@ C9800(config)# wireless management interface Vlan10
 C9800(config-mgmt-interface)#end
 ```
 
-11.A certificate is needed for the AP to join the virtual C9800. This can be created automatically using the following commands.
+11. A certificate is needed for the AP to join the virtual C9800. This can be created automatically using the following commands.
 
 ```
 C9800#wireless config vwlc-ssc key-size 2048 signature-algo sha256 password 0 Cisco123
@@ -270,7 +270,7 @@ Script is completed
 This is a script that automates the whole certificate creation.
 
 
-12.Verify Certificate Installation:
+12. Verify Certificate Installation:
 
 ```
 C9800#show wireless management trustpoint
@@ -282,10 +282,9 @@ Private key Info : Available
 FIPS suitability : Not Applicable
 ```
 
-13.Access via GUI. In your remote desktop open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark.
+13. Access via GUI. In your remote desktop open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark.
 
 **Username:** dcloud 
-
 **Password:** dcloud 
 
 ![](/images/GUI-credentials.png)
