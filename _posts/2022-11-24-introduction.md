@@ -357,8 +357,6 @@ To check the current tags click on the AP entry and look at the "Tags" section i
 
 ![](/images/AP_tags_default.png) 
 
-
-
 Now that you confirmed the AP has joined navigate to **Monitoring > Wireless > AP statistics** click on the wrench icon for both the AP Radio and Ethernet MAC. 
 
 ![](/images/ratrace_1.png)
