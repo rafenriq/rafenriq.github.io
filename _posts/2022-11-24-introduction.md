@@ -791,7 +791,7 @@ To add the AP to the network we need the serial number (SN). SN can be found on 
 
 ![](/images/labelAP.jpeg)
 
-For this LAB, (we are not allowed to bring equipment to the room) the following are the SN, use the SN assigned to your POD
+For the LAB, (we are not allowed to bring equipment to the room :() so following are the SN.
 
 ```
 | **Pod**       | **PID**       | **SN**|
@@ -812,6 +812,7 @@ For this LAB, (we are not allowed to bring equipment to the room) the following 
 | 14            | ``       | ``       |
 | 15            | ``       | ``       |
 ```
+Click on **Add devices** and take the SN from the table above depending of the pod you are using. 
 
 ![](/images/createnetwork3.png)
 
