@@ -440,13 +440,13 @@ Navigate to **Configuration > Tags & Profiles > Tags > Policy > +Add**
 
 ![](/images/tag_policy_AMS.png)
 
-5.Create an AP join Profile. Configure the name and the corresponding Country.
+5.Create an AP join Profile. Configure the name and the corresponding Country. Follow the table below to verify the country you need to configure for your given AP.
 
 Navigate to **Configuration > Tags & Profiles > AP join > +Add**
 
 ![](/images/ap_join_country.png)
 
-
+```
 | **Pod**       | **PID**       | **Country**|
 | ------------- |:-------------:| ----------:|
 | 1             | `CW9166I-A`   | `CA`       |
@@ -464,18 +464,17 @@ Navigate to **Configuration > Tags & Profiles > AP join > +Add**
 | 13            | ``       | ``       |
 | 14            | ``       | ``       |
 | 15            | ``       | ``       |
-
+```
 <!--  To validate a Product ID for a country refer [Wireless LAN Compliance Lookup](https://www.cisco.com/c/dam/assets/prod/wireless/wireless-compliance-tool/index.html). 
-
 ![](/images/country-code.png)-->
 
 6.Create a Flex Profile. 
 
-Navigate to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30. This is the same value as the native vlan configured in the AP switchport.
+Navigate to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30 (which is the VLAN whre AP sits on). This is the same value as the native vlan configured in the AP switchport.
 
 ![](/images/FlexProfile_add_General.png)
 
-Select the VLAN tab, click **+Add** and set configurations as in the image below.
+Select the VLAN tab, click **+Add** and set configurations as in the image below. This is the VLAN that wireless client will use when connecting to the just defined SSID. 
 
 ![](/images/FlexProfile_vlan.png) 
 
