@@ -72,45 +72,37 @@ Once VPN connection is stablished open a Remote Desktop Connection
 ![](/images/rdp.png)
 
 **Host:** 198.18.133.136
-
 **User:** Administrator
-
 **Password:** C1sco12345
-
 
 ## Cisco Catalyst 9800 Series Wireless Controller
 
-The Catalyst 9800 is Cisco's latest and greatest Wireless LAN Controller, and it's a real game-changer! It can be deployed either on-premises or in a private or public cloud, giving you a ton of flexibility. The C9800 offers awesome features like telemetry, high availability, programmability, and more.
+The Catalyst 9800 is Cisco's latest and greatest Wireless LAN Controller, and it's a real game-changer! It can be deployed either on-premises or in a private or public cloud, giving you a lot of flexibility. The C9800 offers awesome features like telemetry, high availability, programmability, and more.
 
 In this section, we'll start by showing you the basics of setting up a Wireless Controller and a 916X Access Point in a private cloud controller. Then, we will take things to the next level and show you how to migrate the AP management to Meraki. It's going to be a fun and informative ride, so buckle up and let's get started!
 
 ![](/images/9800-networkdiagram.png)
 
-
 ### Day 0 configuration
 
-Setting up your Wireless Controller is a breeze! Just follow the instructions and you will be up and running in no time. Keep in mind that the day0 configuration is only necessary for brand new installations or when the Controller's configuration has been reset to factory defaults. You have the option to use either the Web UI or CLI procedures for this exercise, so pick the one that you feel most comfortable with. 
+Setting up your Wireless Controller is a breeze! Just follow the instructions and you will be up and running in no time. Keep in mind that the day0 configuration is only necessary for brand new installations or when the Controller's configuration has been reset to factory defaults. You have the option to use either the Web UI or CLI procedure for this exercise, so pick the one that you feel most comfortable with. 
 
-**_Web UI Procedure_**
+#### Web UI Procedure
 
-1.Access the Day 0 Wizard via Out-Of-Band port. 
-
+1. Access the Day 0 Wizard via Out-Of-Band port. 
 In the remote desktop open a browser and type **https://100.64.0.7** or click on the **C9800-CL** bookmark. Use following credentials.
 
 **Username:** dcloud 
-
 **Password:** dcloud 
 
 ![](/images/GUI-credentials.png)
 
-2.Once you are logged into the Controller, fill in the following:
+2. Once you are logged into the Controller, fill in the following:
 
 In the General Settings screen, 
 
 • Deployment mode – Standalone
-
 • Country Code - US,MX,BE,CA
-
 • NTP Server - 100.64.0.1
 
 ![](/images/Day0_1.png)
@@ -118,81 +110,62 @@ In the General Settings screen,
 • Wireless Management Settings
 
 Port number - GigabitEthernet2
-    
 IPv4 - Check
-  
 Wireless Management VLAN - 10
-  
 Wireless Management IP - 198.19.10.7
-  
 Subnet mask - 255.255.255.0
   
 • Static Route Settings
 
-IPv4 Route - Check
-  
-IPv4 Destination Prefix - 0.0.0.0
-  	
-IPv4 Destination Mask - 0.0.0.0
-    
+IPv4 Route - Check 
+IPv4 Destination Prefix - 0.0.0.0	
+IPv4 Destination Mask - 0.0.0.0 
 IPv4 Next Hop IP - 198.19.10.254
-  
 Click "Next"
 
 ![](/images/Day0_2.png)
 
-In the Wireles Network Settings **>+Add**,
+In the Wireles Network Settings click  **+Add**,
 
 • Add Network
 
 Network Name - CiscoLive
-  
 Network Tye - Employee
-  
 Security - WPA2 Personal
-  
 Pre-Shared Key - Cisco123
-  
-  Click "+Add" and "Next"
+Click "+Add" and "Next"
 
 ![](/images/Day0_3.png)
 
-In the Advanced Settings,
+In the Advanced Settings
 
 • AP Certificate
 
 Generate Certificate - Yes
-  
 RSA Key-Size - 2048
-  
 Signature Algorithm - sha256
-  
 Password - C1sco12345
   
 • Create a New AP Management User
 
 New AP Management User - admin
-
 Password - C1sco12345
-
 Secret - C1sco12345
-  
-  Click "Summary"
+Click "Summary"
 
 ![](/images/Day0_4.png)
 
 ![](/images/Day0_5.png)
 
-3.Review the Summary, If all settings are correct click "Finish" and proceed.
+3. Review the Summary, If all settings are correct click "Finish" and proceed as shown in the images below. 
 
 ![](/images/Day0_6.png)
 
 ![](/images/Day0_6_1.png)
 
-4.After a minute or two refresh the page and log in with same credentials. Now you will be prompted with the Wireless Controller GUI. 
+4. After a minute or two refresh the page and log in with same credentials. Now you will be prompted with the Wireless Controller GUI. 
 
-
-**_CLI Procedure_**
+#### CLI Procedure
 
 1. Access to Controller via SSH.
 
@@ -201,15 +174,12 @@ In the remote desktop access the Controller CLI via SSH using mRemoteNG App. Onc
 Login with the following credentials:
 
 **Username:** dcloud 
-
 **Password:** dcloud 
-
 **Enable:** dcloud
 
 ![](/images/mremoteng-ssh.png)
 
-
-2.Set the hostname as seen below:
+2. Set the hostname as seen below:
 
 ```
 WLC#conf t
