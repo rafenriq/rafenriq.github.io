@@ -492,7 +492,7 @@ Uncheck "Enable Local Site" and set configurations as in the image below.
 
 9.AP tag assignation can be done in multiple ways. We will see a couple of them, per AP and to multiple APs at once.
 
-_Assigning tags to a specific AP._ 
+#### Assigning tags to a specific AP.
 
 Navigate to **Configuration > Wireless > Access Points** and select the Access Point then the "Edit AP" window will appear. In the "Tags" section of the "General" tab select from the drop-down list the tags you created in previous step.
 
