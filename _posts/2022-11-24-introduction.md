@@ -754,45 +754,32 @@ _____________________________________________________________________________
 
 The first thing that we need to do is to create an account in Meraki dashboard. 
 
-_For this LAB we have created the account, as the linceses available for the APs we are using were given by meraki under the same account._
+_For this LAB we have created the users under the same account, as the linceses available._
+
+At this point you should have a mail as the following to set up your passwork
+
+![](/images/merakiaccount1.png)
+
+Pick up a password so we are ready to access the dashboard. 
+
+![](/images/merakiaccount2.png)
 
 If you like, you are welcome to create your dashboard account using the following [link](https://account.meraki.com/login/new_account). 
 
 The information needed to create the account is the following: 
-Selecting the region is very important when it comes to wireless as this setting are use for AP to work based on different regulatory domains. 
+_Note:_ Selecting the region is very important when it comes to wireless as this setting are use for AP to work based on different regulatory domains. 
 
 ![](/images/select-region-dashboard.png)
 
 ![](/images/new-dashboarb-account.png)
 
-You can open the following [link](https://account.meraki.com/secure/login/dashboard_login) to access your account, credentials are: 
-
-```
-| **Pod**       | **Name**       | **Company**|
-| ------------- |:--------------:| ----------:|
-| 1             | Simon Balon   | `CA`       |
-| 2             | keith Clarke   | `CA`       |
-| 3             | Heidi Dorrepaal   | `CA`       |
-| 4             | Amanuel Getaneh   | `CA`       |
-| 5             | Christian Ginser   | `CA`       |
-| 6             | Ole Kasten   | `CA`       |
-| 7             | Grezegorz Koziel   | `CA`       |
-| 8             | Rene Mueller   | `US`       |
-| 9             | Heriel Omaisrael   | `US`       |
-| 10            | Frank Osberg       | ``       |
-| 11            | Ivo Peeters       | ``       |
-| 12            | Pim Servaas       | ``       |
-| 13            | Andrei Sidorkov       | ``       |
-| 14            | Bjorn Svensson       | ``       |
-| 15            | Bernd Syrowatka       | ``       |
-```
-
+You can open the following [link](https://account.meraki.com/secure/login/dashboard_login) to access your account, with your new credentials. 
 
 Once you log in to the Dashboard you will see the following page: 
 
 ![](/images/dashboard.png)
 
-Next step is we need to create your own network for that follow the next screen shoots: 
+Next step is we need to create your own network,for that, follow the next screen shoots: 
 
 ![](/images/createnetwork1.png)
 
@@ -805,6 +792,26 @@ To add the AP to the network we need the serial number (SN). SN can be found on 
 ![](/images/labelAP.jpeg)
 
 For this LAB, (we are not allowed to bring equipment to the room) the following are the SN, use the SN assigned to your POD
+
+```
+| **Pod**       | **PID**       | **SN**|
+| ------------- |:-------------:| ----------:|
+| 1             | `CW9166I-A`   | ``       |
+| 2             | `CW9166I-A`   | ``       |
+| 3             | `CW9166I-A`   | ``       |
+| 4             | `CW9166I-A`   | ``       |
+| 5             | `CW9166I-A`   | ``       |
+| 6             | `CW9166I-A`   | ``       |
+| 7             | `CW9164I-A`   | ``       |
+| 8             | `CW9162I-B`   | ``       |
+| 9             | `CW9162I-B`   | ``       |
+| 10            | ``       | ``       |
+| 11            | ``       | ``       |
+| 12            | ``       | ``       |
+| 13            | ``       | ``       |
+| 14            | ``       | ``       |
+| 15            | ``       | ``       |
+```
 
 ![](/images/createnetwork3.png)
 
