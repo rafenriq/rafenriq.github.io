@@ -6,7 +6,7 @@ published: true
 
 
 # Contents
- - [Introduction](#specification) 
+ - [Introduction](#introduction) 
  - [Learning Objectives](#dependencies-title) 
  - [Network Diagram](#specification) 
  - [Get Started](#get-started)  
@@ -34,10 +34,9 @@ Cisco understands that selecting your next platform is not an easy choice. With 
 
 ## Learning Objectives
 
-With this LAB wil walk you through the steps to migrate an AP Wi-Fi 6E from management with 9800 Wireless LAN Controller to Meraki cloud and vice versa and to demonstrate Wi-Fi 6E configuration for both management types.
+With this LAB will walk you through the steps to migrate an AP Wi-Fi 6E from management with 9800 Wireless LAN Controller to Meraki cloud, vice versa and to demonstrate Wi-Fi 6E configuration for both management types.
 
 ## Network Diagram 
-
 
 ![](/images/Picture1.png)
 
