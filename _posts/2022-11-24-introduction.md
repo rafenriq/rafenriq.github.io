@@ -22,7 +22,7 @@ published: true
   	-   [Configuring Guest SSID](#configuring-guest-ssid) 
  	-   [Meraki Splash page](#meraki-splash-page) 
  	-   [SSID Availability](#ssid-availability) 
- 	-   [Radio Settings](#radio-settings) 
+ 	-   [Radio Settings](#radio-settings)
 
 
 ## Introduction
