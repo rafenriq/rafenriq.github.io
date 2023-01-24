@@ -49,8 +49,8 @@ To access your session open Anyconnect App, add your credentials and click "Conn
 _Select from the table your corresponding credentials:_
 
 | **Pod**         | **User**          | **Password**  |
-| ------------- |:-------------:| ---------:|
-| 1     | `v2718user1`       | `3b48dc`    |
+| --------------- |:-----------------:| -------------:|
+| 1               | `v2718user1`      |    `3b48dc`   |
 | 2     | ``       | ``    |
 | 3     | ``       | ``    |
 | 4     | ``       | ``    |
