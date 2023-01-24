@@ -7,7 +7,7 @@ published: true
 
 # Contents
  - [Introduction](#introduction) 
- - [Learning Objectives](#dependencies-title) 
+ - [Learning Objectives](#learning-objectives) 
  - [Network Diagram](#specification) 
  - [Get Started](#get-started)  
  - [Cisco Catalyst 9800 Series Wireless Controller](#cisco-catalyst-9800-series-wireless-controller)
