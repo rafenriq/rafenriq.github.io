@@ -911,10 +911,10 @@ Configure the following parameters:
 	- Simultaneous logins: allow to use same user/password in different devices
 	- Controller disconnection behavior: If AP is not reaching Meraki Dashboard, what is the expected behavior. 
 
-
 ![](/images/ssid3.png)
 
 - Client IP and VLAN: "Meraki AP assigned (NAT mode)"
+
 Once done save the changes on the right down corner and navigate back to Wireless => SSID
 SSID should look like as following:
 
