@@ -754,7 +754,7 @@ _____________________________________________________________________________
 
 The first thing that we need to do is to create an account in Meraki dashboard. 
 
-_For this LAB we have created the users under the same account, as the linceses available._
+**_For this LAB we have created the users under the same account, as per divices register under the same license._**
 
 At this point you should have a mail as the following to set up your passwork
 
@@ -764,14 +764,17 @@ Pick up a password so we are ready to access the dashboard.
 
 ![](/images/merakiaccount2.png)
 
-If you like, you are welcome to create your dashboard account using the following [link](https://account.meraki.com/login/new_account). 
+_____________________________________________________________________________
+_If you like, you are welcome to create your dashboard account using the following [link](https://account.meraki.com/login/newaccount). 
 
-The information needed to create the account is the following: 
-_Note:_ Selecting the region is very important when it comes to wireless as this setting are use for AP to work based on different regulatory domains. 
+_The information needed to create the account is the following:
+
+_Note: Selecting the region is very important when it comes to wireless as this setting are use for AP to work based on different regulatory domains._
 
 ![](/images/select-region-dashboard.png)
 
 ![](/images/new-dashboarb-account.png)
+_____________________________________________________________________________
 
 You can open the following [link](https://account.meraki.com/secure/login/dashboard_login) to access your account, with your new credentials. 
 
