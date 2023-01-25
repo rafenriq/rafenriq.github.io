@@ -988,3 +988,48 @@ We have done the following changes to show the configuration
 
 Now let's modify the radio settings for our AP. Navigate to **Wireless** >> **Radio Settings**. From there you can see our AP is using the "Basic Indoor Profile", which is the defaul added when creating the network, but most likely in a real deployment we do not want this as every wireless deployment is different. You should see something similar as shown in the next image:
 
+![](/images/radiosettings1.png)
+
+Click on **RF profiles** >> **New Profile**
+
+![](/images/radiosettings2.png)
+
+The following screen will present some predefined profiles that can be taken for different type of deployments, in this case, we will create our own, click on **New Profile from Scratch**
+
+![](/images/radiosettings3.png)
+
+- Give your profile a name, in this example: lab-RF
+- check **Enable operation on 6 GHz band**
+- check **Enable band steering**
+- For Flex Radio select 6GHz as band preference
+
+You can follow the next image as reference. 
+
+![](/images/radiosettings4.png)
+
+Now, lets change to the **2.4 GHz** tab
+
+- Decrease the transmit power
+- Increase the minimum data rate to something above to 18Mbps
+_Note: This will prevent for 802.11b client to connect to the network, of course this depends of the type of devices deployed in such site, but in this case we are going to prentet those clients are not a problem anymore _
+
+![](/images/radiosettings5.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
