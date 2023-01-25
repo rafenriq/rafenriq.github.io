@@ -970,7 +970,7 @@ After you save the changes you should see them as following, You can play around
 
 ![](/images/splashpage10.png)
 
-Click on "back to config" and select your new custom theme, so user will be seeing this page. On this page you can still configure the following if you like: welcome message, logo, and how frequent you want users to see the portal when they connect to the wireless network.
+Click on **back to config** and select your new custom theme, so user will be seeing this page. On this page you can still configure the following if you like: welcome message, logo, and how frequent you want users to see the portal when they connect to the wireless network.
 We have done the following changes to show the configuration 
 
 ![](/images/splashpage11.png)
