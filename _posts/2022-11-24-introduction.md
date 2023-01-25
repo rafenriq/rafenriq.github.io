@@ -932,11 +932,13 @@ All we need is a bit of creativity and HTML knownledge.
 
 In order to modify the splash page navigate to: Wireless >> Splash page on the menu >> 
 Select the SSID we just created for guest clients. 
-From there we have available 2 themes, which we can only modify colors as shown below, click on "Preview" to check how your new colour selection looks like. Feel free to play around with it. 
-
-If we want to further customize this, using the themes as a template, we can do the following: 
+From there we have available 2 themes (moderm and fluid), which we can only modify colors as shown below. 
 
 ![](/images/splashpage1.png)
+
+Click **Preview** to check how your new colour selection looks like. Feel free to play around with it. 
+
+To further customize this, we will use one of these themes as a template, we can do the following: 
 
 ![](/images/splashpage2.png)
 
