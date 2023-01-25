@@ -17,12 +17,12 @@ published: true
     -   [Migrate to Meraki Management](#migrate-to-meraki-management)
 	-	[Troubleshooting tools](#troubleshooting-tools)
  - [Meraki Dashboard](#meraki-dashboard) 
- 	-	[Modify your network information](#modify-your-network-information) 
- 	-   [Configuring Enterprise SSID](#configuring-enterprise-ssid) 
-  	-   [Configuring Guest SSID](#configuring-guest-ssid) 
- 	-   [Meraki Splash page](#meraki-splash-page) 
- 	-   [SSID Availability](#ssid-availability) 
- 	-   [Radio Settings](#radio-settings)
+	-	[Modify your network information](#modify-your-network-information) 
+    -   [Configuring Enterprise SSID](#configuring-enterprise-ssid) 
+    -   [Configuring Guest SSID](#configuring-guest-ssid) 
+    -   [Meraki Splash page](#meraki-splash-page) 
+	-   [SSID Availability](#ssid-availability) 
+    -   [Radio Settings](#radio-settings)
 
 
 ## Introduction
@@ -879,18 +879,18 @@ Finally save the changes
 
 ## Configuring Enterprise SSID
 
-Navigate to Wireless => SSID. Under "Unconfigured SSID 2" click "edit settings"
+Navigate to Wireless => SSID. Under **Unconfigured SSID 2** click **edit settings**
 
 ![](/images/ssid1.png)
 
 Configure the following parameters:
-- SSID name: give it a name Ex. "Corp rafenriq"
+- SSID name: give it a name, ex. "Corp rafenriq"
 - Status: Enable 
 - Security: Enterprise with "Meraki Cloud Authentications" 
 - Encryption: WPA2
 - Client IP and VLAN: "Meraki AP assigned (NAT mode)"
-Once done save the changes on the right down corner and navigate back to Wireless => SSID
-SSID should look like as following: 
+Once done **save the changes** on the right down corner and navigate back to **Wireless => SSID**
+SSID(s) should look like as following: 
 
 ![](/images/ssid2.png)
 
