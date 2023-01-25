@@ -889,6 +889,7 @@ Configure the following parameters:
 - Security: Enterprise with "Meraki Cloud Authentications" 
 - Encryption: WPA2
 - Client IP and VLAN: "Meraki AP assigned (NAT mode)"
+
 Once done **save the changes** on the right down corner and navigate back to **Wireless => SSID**
 SSID(s) should look like as following: 
 
