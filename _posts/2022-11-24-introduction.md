@@ -782,7 +782,7 @@ Once you log in to the Dashboard you will see the following page:
 
 ![](/images/dashboard.png)
 
-Next step is we need to create your own network,for that, follow the next screen shoots: 
+Next step is, we need to create your own network,for that, follow the next screen shoots: 
 
 ![](/images/createnetwork1.png)
 
@@ -790,7 +790,7 @@ Enter a name for your network
 
 ![](/images/createnetwork2.png)
 
-To add the AP to the network we need the serial number (SN). SN can be found on a label in the AP as shown in the following picture. 
+To add the AP to the network we need the Meraki serial number (SN). SN can be found on a label in the AP as shown in the following picture. 
 
 ![](/images/labelAP.jpeg)
 
@@ -819,11 +819,12 @@ Click on **Add devices** and take the SN from the table above depending of the p
 
 ![](/images/createnetwork3.png)
 
-Finally, create the network
+Finally, click on **create the network**
 
 ![](/images/createnetwork4.png)
 
 In the following page we can place the divice in a specific address , this will define the location for your AP in your network. 
+Clock on **Place devices on the map** 
 
 ![](/images/adddevicemap1.png)
 
@@ -831,7 +832,8 @@ Select the AP and follow the steps in the image below
 
 ![](/images/adddevicemap2.png)
 
-Click on "Enter address" and enter a valid address to position your AP. 
+Click on **Enter address** and enter a valid address to position your AP.
+(it can be anything, your company address, home, CL location, you pick ... ) 
 
 ![](/images/adddevicemap3.png)
 
