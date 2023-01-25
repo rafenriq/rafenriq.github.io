@@ -1015,6 +1015,26 @@ _Note: This will prevent for 802.11b client to connect to the network, of course
 
 ![](/images/radiosettings5.png)
 
+After, select **5 GHz** tab, here let's configure the following: 
+
+- **Channel with** select **Manual** and configure **40Mhz**
+
+![](/images/radiosettings6.png)
+
+- Click on **RX - SOP**
+
+![](/images/radiosettings7.png)
+
+You will see the following warning, click **Proceed**
+
+![](/images/radiosettings8.png)
+
+- Enable **RX - SOP**
+- Specify -78 dBm 
+
+![](/images/radiosettings9.png)
+
+At last, select **6 GHz** tab
 
 
 
