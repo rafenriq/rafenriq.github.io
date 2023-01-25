@@ -897,7 +897,7 @@ SSID(s) should look like as following:
 
 ## Configuring Guest SSID
 
-Navigate to Wireless => SSID. Under "Unconfigured SSID 3" click "edit settings"
+Navigate to Wireless => SSID. Under **Unconfigured SSID 3** click **edit settings**
 
 Configure the following parameters:
 - SSID name: give it a name Ex. "Guest rafenriq"
@@ -905,11 +905,11 @@ Configure the following parameters:
 - Security: Open
 - Splash Page: Sign-on with "Meraki Cloud authentication"
 - For Advanced splash setting, let's use the following:
-..- Captive portal strength: Chose type of traffic allowed before completing portal
-..- Walled garden: IP addresses that can be allowed before going through the splash page, for example if portal is hosted in a 3rd party server, we need to allow this IP address so clients can reach to this portal
-..- Self-registration: Display a form on the web page to allow client to create a user, users need to be Admin approved before they can actually work in the portal.  
-..- Simultaneous logins: allow to use same user/password in different devices
-..- Controller disconnection behavior: If AP is not reaching Meraki Dashboard, what is the expected behavior. 
+	- Captive portal strength: Chose type of traffic allowed before completing portal
+	- Walled garden: IP addresses that can be allowed before going through the splash page, for example if portal is hosted in a 3rd party server, we need to allow this IP address so clients can reach to this portal
+	- Self-registration: Display a form on the web page to allow client to create a user, users need to be Admin approved before they can actually work in the portal.  
+	- Simultaneous logins: allow to use same user/password in different devices
+	- Controller disconnection behavior: If AP is not reaching Meraki Dashboard, what is the expected behavior. 
 
 
 ![](/images/ssid3.png)
