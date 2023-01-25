@@ -865,7 +865,8 @@ We can update information to the network just created. In this case let's set th
 
 ![](/images/modifynw2.png)
 
-Additioanlly we can configure SysLog and SNMP for network management. This values will be valid for all the devices you add to this network 
+Additionally we can configure SysLog and SNMP for network management. This values will be valid for all the devices you add to this network 
+- SysLog IP address: 18.217.117.169
 
 ![](/images/modifynw3.png)
 
