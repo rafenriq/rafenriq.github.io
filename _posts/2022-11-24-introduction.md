@@ -961,7 +961,7 @@ Select "auth.html" and click Edit, add the following line to the html file and "
 
 ![](/images/splashpage8.png)
 
-Lets select file "main.css" to configure the color and lets make the following change
+After, Let's select file "main.css" to configure the color as shown below and test the changes.
 
 ![](/images/splashpage9.png)
 
