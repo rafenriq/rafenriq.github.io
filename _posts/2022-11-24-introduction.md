@@ -849,15 +849,13 @@ Click on your network name and then on the AP name, at this moment is using AP m
 
 ![](/images/configAP1.png)
 
-Give your AP a name
+Give your AP a name. In this case we use: "Home-AP-rafenriq"
 
 ![](/images/configAP2.png)
 
-Click on BSSID detail and you will see we  already have an SSID configured with name: "network" "WiFi", this is expected as we use the default template, while creating the network. 
+Click on BSSID detail and you will see we  already have an SSID configured with name: "network" + "WiFi", this is expected as we use the default template, while creating the network. 
 
 ![](/images/configAP3.png)
-
-#specification
 
 ## Modify your network information 
 
