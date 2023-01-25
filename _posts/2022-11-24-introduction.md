@@ -952,9 +952,12 @@ You will have a new tab on your browser to be able to modify the theme as needed
 
 ![](/images/splashpage5.png)
 
-In this case we are doing something very simple, we are just adding a the following message to the page: "This message has been added for CL LAB LTREWN-2034" and we are changing the color for the font. 
+In this case we are doing something very simple, we are just adding the following message to the page: "This message has been added for CL LAB LTREWN-2034" and we are changing the color for the font. 
 
 Select "auth.html" and click Edit, add the following line to the html file and "Save" the file 
+``` html
+<h3>This message has been added for CL LAB LTREWN-2034</h3>
+```
 
 ![](/images/splashpage8.png)
 
