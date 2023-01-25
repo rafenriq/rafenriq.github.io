@@ -923,16 +923,16 @@ SSID should look like as following:
 
 ## Meraki Splash page
 
-Unlike very very simple portal page presented by 9800, show in image below:
+Unlike the very very simple portal page presented by 9800, show in image below:
 
 ![](/images/9800-portal.png)
 
 Meraki has a very good user friendly interface on the dashboard to modify the default splash page to customize your own. 
-All we need is a bit of HTML knownledge. 
+All we need is a bit of creativity and HTML knownledge. 
 
-In order to modify the splash page navigate to: Wireless >> Splash page
+In order to modify the splash page navigate to: Wireless >> Splash page on the menu >> 
 Select the SSID we just created for guest clients. 
-From there we have available 2 themes, wich we can only modify colors as shown below, click on "Preview" to check how your new colour selections looks like. Feel free to play around with it. 
+From there we have available 2 themes, which we can only modify colors as shown below, click on "Preview" to check how your new colour selection looks like. Feel free to play around with it. 
 
 If we want to further customize this, using the themes as a template, we can do the following: 
 
