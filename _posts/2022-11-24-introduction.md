@@ -1039,6 +1039,9 @@ The advantage of this is to create smaller cells with strong signal and warantee
 
 At last, select **6 GHz** tab
 
+- **Channel with** select **Manual** and configure **160Mhz**
+Here we can see one of the big advantages of using this band, which is allowing us to create bigger channels to transmit data. 
+- **Channle assigment method**
 
 
 
