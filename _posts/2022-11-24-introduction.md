@@ -1034,6 +1034,9 @@ You will see the following warning, click **Proceed**
 
 ![](/images/radiosettings9.png)
 
+**RX - SOP** is a very power feature that is mostly used in high density deployments, what we do is pretty much telling the AP that frames that are received with an RSSI below -78 dBm will just be ignore, therefore AP will not even try to decode them. 
+The advantage of this is to create smaller cells with strong signal and warantee high data rates for clients. 
+
 At last, select **6 GHz** tab
 
 
