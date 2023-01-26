@@ -1096,5 +1096,12 @@ Give 2 minutes and then changes should be reflected
 ![](/images/radiosettings20.png)
 
 
+> FYI ...
+
+> Even in domains where the new allocation is narrower—for example, in Europe with the ETSI domain currently planning to allocate 500 MHz—the number of channels available to Wi-Fi doubles. This means that any place that had 40 MHz channels will soon be able to switch to 80 MHz channels.
+
+> In the US FCC domain, Wi-Fi 6E adds 1200 MHz of new spectrum, **creating 59** 20-MHz-wide channels, more than tripling the number of channels available.
+
+
 
 
