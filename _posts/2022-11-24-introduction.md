@@ -1152,6 +1152,8 @@ _Note: That's it!, all this looks very easy but in real world scenarios you must
 
 ### Troubleshoot Meraki AP 
 
+#### AP join
+
 Although Meraki does not provide as powerful tools as 9800 to troubleshoot AP join, as most of the information is kept on the cloud back-end and engaging support from Meraki is needed. It does provide basic connectivity test, you can play around with them if you like.
 
 You can navigate to **Wireless** >> **Access Points** >> click on your AP name
@@ -1161,6 +1163,8 @@ You can navigate to **Wireless** >> **Access Points** >> click on your AP name
 Under **Tool** option we can perform  ping, traceroute, throughput test to AP. 
 
 ![](/images/ts3.png)
+
+#### RF
 
 The tools available to monitor health for clients and RF on the wireless networks on the other hand are very advanced. 
 
@@ -1175,7 +1179,27 @@ The real advantage of Meraki here is the ability to do real-time spectrum analys
 
 _Note: while troubleshooting signals on the RF spectrum is not easy. On the reference page of this guide we leave you a link to most common signal pattern interfering in 2.4Ghz and 5Ghz_ 
 
+#### Clients
 
+Meraki dashboard offer many stats, graphs to monitor traffic for clients, health, problem, etc. 
+As this LAB is not intended to be used with clients we prefer to leave you some link on the refernce part to have more information on this if needed. 
+
+### Migration from Meraki to 9800 WLC 
+
+First thing we need to do is disable messing from the AP, as this is a feature enable by default and with it we cannot move the AP back to the 9800 WLC. 
+
+Navigate to **Wireless** >> **Access Points** >> click on your AP name
+
+
+Navigate to **Wireless** >> **Access Points** >> click on your AP name
+
+![](/images/migrationback1.png)
+
+Click on **Edit** >> **Migrate to Cisco DNA Management Mode**
+
+![](/images/migrationback1.png)
+
+You will received the following warning message, click on **Migrate 1 access point**
 
 
 
