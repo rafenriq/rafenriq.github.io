@@ -1091,7 +1091,7 @@ It is possible that enabling radio on 6Ghz takes a bit of time but for now you s
 
 ![](/images/radiosettings19.png)
 
-_Note: The CW9166 has three client-serving W-iFi radios capable of operating in 2.4 GHz, 5 GHz, and 6Hz frequencies. On the CW9166, the third Wi-Fi radio can be configured to operate either in the 5 GHz frequency band or 6 GHz frequency band._
+_Note: The CW9166 has three client-serving W-iFi radios capable of operating in 2.4 GHz, 5 GHz, and 6Hz frequencies. On the CW9166, the third Wi-Fi radio can be configured to operate either in the 5 GHz frequency band or 6 GHz frequency band. For 9162/9164 we have the 3 radios operating in different bands._
 
 _The out-of-the-box setting of the CW9166 will have the second and third radio both operating in the 5 GHz frequency band (Dual 5 GHz mode)._
 
