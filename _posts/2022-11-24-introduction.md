@@ -1074,3 +1074,27 @@ _Note: Remember that RF profiles are configured based on your site survey result
 Go back to **Overview** >> select your AP using the check box >> click on **Edit Settings** >> then click on **Assign profile**
 
 ![](/images/radiosettings15.png)
+
+Select your profile, in this case "lab-RF" and click on **Next**
+
+![](/images/radiosettings16.png)
+
+Check all three boxes to override values and click on **review changes**
+
+![](/images/radiosettings17.png)
+
+Review the changes and **Apply changes**
+
+![](/images/radiosettings18.png)
+
+It is possible that enabling radio on 6Ghz take a bit of time but for now you should be able to see that the RF profiles has been apply correctly
+
+![](/images/radiosettings19.png)
+
+Give 2 minutes and then changes should be reflected 
+
+![](/images/radiosettings20.png)
+
+
+
+
