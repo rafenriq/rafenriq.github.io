@@ -1149,3 +1149,15 @@ Navigate back to **Wireless** >> **SSID** and your new SSID should look like as 
 ![](/images/ssid6g3.png)
 
 _Note: That's it!, all this looks very easy but in real world scenarios you must likely need transition scearios, for more information on that, look at the reference link on top of this guide to learn more about it._
+
+### Troubleshoot Meraki AP 
+
+Meraki dashboard provide very powerful tools to monitor your RF enviroment, giving you the ability to do real-time spectrum analysis of the enviroment while servin clients. 
+
+You can review this information for you access point using **Monitor** >> **RF spectrum**
+
+![](/images/ssid6g3.png)
+
+From this information we can identify what is the channel utilization for each channel on both bands 2.4Ghz and 5Ghz 
+
+
