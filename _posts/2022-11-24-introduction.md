@@ -1095,13 +1095,26 @@ Give 2 minutes and then changes should be reflected
 
 ![](/images/radiosettings20.png)
 
+***
+***
 
-> FYI ...
+> FYI - Channels on 6GHz band
 
 > Even in domains where the new allocation is narrower—for example, in Europe with the ETSI domain currently planning to allocate 500 MHz—the number of channels available to Wi-Fi doubles. This means that any place that had 40 MHz channels will soon be able to switch to 80 MHz channels.
 
 > In the US FCC domain, Wi-Fi 6E adds 1200 MHz of new spectrum, **creating 59** 20-MHz-wide channels, more than tripling the number of channels available.
 
+> FYI - Transmit power on 6GHz band
+
+People will want to take a 5GHz AP and do a 1:1 replacement with a 6GHz supported AP, this may seem reasonable, but there are some aspects to consider:
+
+-As WiFi-6E uses a higher frequency, the propagation characteristics are different, the signal drops slightly faster in 6 than in 5GHz. The difference should be around 2 dBm on measurements over the same distance. Material absorption will be different as well.
+
+-6GHz has different regulatory power constraints than 5GHz. Currently, most deployments will be using Low Power APs (for simplicity sake’s, let’s say 24dBm in FCC, 23 dBm in ETSI). This means that depending on the current network AP radio’s power levels,  using 6GHz may result in a slightly lower power output
+
+
+***
+***
 
 
 
