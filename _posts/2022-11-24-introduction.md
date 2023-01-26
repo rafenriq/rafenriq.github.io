@@ -21,8 +21,9 @@ published: true
     -   [Configuring Enterprise SSID](#configuring-enterprise-ssid) 
     -   [Configuring Guest SSID](#configuring-guest-ssid) 
     -   [Meraki Splash page](#meraki-splash-page) 
-	-   [SSID Availability](#ssid-availability) 
     -   [Radio Settings](#radio-settings)
+    -   [Troubleshoot Meraki AP](#troubleshoot-meraki-ap)
+    -   [Migration from Meraki to 9800 WLC](#migration-from-meraki-to-9800-wlc)
 
 
 ## Introduction
@@ -991,7 +992,7 @@ We have done the following changes to show the configuration
 ![](/images/splashpage12.png)
 
 
-### Radio Settings
+## Radio Settings
 
 Now let's modify the radio settings for our AP. Navigate to **Wireless** >> **Radio Settings**. From there you can see our AP is using the "Basic Indoor Profile", which is the defaul added when creating the network, but most likely in a real deployment we do not want this as every wireless deployment is different. You should see something similar as shown in the next image:
 
@@ -1150,9 +1151,9 @@ Navigate back to **Wireless** >> **SSID** and your new SSID should look like as 
 
 _Note: That's it!, all this looks very easy but in real world scenarios you must likely need transition scearios, for more information on that, look at the reference link on top of this guide to learn more about it._
 
-### Troubleshoot Meraki AP 
+## Troubleshoot Meraki AP 
 
-#### AP join
+### AP join
 
 Although Meraki does not provide as powerful tools as 9800 to troubleshoot AP join, as most of the information is kept on the cloud back-end and engaging support from Meraki is needed. It does provide basic connectivity test, you can play around with them if you like.
 
@@ -1164,7 +1165,7 @@ Under **Tool** option we can perform  ping, traceroute, throughput test to AP.
 
 ![](/images/ts3.png)
 
-#### RF
+### RF
 
 The tools available to monitor health for clients and RF on the wireless networks on the other hand are very advanced. 
 
@@ -1179,12 +1180,12 @@ The real advantage of Meraki here is the ability to do real-time spectrum analys
 
 _Note: while troubleshooting signals on the RF spectrum is not easy. On the reference page of this guide we leave you a link to most common signal pattern interfering in 2.4Ghz and 5Ghz_ 
 
-#### Clients
+### Clients
 
 Meraki dashboard offer many stats, graphs to monitor traffic for clients, health, problem, etc. 
 As this LAB is not intended to be used with clients we prefer to leave you some link on the refernce part to have more information on this if needed. 
 
-### Migration from Meraki to 9800 WLC 
+## Migration from Meraki to 9800 WLC 
 
 First thing we need to do is disable messing from the AP, as this is a feature enable by default and with it we cannot move the AP back to the 9800 WLC. 
 
