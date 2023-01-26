@@ -1152,12 +1152,20 @@ _Note: That's it!, all this looks very easy but in real world scenarios you must
 
 ### Troubleshoot Meraki AP 
 
-Meraki dashboard provide very powerful tools to monitor your RF enviroment, giving you the ability to do real-time spectrum analysis of the enviroment while servin clients. 
+Although Meraki does not provide us as powerful tools as 9800 to troubleshoot AP join, as most of the information is kept on the cloud back-end and engaging support from Meraki is needed. The tools available to monitor health for clients and RF on the wireless networks are very advanced. 
 
-You can review this information for you access point using **Monitor** >> **RF spectrum**
+Meraki dashboard provides very powerful tool to monitor your RF enviroment. You can review this information for you access point using **Monitor** >> **RF spectrum**
+
+-From this information, we can identify what is the channel utilization for each channel on both bands 2.4Ghz, 5Ghz and 6Ghz still not added but soon to come :)
+-We can also indentify what other SSID are being brodcasted on the same location and how strong we can hear them. 
+
+The real advantage of Meraki here is the ability to do real-time spectrum analysis of the enviroment while servin clients. 
 
 ![](/images/ssid6g3.png)
 
-From this information we can identify what is the channel utilization for each channel on both bands 2.4Ghz and 5Ghz 
+_Note: while troubleshooting signals on the RF spectrum is not easy. On the reference part of this guide we leave you a link to most common signal pattern interfering in 2.4Ghz and 5Ghz_ 
+
+
+
 
 
