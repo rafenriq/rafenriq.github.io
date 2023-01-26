@@ -1048,4 +1048,29 @@ At last, select **6 GHz** tab
 
 - **Channel with** select **Manual** and configure **160Mhz**
 Here we can see one of the big advantages of using this band, which is allowing us to create bigger channels to transmit data. 
-- **Channle assigment method**
+
+![](/images/radiosettings10.png)
+
+Here we can see one of the big advantages of using this band, which is allowing us to create bigger channels to transmit data, due to the number of channels available in this band.  
+
+- **Channel assigment method** click on **Change channels used by Autochannel..**
+
+![](/images/radiosettings11.png)
+
+Leave avaiable just one channel of 160Mhz (8 channels) so we force AP to take this one. Here an example, once finished, click on **Done**.
+
+![](/images/radiosettings12.png)
+
+Finally **Save** the changes in the bottom of the page 
+
+![](/images/radiosettings13.png)
+
+You should be back to **Radio Setting** >> **RF profiles** and you should be able to see you new brand RF profile. 
+
+![](/images/radiosettings14.png)
+
+_Note: Remember that RF profiles are configured based on your site survey results, every wireless deployment is different, environmental condition changes, therefore RF propagation changes_
+
+Go back to **Overview** >> select your AP using the check box >> click on **Edit Settings** >> then click on **Assign profile**
+
+![](/images/radiosettings15.png)
