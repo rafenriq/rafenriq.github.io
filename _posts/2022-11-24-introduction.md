@@ -1163,7 +1163,7 @@ The real advantage of Meraki here is the ability to do real-time spectrum analys
 
 ![](/images/ssid6g3.png)
 
-_Note: while troubleshooting signals on the RF spectrum is not easy. On the reference part of this guide we leave you a link to most common signal pattern interfering in 2.4Ghz and 5Ghz_ 
+_Note: while troubleshooting signals on the RF spectrum is not easy. On the reference page of this guide we leave you a link to most common signal pattern interfering in 2.4Ghz and 5Ghz_ 
 
 
 
