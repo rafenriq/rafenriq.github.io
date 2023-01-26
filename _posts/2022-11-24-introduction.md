@@ -1116,5 +1116,21 @@ currently planning to allocate 500 MHz—the number of channels available to Wi-
 ***
 ***
 
+At this point we might think that our _Corp_ and _Guest_ SSID are brodcasting on the 6Ghz band, but this is not true, WiFi 6E did not leave security out, so the security settings need to be configure to have an SSID brodcasted on the 6Ghz band: 
+
+-WPA3: this enforces mandatory Protected Management Frames (PMF/802.11w)
+-Opportunistic Key Encryption (OWE). This replaces the concept of “Open SSID”, and allows to have encryption across devices, without any authentication
+-Simultaneous Authentication of Equals (SAE). This takes the role of PSK (also called “personal”) authentication methods but makes it resistant to offline password attacks, with improved cryptographic algorithms
+
+So in order for us to configure a working SSID for 6Ghz lets create a new SSID. 
+
+Navigate to **Wireless** >> **SSID** >> under **Unconfigured SSID 4** >> click on **Edit settings**
+
+![](/images/ssid6g1.png)
+
+Use the following parameters: 
+    - **SSID name**: you pick it, in this example Wlan6GHz
+    - **SSID status**: Enable
+    - Enable **Opportunistic Wireless Encryption (OWE)**
 
 
