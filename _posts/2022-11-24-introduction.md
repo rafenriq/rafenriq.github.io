@@ -1100,27 +1100,27 @@ Give 2 minutes and then changes should be reflected
 
 **> FYI - Channels on 6GHz band**
 
-> Even in domains where the new allocation is narrower—for example, in Europe with the ETSI domain
+	> Even in domains where the new allocation is narrower—for example, in Europe with the ETSI domain
 currently planning to allocate 500 MHz—the number of channels available to Wi-Fi doubles. This means that any place that had 40 MHz channels will soon be able to switch to 80 MHz channels.
 
-> In the US FCC domain, Wi-Fi 6E adds 1200 MHz of new spectrum, **creating 59** 20-MHz-wide channels, more than tripling the number of channels available.
+	> In the US FCC domain, Wi-Fi 6E adds 1200 MHz of new spectrum, **creating 59** 20-MHz-wide channels, more than tripling the number of channels available.
 
 **> FYI - Transmit power on 6GHz band**
 
-> People will want to take a 5GHz AP and do a 1:1 replacement with a 6GHz supported AP, this may seem reasonable, but there are some aspects to consider:
+	> People will want to take a 5GHz AP and do a 1:1 replacement with a 6GHz supported AP, this may seem reasonable, but there are some aspects to consider:
 
-> -As WiFi-6E uses a higher frequency, the propagation characteristics are different, the signal drops slightly faster in 6 than in 5GHz. The difference should be around 2 dBm on measurements over the same distance. Material absorption will be different as well.
+	> -As WiFi-6E uses a higher frequency, the propagation characteristics are different, the signal drops slightly faster in 6 than in 5GHz. The difference should be around 2 dBm on measurements over the same distance. Material absorption will be different as well.
 
-> -6GHz has different regulatory power constraints than 5GHz. Currently, most deployments will be using Low Power APs (for simplicity sake’s, let’s say 24dBm in FCC, 23 dBm in ETSI). This means that depending on the current network AP radio’s power levels,  using 6GHz may result in a slightly lower power output
+	> -6GHz has different regulatory power constraints than 5GHz. Currently, most deployments will be using Low Power APs (for simplicity sake’s, let’s say 24dBm in FCC, 23 dBm in ETSI). This means that depending on the current network AP radio’s power levels,  using 6GHz may result in a slightly lower power output
 
 ***
 ***
 
 At this point we might think that our _Corp_ and _Guest_ SSID are brodcasting on the 6Ghz band, but this is not true, WiFi 6E did not leave security out, so the security settings need to be configure to have an SSID brodcasted on the 6Ghz band: 
 
--WPA3: this enforces mandatory Protected Management Frames (PMF/802.11w)
--Opportunistic Key Encryption (OWE). This replaces the concept of “Open SSID”, and allows to have encryption across devices, without any authentication
--Simultaneous Authentication of Equals (SAE). This takes the role of PSK (also called “personal”) authentication methods but makes it resistant to offline password attacks, with improved cryptographic algorithms
+- WPA3: this enforces mandatory Protected Management Frames (PMF/802.11w)
+- Opportunistic Key Encryption (OWE). This replaces the concept of “Open SSID”, and allows to have encryption across devices, without any authentication
+- Simultaneous Authentication of Equals (SAE). This takes the role of PSK (also called “personal”) authentication methods but makes it resistant to offline password attacks, with improved cryptographic algorithms
 
 So in order for us to configure a working SSID for 6Ghz lets create a new SSID. 
 
@@ -1129,16 +1129,16 @@ Navigate to **Wireless** >> **SSID** >> under **Unconfigured SSID 4** >> click o
 ![](/images/ssid6g1.png)
 
 Use the following parameters: 
-	- **SSID name**: you pick it, in this example Wlan6GHz
-    - **SSID status**: Enable
-    - Enable **Opportunistic Wireless Encryption (OWE)**
-    - You will notice that WPA3 encryption and 802.11w are enabled by default and values cannot be changed. 
+- **SSID name**: you pick it, in this example Wlan6GHz
+- **SSID status**: Enable
+- Enable **Opportunistic Wireless Encryption (OWE)**
+- You will notice that WPA3 encryption and 802.11w are enabled by default and values cannot be changed. 
     
 ![](/images/ssid6g2.png)
     
-	- **Splash page** select none
-    - Use **Meraki AP assigned (NAT mode)** under **Client IP and VLAN**
-    - **Save** the changes on the right down corner. 
+- **Splash page** select none
+- Use **Meraki AP assigned (NAT mode)** under **Client IP and VLAN**
+- **Save** the changes on the right down corner. 
     
 Navigate back to **Wireless** >> **SSID** and your new SSID should look like as follow: 
 
