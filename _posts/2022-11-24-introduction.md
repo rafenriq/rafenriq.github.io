@@ -1140,5 +1140,8 @@ Use the following parameters:
     - Use **Meraki AP assigned (NAT mode)** under **Client IP and VLAN**
     - **Save** the changes on the right down corner. 
     
+Navigate back to **Wireless** >> **SSID** and your new SSID should look like as follow: 
 
+![](/images/ssid6g3.png)
 
+_Note: That's it!, all this looks very easy but in real world scenarios you must likely need transition scearios, for more information on that, look at the reference link on top of this guide to learn more about it._ 
