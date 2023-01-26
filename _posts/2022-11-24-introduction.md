@@ -1087,9 +1087,13 @@ Review the changes and **Apply changes**
 
 ![](/images/radiosettings18.png)
 
-It is possible that enabling radio on 6Ghz take a bit of time but for now you should be able to see that the RF profiles has been apply correctly
+It is possible that enabling radio on 6Ghz takes a bit of time but for now you should be able to see that the RF profiles has been apply correctly
 
 ![](/images/radiosettings19.png)
+
+_Note: The CW9166 has three client-serving W-iFi radios capable of operating in 2.4 GHz, 5 GHz, and 6Hz frequencies. On the CW9166, the third Wi-Fi radio can be configured to operate either in the 5 GHz frequency band or 6 GHz frequency band._
+
+_The out-of-the-box setting of the CW9166 will have the second and third radio both operating in the 5 GHz frequency band (Dual 5 GHz mode)._
 
 Give 2 minutes and then changes should be reflected 
 
@@ -1144,4 +1148,4 @@ Navigate back to **Wireless** >> **SSID** and your new SSID should look like as 
 
 ![](/images/ssid6g3.png)
 
-_Note: That's it!, all this looks very easy but in real world scenarios you must likely need transition scearios, for more information on that, look at the reference link on top of this guide to learn more about it._ 
+_Note: That's it!, all this looks very easy but in real world scenarios you must likely need transition scearios, for more information on that, look at the reference link on top of this guide to learn more about it._
