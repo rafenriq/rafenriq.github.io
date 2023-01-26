@@ -1129,8 +1129,16 @@ Navigate to **Wireless** >> **SSID** >> under **Unconfigured SSID 4** >> click o
 ![](/images/ssid6g1.png)
 
 Use the following parameters: 
-    - **SSID name**: you pick it, in this example Wlan6GHz
+	- **SSID name**: you pick it, in this example Wlan6GHz
     - **SSID status**: Enable
     - Enable **Opportunistic Wireless Encryption (OWE)**
+    - You will notice that WPA3 encryption and 802.11w are enabled by default and values cannot be changed. 
+    
+![](/images/ssid6g2.png)
+    
+	- **Splash page** select none
+    - Use **Meraki AP assigned (NAT mode)** under **Client IP and VLAN**
+    - **Save** the changes on the right down corner. 
+    
 
 
