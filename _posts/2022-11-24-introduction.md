@@ -1152,7 +1152,17 @@ _Note: That's it!, all this looks very easy but in real world scenarios you must
 
 ### Troubleshoot Meraki AP 
 
-Although Meraki does not provide us as powerful tools as 9800 to troubleshoot AP join, as most of the information is kept on the cloud back-end and engaging support from Meraki is needed. The tools available to monitor health for clients and RF on the wireless networks are very advanced. 
+Although Meraki does not provide as powerful tools as 9800 to troubleshoot AP join, as most of the information is kept on the cloud back-end and engaging support from Meraki is needed. It does provide basic connectivity test, you can play around with them if you like.
+
+You can navigate to **Wireless** >> **Access Points** >> click on your AP name
+
+![](/images/ts2.png)
+
+Under **Tool** option we can perform  ping, traceroute, throughput test to AP. 
+
+![](/images/ts3.png)
+
+The tools available to monitor health for clients and RF on the wireless networks are very advanced. 
 
 Meraki dashboard provides very powerful tool to monitor your RF enviroment. You can review this information for you access point using **Monitor** >> **RF spectrum**
 
@@ -1161,7 +1171,7 @@ Meraki dashboard provides very powerful tool to monitor your RF enviroment. You 
 
 The real advantage of Meraki here is the ability to do real-time spectrum analysis of the enviroment while servin clients. 
 
-![](/images/ssid6g3.png)
+![](/images/ts1.png)
 
 _Note: while troubleshooting signals on the RF spectrum is not easy. On the reference page of this guide we leave you a link to most common signal pattern interfering in 2.4Ghz and 5Ghz_ 
 
