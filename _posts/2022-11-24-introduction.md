@@ -470,7 +470,7 @@ Navigate to **Configuration > Tags & Profiles > AP join > +Add**
 
 6.Create a Flex Profile. 
 
-Navigate to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30 (which is the VLAN whre AP sits on). This is the same value as the native vlan configured in the AP switchport.
+Navigate to **Configuration > Tags & Profiles > Flex > +Add**. Give it a name and define the AP native vlan, in this case we will use Vlan ID 30 (which is the VLAN where AP sits on). This is the same value as the native vlan configured in the AP switchport.
 
 ![](/images/FlexProfile_add_General.png)
 
@@ -638,6 +638,13 @@ Review if there are failed convertions, issue the "**show ap management-mode mer
 ```
 C9800#show ap management-mode meraki failure summary
 ```
+
+Now your APs should be rebooting and booting using the Meraki software. In next section, you will claim the recently converted APs. Note that in order to claim the Access Points, you must have the appropriate licenses, such as co-termination or per-device licensing models.
+
+Please refer to [Meraki Per-Device Licensing Overview](https://documentation.meraki.com/General_Administration/Licensing/Meraki_Per-Device_Licensing_Overview) to learn more about the PDL model.
+
+Please refer to [Meraki Co-Termination Licensing Overview](https://documentation.meraki.com/General_Administration/Licensing/Meraki_Co-Termination_Licensing_Overview) to learn more about the co-term model.
+
 
 ### Troubleshooting tools
 
