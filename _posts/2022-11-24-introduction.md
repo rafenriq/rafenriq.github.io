@@ -1162,7 +1162,7 @@ Under **Tool** option we can perform  ping, traceroute, throughput test to AP.
 
 ![](/images/ts3.png)
 
-The tools available to monitor health for clients and RF on the wireless networks are very advanced. 
+The tools available to monitor health for clients and RF on the wireless networks on the other hand are very advanced. 
 
 Meraki dashboard provides very powerful tool to monitor your RF enviroment. You can review this information for you access point using **Monitor** >> **RF spectrum**
 
