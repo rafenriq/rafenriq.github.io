@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: References
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+Some information for you!
 
-### More Information
+[Data sheet for AP 9162 / 9164 / 9166](https://www.cisco.com/c/en/us/products/wireless/catalyst-9100ax-access-points/datasheet-listing.html).
 
-A place to include any other types of information that you'd like to include about yourself.
+[Networking Demystified: Why Wi-Fi 6E is Hot and Why You Should Care](https://blogs.cisco.com/networking/networking-demystified-why-wi-fi-6e-is-hot-and-why-you-should-care)
 
-### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+
