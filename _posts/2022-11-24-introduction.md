@@ -82,7 +82,7 @@ The Catalyst 9800 is Cisco's latest and greatest Wireless LAN Controller, and it
 
 In this section, we'll start by showing you the basics of setting up a Wireless Controller and a 916X Access Point in a private cloud controller. Then, we will take things to the next level and show you how to migrate the AP management to Meraki. It's going to be a fun and informative ride, so buckle up and let's get started!
 
-![](/images/9800-networkdiagram.png)
+![](/images/9800-networkdiagram_2.png)
 
 ### Day 0 configuration
 
@@ -641,7 +641,7 @@ C9800#show ap management-mode meraki failure summary
 
 ### Troubleshooting tools
 
-To troubleshoot in the 9800 we have some avaialble tools.
+To troubleshoot in the 9800 we have some avaialble tools. To know in detail about the 9800 troubleshooting tools we encourage you to take the "_LTREWN-2724 Be My Guest: Designing and Troubleshooting Wireless Guest Networks with Catalyst 9800 Wireless Controller_" this session will cover the troubleshooting of common wireless guest networks scenarios on Catalyst 9800 Wireless LAN Controllers. This includes Local Web Authentication with local and radius auth, External Web Authentication with custom portals and Cisco DNA Spaces and Central Web Authentication with Cisco ISE. Do not miss it!
 
 **Syslog**
 
@@ -1042,20 +1042,3 @@ At last, select **6 GHz** tab
 - **Channel with** select **Manual** and configure **160Mhz**
 Here we can see one of the big advantages of using this band, which is allowing us to create bigger channels to transmit data. 
 - **Channle assigment method**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
