@@ -1188,8 +1188,15 @@ As this LAB is not intended to be used with clients we prefer to leave you some 
 
 First thing we need to do is disable messing from the AP, as this is a feature enable by default and with it we cannot move the AP back to the 9800 WLC. 
 
-Navigate to **Wireless** >> **Access Points** >> click on your AP name
+Navigate to **Network-wide** >> **General** 
 
+![](/images/migrationback7.png)
+
+Now disable meshing as show in the following picture
+
+![](/images/migrationback5.png)
+
+**Save** the changes on the right low corner. 
 
 Navigate to **Wireless** >> **Access Points** >> click on your AP name
 
@@ -1197,9 +1204,9 @@ Navigate to **Wireless** >> **Access Points** >> click on your AP name
 
 Click on **Edit** >> **Migrate to Cisco DNA Management Mode**
 
-![](/images/migrationback1.png)
+![](/images/migrationback2.png)
 
-You will received the following warning message, click on **Migrate 1 access point**
+You will received a warning message, click on **Migrate 1 access point**. It will take few minutes for AP to reload. After that you should see the AP as disconnected from Meraki dasboard. 
 
-
+![](/images/migrationback6.png)
 
