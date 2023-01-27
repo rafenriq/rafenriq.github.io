@@ -448,23 +448,23 @@ Navigate to **Configuration > Tags & Profiles > AP join > +Add**
 ![](/images/ap_join_country.png)
 
 ```
-| **Pod**       | **PID**       | **Country**|
-| ------------- |:-------------:| ----------:|
-| 1             | `CW9166I-A`   | `CA`       |
-| 2             | `CW9166I-A`   | `CA`       |
-| 3             | `CW9166I-A`   | `CA`       |
-| 4             | `CW9166I-A`   | `CA`       |
-| 5             | `CW9166I-A`   | `CA`       |
-| 6             | `CW9166I-A`   | `CA`       |
-| 7             | `CW9164I-A`   | `CA`       |
-| 8             | `CW9162I-B`   | `US`       |
-| 9             | `CW9162I-B`   | `US`       |
-| 10            | ``       | ``       |
-| 11            | ``       | ``       |
-| 12            | ``       | ``       |
-| 13            | ``       | ``       |
-| 14            | ``       | ``       |
-| 15            | ``       | ``       |
+| POD           | PID         | Country  |
+| ------------- | ----------- | ---------|
+| 1             | CW9166I-A   | CA       |
+| 2             | CW9164I-A   | CA       |
+| 3             | CW9166I-A   | CA       |
+| 4             | CW9166I-A   | CA       |
+| 5             | CW9164I-A   | CA       |
+| 6             | CW9166I-A   | CA       |
+| 7             | CW9166I-A   | CA       |
+| 8             | CW9164I-A   | CA       |
+| 9             | CW9164I-A   | CA       |
+| 10            | CW9162I-B   | US       |
+| 11            | CW9162I-B   | US       |
+| 12            | CW9164I-A   | CA       |
+| 13            | CW9166I-B   | US       |
+| 14            | CW9166I-B   | US       |
+| 15            | CW9166I-B   | US       |
 ```
 <!--  To validate a Product ID for a country refer [Wireless LAN Compliance Lookup](https://www.cisco.com/c/dam/assets/prod/wireless/wireless-compliance-tool/index.html). 
 ![](/images/country-code.png)-->
@@ -1210,4 +1210,3 @@ Click on **Edit** >> **Migrate to Cisco DNA Management Mode**
 You will received a warning message, click on **Migrate 1 access point**. It will take few minutes for AP to reload. After that you should see the AP as disconnected from Meraki dasboard. 
 
 ![](/images/migrationback6.png)
-
