@@ -20,12 +20,12 @@ avatar: /images/CL-log.png
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: rafenriq@cisco.com
+  email: rafenriq@cisco.com, espacheco@cisco.com
   facebook:
   flickr:
   github: 
   instagram:
-  linkedin:
+  linkedin: https://www.linkedin.com/in/estefania-pacheco/
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: enriquez_olguin
