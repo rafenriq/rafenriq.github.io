@@ -1,7 +1,7 @@
 ---
 layout: page
 title: References
-permalink: /about/
+permalink: /references/
 published: true
 ---
 
