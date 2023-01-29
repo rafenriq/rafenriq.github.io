@@ -19,5 +19,11 @@ Some information for you!
 
 ## Meraki
 
+[Meraki Dashboard getting started](https://documentation.meraki.com/Getting_Started_with_Meraki/Getting_Started_Resources/Getting_Started_Checklist)
+[Monitorig & Reporting ](https://documentation.meraki.com/MR/Monitoring_and_Reporting)
+[Wireless Troubleshooting](https://documentation.meraki.com/MR/Wireless_Troubleshooting)
 
+# 9800 WLC 
 
+[9800-CL Deployment Guide](Cisco Catalyst 9800-CL Wireless Controller for Cloud Deployment Guide)
+[9800 Best practices](https://www.cisco.com/c/en/us/products/collateral/wireless/catalyst-9800-series-wireless-controllers/guide-c07-743627.html)
