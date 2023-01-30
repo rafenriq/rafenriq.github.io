@@ -16,6 +16,8 @@ Some information for you!
 
 [Networking Demystified: Why Wi-Fi 6E is Hot and Why You Should Care](https://blogs.cisco.com/networking/networking-demystified-why-wi-fi-6e-is-hot-and-why-you-should-care)
 [WLAN/SSID Security Migration into 6GHz Networks](https://blogs.cisco.com/networking/wlan-ssid-security-migration-into-6ghz-networks)
+[Architecting Next Generation Wireless Network with Catalyst Wi-Fi 6E Access Points](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2022/pdf/BRKEWN-2024.pdf)
+
 
 ## Meraki
 
