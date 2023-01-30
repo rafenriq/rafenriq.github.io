@@ -24,6 +24,7 @@ Some information for you!
 [Meraki Dashboard getting started](https://documentation.meraki.com/Getting_Started_with_Meraki/Getting_Started_Resources/Getting_Started_Checklist)
 [Monitorig & Reporting ](https://documentation.meraki.com/MR/Monitoring_and_Reporting)
 [Wireless Troubleshooting](https://documentation.meraki.com/MR/Wireless_Troubleshooting)
+[Upstream Firewall Rules for Cloud Connectivity](https://documentation.meraki.com/General_Administration/Other_Topics/Upstream_Firewall_Rules_for_Cloud_Connectivity#Addresses_and_Ports_to_Allow)
 
 # 9800 WLC 
 
