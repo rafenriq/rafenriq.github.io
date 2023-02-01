@@ -13,6 +13,8 @@ Some information for you!
 
 [Installation guides Meraki 9162 / 9164 / 9166](https://documentation.meraki.com/MR/MR_Installation_Guides/CW9166_Installation_Guide)
 
+[Wireless LAN Compliance Lookup](https://www.cisco.com/c/dam/assets/prod/wireless/wireless-compliance-tool/index.html)
+
 ## Wi-Fi 6E
 
 [Networking Demystified: Why Wi-Fi 6E is Hot and Why You Should Care](https://blogs.cisco.com/networking/networking-demystified-why-wi-fi-6e-is-hot-and-why-you-should-care)
@@ -45,3 +47,5 @@ Some information for you!
 [Wireless Troubleshooting](https://documentation.meraki.com/MR/Wireless_Troubleshooting)
 
 [Upstream Firewall Rules for Cloud Connectivity](https://documentation.meraki.com/General_Administration/Other_Topics/Upstream_Firewall_Rules_for_Cloud_Connectivity#Addresses_and_Ports_to_Allow)
+
+[Meraki Licensing](https://documentation.meraki.com/General_Administration/Licensing/Meraki_Licensing)
