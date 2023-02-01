@@ -34,8 +34,6 @@ Some information for you!
 
 [Understand Catalyst 9800 Wireless Controllers Configuration Model](https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/213911-understand-catalyst-9800-wireless-contro.html)
 
-[Configuring the 9800-CL via the CLI](https://www.cisco.com/c/en/us/products/collateral/wireless/catalyst-9800-cl-wireless-controller-cloud/nb-06-cat9800-cl-wirel-cloud-dep-guide-cte-en.html#Configuringthe9800CLviatheCLISkippingtheDAY0guidedflow)
-
 [Understand Wireless Debugs and Log Collection on Catalyst 9800 Wireless LAN Controllers](https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/213949-wireless-debugging-and-log-collection-on.html)
 
 ## Meraki
